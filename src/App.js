@@ -3,6 +3,8 @@ import './App.css';
 import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
+import CartPage from './pages/CartPage';
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -18,6 +20,8 @@ function App() {
           <Route exact path='/' element={<Home />} />
           <Route exact path='/signup' element={<SignupPage />} />
           <Route exact path='/login' element={<LoginPage />} />
+          {/* Testing Purpose Cart Component is Added after some time it will add Cart Page */}
+          <Route exact path='/cart' element={<CartPage />} />
         </Routes>
       </Router>
     </div>
