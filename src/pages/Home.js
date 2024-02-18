@@ -1,15 +1,11 @@
-import Navbar from "../features/navbar/Navbar";
-import ProductList from "../features/product-list/ProductList";
-
-
-
+import Navbar from '../features/Navbar/Navbar';
+import ProductList from '../features/ProductList/ProductList'
 function Home() {
     return (
         <div>
             <Navbar>
-                <ProductList ></ProductList>
+                <ProductList></ProductList>
             </Navbar>
-
         </div>
     );
 }
