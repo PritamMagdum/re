@@ -242,8 +242,6 @@ const Oldproducts = [
   },
 ]
 
-
-
 export default function ProductList() {
   const dispatch = useDispatch();
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
@@ -283,7 +281,7 @@ export default function ProductList() {
   }
 
   useEffect(() => {
-    const pagination = { _page: page, _limit: ITEMS_PER_PAGE }
+    const pagination = { _page: page, _per_page: ITEMS_PER_PAGE }
     dispatch(fetchProductsByFiltersAsync({ filter, sort, pagination }));
     // dispatch(fetchAllProductsAsync())
   }, [dispatch, filter, sort, page])
@@ -508,7 +506,8 @@ export default function ProductList() {
                       <div className="mx-auto max-w-2xl px-4 py-0 sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8">
 
                         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
-                          {products.map((product) => (
+                          {/* {console.log(products)} */}
+                          {products?.data?.map((product) => (
                             <Link to="product-detail">
 
                               <div key={product.id} className="group relative border-solid border-2 p-2 rounded-md">

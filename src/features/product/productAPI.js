@@ -13,6 +13,7 @@ export function fetchProductsByFilters(filter, sort, pagination) {
   // Suppose filter is comming like  {"category":"smartphone"}
   // filter : {"category" : ["smartphone", "Laptops"]}
   // pagination : {_page:1, _limit:10}
+
   let queryString = "";
   for (let key in filter) {
     const categoryValues = filter[key];
@@ -23,17 +24,22 @@ export function fetchProductsByFilters(filter, sort, pagination) {
   }
 
   for (let key in sort) {
-    queryString += `${key}=${sort[key]}`
+    queryString += `${key}=${sort[key]}&`
   }
 
   for (let key in pagination) {
-    queryString += `${key}=${sort[key]}`
+    queryString += `${key}=${pagination[key]}&`
   }
 
   return new Promise(async (resolve) => {
     // TODO : we will not hard-code server URL here
     const responce = await fetch('http://localhost:8080/products?' + queryString);
+
+    // console.log("this is response ---->", responce)
+
     const data = await responce.json();
+
+    // console.log("this is data ---->", data)
     resolve({ data });
   });
 }
