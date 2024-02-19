@@ -8,9 +8,11 @@ export function fetchAllProducts() {
   });
 }
 
-export function fetchProductsByFilters(filter, sort) {
+export function fetchProductsByFilters(filter, sort, pagination) {
   // TODO : On server we will support multi values
   // Suppose filter is comming like  {"category":"smartphone"}
+  // filter : {"category" : ["smartphone", "Laptops"]}
+  // pagination : {_page:1, _limit:10}
   let queryString = "";
   for (let key in filter) {
     const categoryValues = filter[key];
@@ -21,6 +23,10 @@ export function fetchProductsByFilters(filter, sort) {
   }
 
   for (let key in sort) {
+    queryString += `${key}=${sort[key]}`
+  }
+
+  for (let key in pagination) {
     queryString += `${key}=${sort[key]}`
   }
 
