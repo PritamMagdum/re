@@ -4,6 +4,7 @@ import {
   fetchAllProductsAsync,
   fetchProductsByFiltersAsync,
   selectAllProducts,
+  selectTotalItems,
 } from '../productSlice';
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
@@ -12,7 +13,7 @@ import { ChevronLeftIcon, ChevronRightIcon, StarIcon } from '@heroicons/react/20
 import { Link } from 'react-router-dom';
 import { ITEMS_PER_PAGE } from '../../../app/constants';
 
-let totalItems = 55;
+// let totalItems = 55;
 
 const sortOptions = [
   { name: 'Best Rating', sort: 'rating', order: 'desc', current: false },
@@ -246,6 +247,7 @@ export default function ProductList() {
   const dispatch = useDispatch();
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
   const products = useSelector(selectAllProducts);
+  const totalItems = useSelector(selectTotalItems);
   const [filter, setFilter] = useState({})
   const [sort, setSort] = useState({})
   const [page, setPage] = useState(1)
@@ -276,7 +278,7 @@ export default function ProductList() {
   }
 
   const handlePage = (page) => {
-    console.log(page);
+    // console.log(page);
     setPage(page);
   }
 

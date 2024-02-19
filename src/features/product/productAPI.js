@@ -33,13 +33,11 @@ export function fetchProductsByFilters(filter, sort, pagination) {
 
   return new Promise(async (resolve) => {
     // TODO : we will not hard-code server URL here
-    const responce = await fetch('http://localhost:8080/products?' + queryString);
-
-    // console.log("this is response ---->", responce)
-
-    const data = await responce.json();
-
-    // console.log("this is data ---->", data)
-    resolve({ data });
+    const response = await fetch('http://localhost:8080/products?' + queryString);
+    // console.log("this is response ---->", response)
+    const data = await response.json();
+    // console.log("this is data ---->", data.items)
+    const totalItems = await data.items
+    resolve({ data: { products: data, totalItems: +totalItems } });
   });
 }
