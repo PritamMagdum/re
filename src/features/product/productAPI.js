@@ -41,3 +41,26 @@ export function fetchProductsByFilters(filter, sort, pagination) {
     resolve({ data: { products: data, totalItems: +totalItems } });
   });
 }
+
+
+export function fetchCategories() {
+  return new Promise(async (resolve) => {
+    const response = await fetch('http://localhost:8080/categories');
+    // console.log("This response is categories ----->", response)
+    const data = await response.json();
+    // console.log(data);
+    resolve({ data });
+  });
+}
+
+export function fetchBrands() {
+  return new Promise(async (resolve) => {
+    // const response2 = await fetch("http;//localhost:8080/brands");
+    const response = await fetch('http://localhost:8080/brands');
+    // console.log("This response is brands ----->", response)
+    const data = await response.json();
+    // console.log("This data is comes from API -", data);
+    resolve({ data });
+  });
+}
+
