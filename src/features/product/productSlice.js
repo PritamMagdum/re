@@ -3,8 +3,8 @@ import { fetchAllProducts, fetchProductsByFilters, fetchBrands, fetchCategories 
 
 const initialState = {
   products: [],
-  brands: [],
-  categories: [],
+  brands: ["apple"],
+  categories: ["smartphone"],
   status: 'idle',
   totalItems: 0
 };

@@ -29,7 +29,6 @@ const sortOptions = [
   { name: 'Price: High to Low', sort: 'price', order: 'desc', current: false },
 ]
 
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
@@ -322,8 +321,8 @@ function MobileFilter({ mobileFiltersOpen, setMobileFiltersOpen, filters, handle
 
 function DesktopFilter({ filters, handleFilter, categories, fetchBrandsData }) {
   return (
-    <form className="hidden lg:block">
 
+    <form className="hidden lg:block">
       {filters.map((section) => (
         <Disclosure as="div" key={section.id} className="border-b border-gray-200 py-6">
           {console.log("This comes from section.id ---->", section)}
@@ -345,7 +344,7 @@ function DesktopFilter({ filters, handleFilter, categories, fetchBrandsData }) {
               </h3>
               <Disclosure.Panel className="pt-6">
                 <div className="space-y-4">
-                  {section.options.map((option, optionIdx) => (
+                  {section?.options?.map((option, optionIdx) => (
                     <div key={option.value} className="flex items-center">
                       <input
                         id={`filter-${section.id}-${optionIdx}`}
@@ -368,11 +367,13 @@ function DesktopFilter({ filters, handleFilter, categories, fetchBrandsData }) {
               </Disclosure.Panel>
             </>
           )}
+          {console.log("This comes from section.options ---->", section.options)}
         </Disclosure>
       ))}
     </form>
   )
 }
+
 
 
 function Pagination({ page, totalItems, handlePage }) {

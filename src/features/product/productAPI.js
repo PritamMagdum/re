@@ -59,7 +59,7 @@ export function fetchBrands() {
     const response = await fetch('http://localhost:8080/brands');
     // console.log("This response is brands ----->", response)
     const data = await response.json();
-    // console.log("This data is comes from API -", data);
+    console.log("This data is comes from API -", data);
     resolve({ data });
   });
 }
