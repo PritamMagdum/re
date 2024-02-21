@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useForm } from "react-hook-form";
 
-import { selectLoggedInUser, createUserAsync } from '../authSlice';
+import { createUserAsync } from '../authSlice';
 import { Link } from 'react-router-dom';
-export default function Signup() {
+export default function Signup(user) {
     const dispatch = useDispatch();
 
     const {
@@ -14,9 +14,9 @@ export default function Signup() {
         formState: { errors },
     } = useForm()
 
-    const user = useSelector(selectLoggedInUser)
 
-    console.log(errors)
+
+    // console.log(errors)
     return (
         <>
             {user?.email}
