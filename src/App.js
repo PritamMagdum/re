@@ -20,6 +20,11 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
+
+          <Route element={<Protected />}>
+            <Route exact path='/' element={<Home />} />
+            <Route exact path='/cart' element={<CartPage />} />
+          </Route>
           <Route exact path='/' element={<Protected><Home /></Protected>} />
           <Route exact path='/signup' element={<SignupPage />} />
           <Route exact path='/login' element={<LoginPage />} />

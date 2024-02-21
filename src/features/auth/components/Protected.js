@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { Navigate } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 import { selectLoggedInUser } from "../authSlice";
 
 
@@ -8,10 +8,9 @@ function Protected(children) {
 
     const user = useSelector(selectLoggedInUser)
 
-    if (!user) {
-        return <Navigate to='/login'></Navigate>
-    }
-    return children;
+    return (
+        user ? <Outlet /> : <Navigate to="/login" />
+    )
 }
 
 export default Protected;

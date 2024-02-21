@@ -15,7 +15,6 @@ export default function Signup(user) {
     } = useForm()
 
 
-
     // console.log(errors)
     return (
         <>
@@ -33,7 +32,7 @@ export default function Signup(user) {
                 </div>
 
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-                    <form className="space-y-6"
+                    <form noValidate className="space-y-6"
                         onSubmit={handleSubmit((data) => {
                             dispatch(createUserAsync({
                                 email: data.email,
