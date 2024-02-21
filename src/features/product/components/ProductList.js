@@ -388,11 +388,13 @@ function Pagination({ page, totalItems, handlePage }) {
     <div className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
       <div className="flex flex-1 justify-between sm:hidden">
         <div
+          onClick={e => handlePage(page > 1 ? page - 1 : page)}
           className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
         >
           Previous
         </div>
         <div
+          onClick={e => handlePage(page < totalPages ? page + 1 : page)}
           className="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
         >
           Next
@@ -448,9 +450,9 @@ function ProductGrid({ products }) {
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
           {/* {console.log(products)} */}
           {products?.data?.map((product) => (
-            <Link to="product-detail">
+            <Link to={`/product-detail/${product.id}`} key={product.id}>
 
-              <div key={product.id} className="group relative border-solid border-2 p-2 rounded-md">
+              <div className="group relative border-solid border-2 p-2 rounded-md">
                 <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                   <img
                     src={product.thumbnail}
