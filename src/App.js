@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
@@ -13,9 +13,24 @@ import {
 } from 'react-router-dom'
 import ProductDetailPage from './pages/ProductDetailPage';
 import Protected from './features/auth/components/Protected';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchItemsByUserIdAsync } from './features/cart/cartSlice';
+import { selectLoggedInUser } from './features/auth/authSlice';
 
 
 function App() {
+  const dispatch = useDispatch();
+  const user = useSelector(selectLoggedInUser)
+  console.log("This is comes from app.js file ------>", user);
+  useEffect(() => {
+    if (user) {
+      console.log("This is comes from app.js file ------>", user);
+      dispatch(fetchItemsByUserIdAsync(user.id))
+    }
+  }, [dispatch, user])
+
+
+
   return (
     <div className="App">
       <Router>
