@@ -3,10 +3,12 @@ import { useSelector, useDispatch } from 'react-redux';
 import {
   fetchBrandsAsync,
   fetchCategoriesAsync,
+  fetchFiltersAsync,
   fetchProductsByFiltersAsync,
   selectAllProducts,
   selectBrands,
   selectCategories,
+  selectFilters,
   selectTotalItems,
 } from '../productSlice';
 
@@ -41,6 +43,7 @@ export default function ProductList() {
   const totalItems = useSelector(selectTotalItems);
   const brands = useSelector(selectBrands);
   const categories = useSelector(selectCategories);
+  // const filters = useSelector(selectFilters);
   const [filter, setFilter] = useState({})
   const [sort, setSort] = useState({})
   const [page, setPage] = useState(1)
@@ -79,7 +82,7 @@ export default function ProductList() {
 
   const handleSort = (e, option) => {
     // TODO : Find the solution of asc and desc sort
-    const sort = { ...filter, _sort: option.sort };
+    const sort = { _sort: option.sort };
     setSort(sort);
 
   }
@@ -102,6 +105,7 @@ export default function ProductList() {
   useEffect(() => {
     dispatch(fetchBrandsAsync());
     dispatch(fetchCategoriesAsync());
+    // dispatch(fetchFiltersAsync())
   }, []);
 
 
@@ -283,7 +287,7 @@ function MobileFilter({ mobileFiltersOpen, setMobileFiltersOpen, filters, handle
                         </h3>
                         <Disclosure.Panel className="pt-6">
                           <div className="space-y-6">
-                            {console.log(section)}
+                            {/* {console.log(section)} */}
                             {section.options.map((option, optionIdx) => (
                               <div key={option.value} className="flex items-center">
                                 <input
@@ -325,7 +329,7 @@ function DesktopFilter({ filters, handleFilter, categories, fetchBrandsData }) {
     <form className="hidden lg:block">
       {filters.map((section) => (
         <Disclosure as="div" key={section.id} className="border-b border-gray-200 py-6">
-          {console.log("This comes from section.id ---->", section)}
+          {/* {console.log("This comes from filters ---->", filters)} */}
           {/* {console.log("This comes from section.name ---->", section.name)} */}
           {({ open }) => (
             <>
@@ -344,7 +348,7 @@ function DesktopFilter({ filters, handleFilter, categories, fetchBrandsData }) {
               </h3>
               <Disclosure.Panel className="pt-6">
                 <div className="space-y-4">
-                  {section?.options?.map((option, optionIdx) => (
+                  {section.options.map((option, optionIdx) => (
                     <div key={option.value} className="flex items-center">
                       <input
                         id={`filter-${section.id}-${optionIdx}`}
@@ -367,7 +371,7 @@ function DesktopFilter({ filters, handleFilter, categories, fetchBrandsData }) {
               </Disclosure.Panel>
             </>
           )}
-          {console.log("This comes from section.options ---->", section.options)}
+          {/* {console.log("This comes from section.options ---->", section.options)} */}
         </Disclosure>
       ))}
     </form>
