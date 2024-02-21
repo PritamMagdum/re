@@ -24,13 +24,14 @@ function App() {
           <Route element={<Protected />}>
             <Route exact path='/' element={<Home />} />
             <Route exact path='/cart' element={<CartPage />} />
+            <Route exact path='/cart' element={<CartPage />} />
+            <Route exact path='/checkout' element={<Checkout />} />
+            <Route exact path='/product-detail/:id' element={<ProductDetailPage />} />
           </Route>
           <Route exact path='/' element={<Protected><Home /></Protected>} />
           <Route exact path='/signup' element={<SignupPage />} />
           <Route exact path='/login' element={<LoginPage />} />
-          <Route exact path='/cart' element={<Protected><CartPage /></Protected>} />
-          <Route exact path='/checkout' element={<Protected><Checkout /></Protected>} />
-          <Route exact path='/product-detail/:id' element={<Protected><ProductDetailPage /></Protected>} />
+
         </Routes>
       </Router>
     </div>
