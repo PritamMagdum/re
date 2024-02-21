@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import {
   increment,
   incrementAsync,
+  selectItems,
 } from './cartSlice';
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
@@ -33,10 +34,14 @@ const products = [
 ]
 
 
+
 export default function Cart() {
   // const count = useSelector(selectCount);
   const dispatch = useDispatch();
   const [open, setOpen] = useState(true)
+  const items = useSelector(selectItems)
+
+
 
   return (
     <div>
@@ -47,12 +52,13 @@ export default function Cart() {
           <hr className='my-5' />
           <div className="flow-root">
             <ul role="list" className="-my-6 divide-y divide-gray-200">
-              {products.map((product) => (
+              {items && items.map((product) => (
+
                 <li key={product.id} className="flex py-6">
                   <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                     <img
-                      src={product.imageSrc}
-                      alt={product.imageAlt}
+                      src={product[0].thumbnail}
+                      alt={product[0].title}
                       className="h-full w-full object-cover object-center"
                     />
                   </div>
@@ -61,9 +67,9 @@ export default function Cart() {
                     <div>
                       <div className="flex justify-between text-base font-medium text-gray-900">
                         <h3>
-                          <a href={product.href}>{product.name}</a>
+                          <a href={product.href}>{product[0].title}</a>
                         </h3>
-                        <p className="ml-4">{product.price}</p>
+                        <p className="ml-4">${product[0].price}</p>
                       </div>
                       <p className="mt-1 text-sm text-gray-500">{product.color}</p>
                     </div>
