@@ -1,18 +1,55 @@
 // A mock function to mimic making an async request for data
+// export function addToCart(item) {
+//   return new Promise(async (resolve) => {
+//     console.log("Before -->",item)
+
+//     const dataToSend = {
+//       ...item.product,
+//       quantity: item.quantity,
+//       user: item.user
+//     };
+    
+//     const responce = await fetch('http://localhost:8080/cart', {
+//       method: 'POST',
+//       body: JSON.stringify(dataToSend),
+//       headers: {
+//         "content-type": "application/json"
+//       }
+//     });
+//     const data = await responce.json();
+//     console.log("After ---> ",data)
+//     // TODO: On server it will only return some information of users (not password)
+//     resolve({ data });
+//   });
+// }
+
+
 export function addToCart(item) {
   return new Promise(async (resolve) => {
-    const responce = await fetch('http://localhost:8080/cart', {
+    console.log("Before Add --> ", item);
+    
+    const response = await fetch('http://localhost:8080/cart', {
       method: 'POST',
       body: JSON.stringify(item),
       headers: {
         "content-type": "application/json"
       }
     });
-    const data = await responce.json();
-    // TODO: On server it will only return some information of users (not password)
-    resolve({ data });
+    
+    const responseData = await response.json();
+
+    const data = {
+      ...item.product,
+      id: responseData.id,
+      quantity: item.quantity,
+      user: item.user
+    };
+    console.log("Affter Add --> ", data);
+    // Resolve with the merged data
+    resolve(data);
   });
 }
+
 
 export function fetchItemsByUserId(userId) {
   return new Promise(async (resolve) => {
