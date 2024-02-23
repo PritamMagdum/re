@@ -2,8 +2,9 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, ShoppingCartIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
-import { useSelector } from 'react-redux'
-import { selectItems } from '../cart/cartSlice'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchItemsByUserIdAsync, selectItems } from '../cart/cartSlice'
+import { selectLoggedInUser } from '../auth/authSlice'
 
 const user = {
     name: 'Tom Cook',
@@ -30,6 +31,12 @@ function classNames(...classes) {
 
 
 function Navbar({ children }) {
+const dispatch = useDispatch();
+const user = useSelector(selectLoggedInUser);
+
+    const handleClick = ()=>{
+       dispatch(fetchItemsByUserIdAsync(user.id));
+    }
 
     const items = useSelector(selectItems);
     return (
@@ -74,6 +81,7 @@ function Navbar({ children }) {
                                         <div className="ml-4 flex items-center md:ml-6">
                                             <Link to="/cart">
                                                 <button
+                                                onClick={handleClick}
                                                     type="button"
                                                     className="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                                                 // className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"

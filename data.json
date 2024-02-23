@@ -2951,71 +2951,49 @@
   "cart": [
     {
       "0": {
-        "id": "5",
-        "title": "Huawei P30",
-        "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
-        "price": 499,
-        "discountPercentage": 10.58,
-        "rating": 4.09,
-        "stock": 32,
-        "brand": "Huawei",
-        "category": "smartphones",
-        "thumbnail": "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg",
+        "id": "94",
+        "title": "new arrivals Fashion motocross goggles",
+        "description": "new arrivals Fashion motocross goggles motorcycle motocross racing motorcycle",
+        "price": 900,
+        "discountPercentage": 3.85,
+        "rating": 4.06,
+        "stock": 109,
+        "brand": "JIEPOLLY",
+        "category": "motorcycle",
+        "thumbnail": "https://cdn.dummyjson.com/product-images/94/thumbnail.webp",
         "images": [
-          "https://cdn.dummyjson.com/product-images/5/1.jpg",
-          "https://cdn.dummyjson.com/product-images/5/2.jpg",
-          "https://cdn.dummyjson.com/product-images/5/3.jpg"
+          "https://cdn.dummyjson.com/product-images/94/1.webp",
+          "https://cdn.dummyjson.com/product-images/94/2.jpg",
+          "https://cdn.dummyjson.com/product-images/94/3.jpg",
+          "https://cdn.dummyjson.com/product-images/94/thumbnail.webp"
         ]
       },
-      "id": "ab3a",
-      "quantity": 1,
+      "id": "951a",
+      "quantity": 2,
       "user": "aa51"
     },
     {
       "0": {
-        "id": "10",
-        "title": "HP Pavilion 15-DK1056WM",
-        "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
-        "price": 1099,
-        "discountPercentage": 6.18,
-        "rating": 4.43,
-        "stock": 89,
-        "brand": "HP Pavilion",
-        "category": "laptops",
-        "thumbnail": "https://cdn.dummyjson.com/product-images/10/thumbnail.jpeg",
+        "id": "35",
+        "title": "3 DOOR PORTABLE",
+        "description": "Material: Stainless Steel and Fabric  Item Size: 110 cm x 45 cm x 175 cm Package Contents: 1 Storage Wardrobe",
+        "price": 41,
+        "discountPercentage": 7.98,
+        "rating": 4.06,
+        "stock": 68,
+        "brand": "AmnaMart",
+        "category": "furniture",
+        "thumbnail": "https://cdn.dummyjson.com/product-images/35/thumbnail.jpg",
         "images": [
-          "https://cdn.dummyjson.com/product-images/10/1.jpg",
-          "https://cdn.dummyjson.com/product-images/10/2.jpg",
-          "https://cdn.dummyjson.com/product-images/10/3.jpg",
-          "https://cdn.dummyjson.com/product-images/10/thumbnail.jpeg"
+          "https://cdn.dummyjson.com/product-images/35/1.jpg",
+          "https://cdn.dummyjson.com/product-images/35/2.jpg",
+          "https://cdn.dummyjson.com/product-images/35/3.jpg",
+          "https://cdn.dummyjson.com/product-images/35/4.jpg",
+          "https://cdn.dummyjson.com/product-images/35/thumbnail.jpg"
         ]
       },
-      "id": "b988",
-      "quantity": 1,
-      "user": "aa51"
-    },
-    {
-      "0": {
-        "id": "16",
-        "title": "Hyaluronic Acid Serum",
-        "description": "L'OrÃ©al Paris introduces Hyaluron Expert Replumping Serum formulated with 1.5% Hyaluronic Acid",
-        "price": 19,
-        "discountPercentage": 13.31,
-        "rating": 4.83,
-        "stock": 110,
-        "brand": "L'Oreal Paris",
-        "category": "skincare",
-        "thumbnail": "https://cdn.dummyjson.com/product-images/16/thumbnail.jpg",
-        "images": [
-          "https://cdn.dummyjson.com/product-images/16/1.png",
-          "https://cdn.dummyjson.com/product-images/16/2.webp",
-          "https://cdn.dummyjson.com/product-images/16/3.jpg",
-          "https://cdn.dummyjson.com/product-images/16/4.jpg",
-          "https://cdn.dummyjson.com/product-images/16/thumbnail.jpg"
-        ]
-      },
-      "id": "e50b",
-      "quantity": 1,
+      "id": "19bb",
+      "quantity": 2,
       "user": "aa51"
     },
     {
@@ -3038,31 +3016,31 @@
           "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
         ]
       },
-      "id": "77a3",
-      "quantity": 1,
+      "id": "6a6c",
+      "quantity": 2,
       "user": "aa51"
     },
     {
       "0": {
-        "id": "11",
-        "title": "perfume Oil",
-        "description": "Mega Discount, Impression of Acqua Di Gio by GiorgioArmani concentrated attar perfume Oil",
-        "price": 13,
-        "discountPercentage": 8.4,
-        "rating": 4.26,
-        "stock": 65,
-        "brand": "Impression of Acqua Di Gio",
-        "category": "fragrances",
-        "thumbnail": "https://cdn.dummyjson.com/product-images/11/thumbnail.jpg",
+        "id": "6",
+        "title": "MacBook Pro",
+        "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+        "price": 1749,
+        "discountPercentage": 11.02,
+        "rating": 4.57,
+        "stock": 83,
+        "brand": "Apple",
+        "category": "laptops",
+        "thumbnail": "https://cdn.dummyjson.com/product-images/6/thumbnail.png",
         "images": [
-          "https://cdn.dummyjson.com/product-images/11/1.jpg",
-          "https://cdn.dummyjson.com/product-images/11/2.jpg",
-          "https://cdn.dummyjson.com/product-images/11/3.jpg",
-          "https://cdn.dummyjson.com/product-images/11/thumbnail.jpg"
+          "https://cdn.dummyjson.com/product-images/6/1.png",
+          "https://cdn.dummyjson.com/product-images/6/2.jpg",
+          "https://cdn.dummyjson.com/product-images/6/3.png",
+          "https://cdn.dummyjson.com/product-images/6/4.jpg"
         ]
       },
-      "id": "2bb4",
-      "quantity": 1,
+      "id": "87fa",
+      "quantity": 3,
       "user": "aa51"
     }
   ]

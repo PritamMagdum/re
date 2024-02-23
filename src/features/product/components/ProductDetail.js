@@ -4,7 +4,7 @@ import { RadioGroup } from "@headlessui/react";
 import { fetchProductByIdAsync, selectProductById } from "../productSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { addToCartAsync } from "../../cart/cartSlice";
+import { addToCartAsync, fetchItemsByUserIdAsync } from "../../cart/cartSlice";
 import { selectLoggedInUser } from "../../auth/authSlice";
 
 // const product = {
@@ -98,9 +98,17 @@ export default function ProductDetail() {
   const user = useSelector(selectLoggedInUser);
 
   const handleCart = (e) => {
+    const newObj = {...product}
+    newObj.quantity = 2;
+    newObj.user = user.id
+
+    console.log("New Object -> ",newObj);
     e.preventDefault();
     dispatch(addToCartAsync({product:product, quantity: 1, user: user.id }));
     // dispatch(addToCartAsync({...product, quantity : 1, user:user.id}));
+    setTimeout(() => {
+      dispatch(fetchItemsByUserIdAsync(user.id));
+    }, 500);
     
   };
 
