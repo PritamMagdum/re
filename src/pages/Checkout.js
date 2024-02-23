@@ -18,6 +18,8 @@ function Checkout() {
   const [open, setOpen] = useState(true);
   const items = useSelector(selectItems);
   const user = useSelector(selectLoggedInUser);
+  const [selectedAddress, setSelectedAddress] = useState(null);
+  const [paymentMethod, setPaymentMethod] = useState(null);
 
   const {
     register,
@@ -45,6 +47,12 @@ function Checkout() {
       dispatch(fetchItemsByUserIdAsync(user.id));
     }, 50);
   };
+
+  const handleAddress = (e)=>{
+    // console.log(e.target.value);
+    setSelectedAddress(user.addresses[e.target.value])
+  }
+
   return (
     <>
       {!items.length && <Navigate to="/" replace={true}></Navigate>}
@@ -239,13 +247,15 @@ function Checkout() {
                     Choose From Existing Address
                   </p>
                   <ul role="list" className="divide-y divide-gray-100">
-                    {user.addresses.map((address) => (
+                    {user.addresses.map((address, index) => (
                       <li
-                        key={address.email}
+                        key={index}
                         className="flex justify-between gap-x-6 py-5 border-2 px-2 border-gray-200 rounded-md my-1"
                       >
                         <div className="flex min-w-0 gap-x-4">
                           <input
+                            onChange={handleAddress}
+                            value={index}
                             name="email"
                             type="radio"
                             className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
