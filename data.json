@@ -2951,96 +2951,25 @@
   "cart": [
     {
       "0": {
-        "id": "94",
-        "title": "new arrivals Fashion motocross goggles",
-        "description": "new arrivals Fashion motocross goggles motorcycle motocross racing motorcycle",
-        "price": 900,
-        "discountPercentage": 3.85,
-        "rating": 4.06,
-        "stock": 109,
-        "brand": "JIEPOLLY",
-        "category": "motorcycle",
-        "thumbnail": "https://cdn.dummyjson.com/product-images/94/thumbnail.webp",
-        "images": [
-          "https://cdn.dummyjson.com/product-images/94/1.webp",
-          "https://cdn.dummyjson.com/product-images/94/2.jpg",
-          "https://cdn.dummyjson.com/product-images/94/3.jpg",
-          "https://cdn.dummyjson.com/product-images/94/thumbnail.webp"
-        ]
-      },
-      "id": "951a",
-      "quantity": 2,
-      "user": "aa51"
-    },
-    {
-      "0": {
-        "id": "35",
-        "title": "3 DOOR PORTABLE",
-        "description": "Material: Stainless Steel and Fabric  Item Size: 110 cm x 45 cm x 175 cm Package Contents: 1 Storage Wardrobe",
-        "price": 41,
-        "discountPercentage": 7.98,
-        "rating": 4.06,
-        "stock": 68,
-        "brand": "AmnaMart",
-        "category": "furniture",
-        "thumbnail": "https://cdn.dummyjson.com/product-images/35/thumbnail.jpg",
-        "images": [
-          "https://cdn.dummyjson.com/product-images/35/1.jpg",
-          "https://cdn.dummyjson.com/product-images/35/2.jpg",
-          "https://cdn.dummyjson.com/product-images/35/3.jpg",
-          "https://cdn.dummyjson.com/product-images/35/4.jpg",
-          "https://cdn.dummyjson.com/product-images/35/thumbnail.jpg"
-        ]
-      },
-      "id": "19bb",
-      "quantity": 2,
-      "user": "aa51"
-    },
-    {
-      "0": {
-        "id": "12",
-        "title": "Brown Perfume",
-        "description": "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
-        "price": 40,
-        "discountPercentage": 15.66,
-        "rating": 4,
-        "stock": 52,
-        "brand": "Royal_Mirage",
-        "category": "fragrances",
-        "thumbnail": "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg",
-        "images": [
-          "https://cdn.dummyjson.com/product-images/12/1.jpg",
-          "https://cdn.dummyjson.com/product-images/12/2.jpg",
-          "https://cdn.dummyjson.com/product-images/12/3.png",
-          "https://cdn.dummyjson.com/product-images/12/4.jpg",
-          "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
-        ]
-      },
-      "id": "6a6c",
-      "quantity": 2,
-      "user": "aa51"
-    },
-    {
-      "0": {
-        "id": "6",
-        "title": "MacBook Pro",
-        "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
-        "price": 1749,
-        "discountPercentage": 11.02,
-        "rating": 4.57,
-        "stock": 83,
+        "id": "2",
+        "title": "iPhone X",
+        "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+        "price": 899,
+        "discountPercentage": 17.94,
+        "rating": 4.44,
+        "stock": 34,
         "brand": "Apple",
-        "category": "laptops",
-        "thumbnail": "https://cdn.dummyjson.com/product-images/6/thumbnail.png",
+        "category": "smartphones",
+        "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
         "images": [
-          "https://cdn.dummyjson.com/product-images/6/1.png",
-          "https://cdn.dummyjson.com/product-images/6/2.jpg",
-          "https://cdn.dummyjson.com/product-images/6/3.png",
-          "https://cdn.dummyjson.com/product-images/6/4.jpg"
+          "https://cdn.dummyjson.com/product-images/2/1.jpg",
+          "https://cdn.dummyjson.com/product-images/2/2.jpg",
+          "https://cdn.dummyjson.com/product-images/2/3.jpg",
+          "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
         ]
       },
-      "id": "87fa",
-      "quantity": 3,
+      "id": "6c16",
+      "quantity": 1,
       "user": "aa51"
     }
   ]

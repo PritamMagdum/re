@@ -70,10 +70,8 @@ export function fetchItemsByUserId(userId) {
   });
 }
 
-
 export function updateCart(update) {
   return new Promise(async (resolve) => {
-
     // console.log("Before send --> ", sendData);
     const response = await fetch(`http://localhost:8080/cart/${update.id}`, {
       method: "PATCH",
@@ -87,5 +85,21 @@ export function updateCart(update) {
 
     // Resolve with the merged data
     resolve(newData);
+  });
+}
+
+export function deleteItemFromCart(itemId) {
+  return new Promise(async (resolve) => {
+    // console.log("Before send --> ", sendData);
+    console.log("Deleted Item ID: -->", itemId)
+    const response = await fetch(`http://localhost:8080/cart/${itemId}`, {
+      method: "DELETE",
+      headers: {
+        "content-type": "application/json",
+      },
+    });
+    const data = await response.json();
+    // Resolve with the merged data
+    resolve({data:{id:itemId}});
   });
 }

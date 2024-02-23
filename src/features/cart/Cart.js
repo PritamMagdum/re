@@ -1,6 +1,7 @@
 import React, { useState, Fragment, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
+  deleteItemFromCartAsync,
   fetchItemsByUserIdAsync,
   selectItems,
   updateCartAsync,
@@ -36,6 +37,10 @@ export default function Cart() {
       dispatch(fetchItemsByUserIdAsync(user.id))
     };
 
+    const handleRemove = (e, id)=>{
+      dispatch(deleteItemFromCartAsync(id));
+      dispatch(fetchItemsByUserIdAsync(user.id));
+    }
   return (
     <div>
       <div className="mx-auto max-w-7xl px-4 bg-white sm:px-6 lg:px-8">
@@ -91,6 +96,7 @@ export default function Cart() {
 
                         <div className="flex">
                           <button
+                          onClick={e=>handleRemove(e, item.id)}
                             type="button"
                             className="font-medium text-indigo-600 hover:text-indigo-500"
                           >
