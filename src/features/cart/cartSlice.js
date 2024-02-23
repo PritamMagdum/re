@@ -11,11 +11,10 @@ export const addToCartAsync = createAsyncThunk(
   async (item) => {
     const response = await addToCart(item);
     // The value we return becomes the `fulfilled` action payload
-    console.log("This is comes from addToCart ()--->",response.data)
+    console.log("This is comes from addToCart ()--->",response)
     return response.data;
   }
 );
-
 
 export const fetchItemsByUserIdAsync = createAsyncThunk(
   'cart/fetchItemsByUserId',

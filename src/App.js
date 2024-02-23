@@ -21,10 +21,10 @@ import { selectLoggedInUser } from './features/auth/authSlice';
 function App() {
   const dispatch = useDispatch();
   const user = useSelector(selectLoggedInUser)
-  console.log("This is comes from app.js file ------>", user);
+  // console.log("This is comes from app.js file ------>", user);
   useEffect(() => {
     if (user) {
-      console.log("This is comes from app.js file ------>", user);
+      // console.log("This is comes from app.js file ------>", user);
       dispatch(fetchItemsByUserIdAsync(user.id))
     }
   }, [dispatch, user])

@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, Fragment, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   increment,
@@ -8,6 +8,7 @@ import {
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom';
+import { fetchItemsByUserId } from './cartAPI';
 
 // const products = [
 //   {
@@ -34,88 +35,108 @@ import { Link } from 'react-router-dom';
 // ]
 
 
-
 export default function Cart() {
   // const count = useSelector(selectCount);
   const dispatch = useDispatch();
   const [open, setOpen] = useState(true)
   const items = useSelector(selectItems)
-  const totalAmount = items.reduce((amount, item)=>item.product.price * item.quantity + amount, 0)
+  console.log("Items are -> ",items);
+
+  
+  // const totalAmount = items.reduce(async(total, item) => {
+  //   const itemTotal = await item.product.reduce((acc, product) => acc + (product.price * item.quantity), 0);
+  //   return total + itemTotal;
+  // }, 0);
+
+  const totalAmount = items.reduce((amount, item)=> item[0].price * item.quantity + amount, 0)
   const totalItems = items.reduce((total, item)=> item.quantity + total, 0)
+
+  useEffect(() => {
+   
+  },[dispatch, items])
   
   return (
     <div>
-
       <div className="mx-auto max-w-7xl px-4 bg-white sm:px-6 lg:px-8">
         <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
-          <h1 className="text-4xl font-bold tracking-tight my-5 text-gray-900">Cart</h1>
-          <hr className='my-5' />
+          <h1 className="text-4xl font-bold tracking-tight my-5 text-gray-900">
+            Cart
+          </h1>
+          <hr className="my-5" />
           <div className="flow-root">
             <ul role="list" className="-my-6 divide-y divide-gray-200">
-              {items && items.map((product) => (
-
-                <li key={product.id} className="flex py-6">
-                  <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                    <img
-                      src={product.thumbnail}
-                      alt={product.title}
-                      className="h-full w-full object-cover object-center"
-                    />
-                  </div>
-
-                  <div className="ml-4 flex flex-1 flex-col">
-                    <div>
-                      <div className="flex justify-between text-base font-medium text-gray-900">
-                        <h3>
-                          <a href={product.href}>{product.title}</a>
-                        </h3>
-                        <p className="ml-4">${product.price}</p>
-                      </div>
-                      <p className="mt-1 text-sm text-gray-500">{product.brand}</p>
+              {items &&
+                items.map((item) => (
+                  <li key={item.id} className="flex py-6">
+                    <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                      <img
+                        src={item[0].thumbnail}
+                        alt={item[0].title}
+                        className="h-full w-full object-cover object-center"
+                      />
                     </div>
-                    <div className="flex flex-1 items-end justify-between text-sm">
-                      <div className="text-gray-500">
-                        <label htmlFor="quantity" className="inline text-sm font-medium leading-6 text-gray-900">
-                          Qty
-                          
-                        </label>
-                        <select className='py-1 border-inherit mx-2 rounded-md '>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                        </select>
-                      </div>
 
-                      <div className="flex">
-                        <button
-                          type="button"
-                          className="font-medium text-indigo-600 hover:text-indigo-500"
-                        >
-                          Remove
-                        </button>
+                    <div className="ml-4 flex flex-1 flex-col">
+                      <div>
+                        <div className="flex justify-between text-base font-medium text-gray-900">
+                          <h3>
+                            <a href={item.href}>{item.title}</a>
+                          </h3>
+                          <p className="ml-4">${item[0].price}</p>
+                        </div>
+                        <p className="mt-1 text-sm text-gray-500">
+                          {item.brand}
+                        </p>
+                      </div>
+                      <div className="flex flex-1 items-end justify-between text-sm">
+                        <div className="text-gray-500">
+                          <label
+                            htmlFor="quantity"
+                            className="inline text-sm font-medium leading-6 text-gray-900"
+                          >
+                            Qty
+                            {/* {console.log(items)} */}
+                          </label>
+                          <select className="py-1 border-inherit mx-2 rounded-md ">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                        </div>
+
+                        <div className="flex">
+                          <button
+                            type="button"
+                            className="font-medium text-indigo-600 hover:text-indigo-500"
+                          >
+                            Remove
+                          </button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </li>
-              ))}
+                  </li>
+                ))}
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
+        <div className="border-t border-gray-200 px-4 py-6 sm:px-6 my-3">
           <div className="flex justify-between text-base font-medium text-gray-900">
             <p>Subtotal</p>
-            <p>{totalAmount}{console.log(totalAmount)}</p>
+            <p>{totalAmount}</p>
           </div>
-          <div className="flex justify-between text-base font-medium text-gray-900">
+          <div className="flex justify-between text-base font-medium text-gray-900 my-3">
             <p>Total Items in Cart</p>
             <p>{totalItems}</p>
           </div>
-          <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
+          <p className="mt-0.5 text-sm text-gray-500">
+            Shipping and taxes calculated at checkout.
+          </p>
           <div className="mt-6">
-            <Link to="/checkout"
+            <Link
+              to="/checkout"
               className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
             >
               Checkout
@@ -123,7 +144,7 @@ export default function Cart() {
           </div>
           <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
             <p>
-              or{' '}
+              or{" "}
               <Link to="/">
                 <button
                   type="button"
@@ -138,7 +159,6 @@ export default function Cart() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }
