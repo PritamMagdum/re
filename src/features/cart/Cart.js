@@ -8,7 +8,7 @@ import {
 } from './cartSlice';
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { fetchItemsByUserId } from './cartAPI';
 import { selectLoggedInUser } from '../auth/authSlice';
 
@@ -39,10 +39,14 @@ export default function Cart() {
 
     const handleRemove = (e, id)=>{
       dispatch(deleteItemFromCartAsync(id));
-      dispatch(fetchItemsByUserIdAsync(user.id));
+      setTimeout(() => {
+        dispatch(fetchItemsByUserIdAsync(user.id));
+      }, 50);
     }
+
   return (
     <div>
+      {!items.length && <Navigate to="/" replace={true}></Navigate>}
       <div className="mx-auto max-w-7xl px-4 bg-white sm:px-6 lg:px-8">
         <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
           <h1 className="text-4xl font-bold tracking-tight my-5 text-gray-900">
@@ -83,9 +87,11 @@ export default function Cart() {
                             Qty
                             {/* {console.log(items)} */}
                           </label>
-                          <select 
-                          onChange={(e)=>handleQuantity(e,item)} value={item.quantity}
-                          className="py-1 border-inherit mx-2 rounded-md ">
+                          <select
+                            onChange={(e) => handleQuantity(e, item)}
+                            value={item.quantity}
+                            className="py-1 border-inherit mx-2 rounded-md "
+                          >
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -96,7 +102,7 @@ export default function Cart() {
 
                         <div className="flex">
                           <button
-                          onClick={e=>handleRemove(e, item.id)}
+                            onClick={(e) => handleRemove(e, item.id)}
                             type="button"
                             className="font-medium text-indigo-600 hover:text-indigo-500"
                           >
