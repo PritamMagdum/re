@@ -1,5 +1,8 @@
 import { Link, Navigate } from "react-router-dom";
-import { selectLoggedInUser } from "../features/auth/authSlice";
+import {
+  selectLoggedInUser,
+  updateUserAsync,
+} from "../features/auth/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import {
   deleteItemFromCartAsync,
@@ -10,7 +13,6 @@ import {
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
-
 function Checkout() {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(true);
@@ -20,6 +22,7 @@ function Checkout() {
   const {
     register,
     handleSubmit,
+    reset,
     watch,
     formState: { errors },
   } = useForm();
@@ -51,8 +54,14 @@ function Checkout() {
             <form
               noValidate
               onSubmit={handleSubmit((data) => {
-                console.log(data);
-                // dispatch(checkUserAsync({ email: data.email, password: data.password }));
+                // console.log(data);
+                dispatch(
+                  updateUserAsync({
+                    ...user,
+                    addresses: [...user.addresses, data],
+                  })
+                );
+                reset();
               })}
               className="bg-white px-10 py-10"
             >

@@ -2940,7 +2940,35 @@
     {
       "id": "aa51",
       "email": "pritammagdum24@gmail.com",
-      "addresses": [],
+      "addresses": [
+        {
+          "name": "Pritam Sanjay Magdum",
+          "email": "pritammagdum24@gmail.com",
+          "phone": "8698694008",
+          "street": "Magdum Road",
+          "city": "Bastwad",
+          "state": "Maharashtra",
+          "pinCode": "416106"
+        },
+        {
+          "name": "Pritam Sanjay Magdum",
+          "email": "pritammagdum24@gmail.com",
+          "phone": "8698694008",
+          "street": "Magdum Road",
+          "city": "Bastwad",
+          "state": "Maharashtra",
+          "pinCode": "416106"
+        },
+        {
+          "name": "Pritam Sanjay Magdum",
+          "email": "pritammagdum24@gmail.com",
+          "phone": "8698694008",
+          "street": "Pune",
+          "city": "Bastwad",
+          "state": "Maharashtra",
+          "pinCode": "411011"
+        }
+      ],
       "password": "Pritam@123"
     },
     {
