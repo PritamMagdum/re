@@ -10,24 +10,6 @@ import {
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
-const addresses = [
-  {
-    name: "Pritam Magdum",
-    email: "pritam@gmail.com",
-    street: "FC Road",
-    city: "Pune",
-    pincode: 411444,
-    phone: 8455644778,
-  },
-  {
-    name: "Snehal Magdum",
-    email: "snehal@gmail.com",
-    street: "FC Road",
-    city: "Jaysingpur",
-    pincode: 411444,
-    phone: 9544772266,
-  },
-];
 
 function Checkout() {
   const dispatch = useDispatch();
@@ -248,7 +230,7 @@ function Checkout() {
                     Choose From Existing Address
                   </p>
                   <ul role="list" className="divide-y divide-gray-100">
-                    {addresses.map((address) => (
+                    {user.addresses.map((address) => (
                       <li
                         key={address.email}
                         className="flex justify-between gap-x-6 py-5 border-2 px-2 border-gray-200 rounded-md my-1"
