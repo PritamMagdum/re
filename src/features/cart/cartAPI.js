@@ -69,3 +69,23 @@ export function fetchItemsByUserId(userId) {
     resolve({ data });
   });
 }
+
+
+export function updateCart(update) {
+  return new Promise(async (resolve) => {
+
+    // console.log("Before send --> ", sendData);
+    const response = await fetch(`http://localhost:8080/cart/${update.id}`, {
+      method: "PATCH",
+      body: JSON.stringify(update),
+      headers: {
+        "content-type": "application/json",
+      },
+    });
+
+    const newData = await response.json();
+
+    // Resolve with the merged data
+    resolve(newData);
+  });
+}

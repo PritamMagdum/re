@@ -1,38 +1,13 @@
 import React, { useState, Fragment, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
-  increment,
-  incrementAsync,
   selectItems,
+  updateCartAsync,
 } from './cartSlice';
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom';
 import { fetchItemsByUserId } from './cartAPI';
-
-// const products = [
-//   {
-//     id: 1,
-//     name: 'Throwback Hip Bag',
-//     href: '#',
-//     color: 'Salmon',
-//     price: '$90.00',
-//     quantity: 1,
-//     imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
-//     imageAlt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
-//   },
-//   {
-//     id: 2,
-//     name: 'Medium Stuff Satchel',
-//     href: '#',
-//     color: 'Blue',
-//     price: '$32.00',
-//     quantity: 1,
-//     imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
-//     imageAlt:
-//       'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
-//   },
-// ]
 
 
 export default function Cart() {
@@ -40,9 +15,8 @@ export default function Cart() {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(true)
   const items = useSelector(selectItems)
-  console.log("Items are -> ",items);
+  // console.log("Items are -> ",items);
 
-  
   // const totalAmount = items.reduce(async(total, item) => {
   //   const itemTotal = await item.product.reduce((acc, product) => acc + (product.price * item.quantity), 0);
   //   return total + itemTotal;
@@ -50,11 +24,11 @@ export default function Cart() {
 
   const totalAmount = items.reduce((amount, item)=> item[0].price * item.quantity + amount, 0)
   const totalItems = items.reduce((total, item)=> item.quantity + total, 0)
-
-  useEffect(() => {
-   
-  },[dispatch, items])
   
+    const handleQuantity = (e, item) => {
+      dispatch(updateCartAsync({ ...item, quantity: +e.target.value }));
+    };
+
   return (
     <div>
       <div className="mx-auto max-w-7xl px-4 bg-white sm:px-6 lg:px-8">
@@ -97,7 +71,9 @@ export default function Cart() {
                             Qty
                             {/* {console.log(items)} */}
                           </label>
-                          <select className="py-1 border-inherit mx-2 rounded-md ">
+                          <select 
+                          onChange={(e)=>handleQuantity(e,item)}
+                          className="py-1 border-inherit mx-2 rounded-md ">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
