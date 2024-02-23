@@ -1,6 +1,7 @@
 import React, { useState, Fragment, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
+  fetchItemsByUserIdAsync,
   selectItems,
   updateCartAsync,
 } from './cartSlice';
@@ -8,6 +9,8 @@ import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom';
 import { fetchItemsByUserId } from './cartAPI';
+import { selectLoggedInUser } from '../auth/authSlice';
+
 
 
 export default function Cart() {
@@ -15,6 +18,7 @@ export default function Cart() {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(true)
   const items = useSelector(selectItems)
+  const user = useSelector(selectLoggedInUser);
   // console.log("Items are -> ",items);
 
   // const totalAmount = items.reduce(async(total, item) => {
@@ -26,7 +30,10 @@ export default function Cart() {
   const totalItems = items.reduce((total, item)=> item.quantity + total, 0)
   
     const handleQuantity = (e, item) => {
+      console.log("e is ->",e.target.value)
+      console.log("item is -> ",item)
       dispatch(updateCartAsync({ ...item, quantity: +e.target.value }));
+      dispatch(fetchItemsByUserIdAsync(user.id))
     };
 
   return (
@@ -72,7 +79,7 @@ export default function Cart() {
                             {/* {console.log(items)} */}
                           </label>
                           <select 
-                          onChange={(e)=>handleQuantity(e,item)}
+                          onChange={(e)=>handleQuantity(e,item)} value={item.quantity}
                           className="py-1 border-inherit mx-2 rounded-md ">
                             <option value="1">1</option>
                             <option value="2">2</option>
