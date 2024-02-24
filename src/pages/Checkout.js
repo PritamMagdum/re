@@ -12,6 +12,7 @@ import {
 } from "../features/cart/cartSlice";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { createOrderAsync } from "../features/order/orderSlice";
 
 function Checkout() {
   const dispatch = useDispatch();
@@ -56,6 +57,15 @@ function Checkout() {
   const handlePayment = (e) => {
     setPaymentMethod(e.target.value);
   };
+
+  const handleOrder = (e)=>{
+    const order = { items, totalAmount, totalItems, user, paymentMethod, selectedAddress};
+    dispatch(createOrderAsync(order));
+    // TODO : Redirect to order-success page
+    // TODO : Clear cart after oder
+    // TODO : on Server change the stock number of items
+  }
+
   return (
     <>
       {!items.length && <Navigate to="/" replace={true}></Navigate>}
@@ -428,12 +438,12 @@ function Checkout() {
                   Shipping and taxes calculated at checkout.
                 </p>
                 <div className="mt-6">
-                  <Link
-                    to="/checkout"
-                    className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                  <div
+                  onClick={handleOrder}
+                    className="flex items-center cursor-pointer justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
                   >
                     Pay or Order
-                  </Link>
+                  </div>
                 </div>
                 <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                   <p>
