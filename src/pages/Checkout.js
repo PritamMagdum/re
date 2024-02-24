@@ -1,4 +1,4 @@
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import {
   selectLoggedInUser,
   updateUserAsync,
@@ -21,6 +21,7 @@ function Checkout() {
   const user = useSelector(selectLoggedInUser);
   const [selectedAddress, setSelectedAddress] = useState(null);
   const [paymentMethod, setPaymentMethod] = useState("cash");
+  const navigate = useNavigate();
 
   const {
     register,
@@ -64,6 +65,9 @@ function Checkout() {
     // TODO : Redirect to order-success page
     // TODO : Clear cart after oder
     // TODO : on Server change the stock number of items
+    navigate("/order");
+    
+    
   }
 
   return (

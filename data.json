@@ -2976,6 +2976,15 @@
           "city": "Bastwad",
           "state": "Maharashtra",
           "pinCode": "416106"
+        },
+        {
+          "name": "omkar jagtap",
+          "email": "omkar@gmail.com",
+          "phone": "123456789",
+          "street": "Pune",
+          "city": "Pune",
+          "state": "Maharashtra",
+          "pinCode": "411011"
         }
       ],
       "password": "Pritam@123"
@@ -3142,6 +3151,342 @@
         "state": "Maharashtra",
         "pinCode": "416106"
       }
+    },
+    {
+      "id": "6c3e",
+      "items": [
+        {
+          "0": {
+            "id": "2",
+            "title": "iPhone X",
+            "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+            "price": 899,
+            "discountPercentage": 17.94,
+            "rating": 4.44,
+            "stock": 34,
+            "brand": "Apple",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/2/1.jpg",
+              "https://cdn.dummyjson.com/product-images/2/2.jpg",
+              "https://cdn.dummyjson.com/product-images/2/3.jpg",
+              "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+            ]
+          },
+          "id": "5cdf",
+          "quantity": 2,
+          "user": "aa51"
+        }
+      ],
+      "totalAmount": 1798,
+      "totalItems": 2,
+      "user": {
+        "id": "aa51",
+        "email": "pritammagdum24@gmail.com",
+        "addresses": [
+          {
+            "name": "Pritam Sanjay Magdum",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "8698694008",
+            "street": "Magdum Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "416106"
+          },
+          {
+            "name": "Pritam Sanjay Magdum",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "8698694008",
+            "street": "Magdum Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "416106"
+          },
+          {
+            "name": "Pritam Sanjay Magdum",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "8698694008",
+            "street": "Pune",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Sanjay",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "9158344349",
+            "street": "Pune",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "416106"
+          },
+          {
+            "name": "omkar jagtap",
+            "email": "omkar@gmail.com",
+            "phone": "123456789",
+            "street": "Pune",
+            "city": "Pune",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "password": "Pritam@123"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": null
+    },
+    {
+      "id": "7817",
+      "items": [
+        {
+          "0": {
+            "id": "2",
+            "title": "iPhone X",
+            "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+            "price": 899,
+            "discountPercentage": 17.94,
+            "rating": 4.44,
+            "stock": 34,
+            "brand": "Apple",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/2/1.jpg",
+              "https://cdn.dummyjson.com/product-images/2/2.jpg",
+              "https://cdn.dummyjson.com/product-images/2/3.jpg",
+              "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+            ]
+          },
+          "id": "5cdf",
+          "quantity": 2,
+          "user": "aa51"
+        }
+      ],
+      "totalAmount": 1798,
+      "totalItems": 2,
+      "user": {
+        "id": "aa51",
+        "email": "pritammagdum24@gmail.com",
+        "addresses": [
+          {
+            "name": "Pritam Sanjay Magdum",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "8698694008",
+            "street": "Magdum Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "416106"
+          },
+          {
+            "name": "Pritam Sanjay Magdum",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "8698694008",
+            "street": "Magdum Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "416106"
+          },
+          {
+            "name": "Pritam Sanjay Magdum",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "8698694008",
+            "street": "Pune",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Sanjay",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "9158344349",
+            "street": "Pune",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "416106"
+          },
+          {
+            "name": "omkar jagtap",
+            "email": "omkar@gmail.com",
+            "phone": "123456789",
+            "street": "Pune",
+            "city": "Pune",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "password": "Pritam@123"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": null
+    },
+    {
+      "id": "2e17",
+      "items": [
+        {
+          "0": {
+            "id": "2",
+            "title": "iPhone X",
+            "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+            "price": 899,
+            "discountPercentage": 17.94,
+            "rating": 4.44,
+            "stock": 34,
+            "brand": "Apple",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/2/1.jpg",
+              "https://cdn.dummyjson.com/product-images/2/2.jpg",
+              "https://cdn.dummyjson.com/product-images/2/3.jpg",
+              "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+            ]
+          },
+          "id": "5cdf",
+          "quantity": 2,
+          "user": "aa51"
+        }
+      ],
+      "totalAmount": 1798,
+      "totalItems": 2,
+      "user": {
+        "id": "aa51",
+        "email": "pritammagdum24@gmail.com",
+        "addresses": [
+          {
+            "name": "Pritam Sanjay Magdum",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "8698694008",
+            "street": "Magdum Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "416106"
+          },
+          {
+            "name": "Pritam Sanjay Magdum",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "8698694008",
+            "street": "Magdum Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "416106"
+          },
+          {
+            "name": "Pritam Sanjay Magdum",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "8698694008",
+            "street": "Pune",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Sanjay",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "9158344349",
+            "street": "Pune",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "416106"
+          },
+          {
+            "name": "omkar jagtap",
+            "email": "omkar@gmail.com",
+            "phone": "123456789",
+            "street": "Pune",
+            "city": "Pune",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "password": "Pritam@123"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": null
+    },
+    {
+      "id": "1520",
+      "items": [
+        {
+          "0": {
+            "id": "2",
+            "title": "iPhone X",
+            "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+            "price": 899,
+            "discountPercentage": 17.94,
+            "rating": 4.44,
+            "stock": 34,
+            "brand": "Apple",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/2/1.jpg",
+              "https://cdn.dummyjson.com/product-images/2/2.jpg",
+              "https://cdn.dummyjson.com/product-images/2/3.jpg",
+              "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+            ]
+          },
+          "id": "5cdf",
+          "quantity": 2,
+          "user": "aa51"
+        }
+      ],
+      "totalAmount": 1798,
+      "totalItems": 2,
+      "user": {
+        "id": "aa51",
+        "email": "pritammagdum24@gmail.com",
+        "addresses": [
+          {
+            "name": "Pritam Sanjay Magdum",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "8698694008",
+            "street": "Magdum Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "416106"
+          },
+          {
+            "name": "Pritam Sanjay Magdum",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "8698694008",
+            "street": "Magdum Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "416106"
+          },
+          {
+            "name": "Pritam Sanjay Magdum",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "8698694008",
+            "street": "Pune",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Sanjay",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "9158344349",
+            "street": "Pune",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "416106"
+          },
+          {
+            "name": "omkar jagtap",
+            "email": "omkar@gmail.com",
+            "phone": "123456789",
+            "street": "Pune",
+            "city": "Pune",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "password": "Pritam@123"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": null
     }
   ]
 }

@@ -17,6 +17,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchItemsByUserIdAsync } from './features/cart/cartSlice';
 import { selectLoggedInUser } from './features/auth/authSlice';
 import PageNotFound from './pages/PageNotFound';
+import OrderSuccessPage from './pages/OrderSuccessPage';
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
             <Route exact path='/cart' element={<CartPage />} />
             <Route exact path='/checkout' element={<Checkout />} />
             <Route exact path='/product-detail/:id' element={<ProductDetailPage />} />
+            <Route exact path='/order' element={<OrderSuccessPage />} />
           </Route>
           <Route exact path='/' element={<Protected><Home /></Protected>} />
           <Route exact path='/signup' element={<SignupPage />} />
