@@ -3046,31 +3046,32 @@
     },
     {
       "0": {
-        "id": "2",
-        "title": "iPhone X",
-        "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-        "price": 899,
-        "discountPercentage": 17.94,
-        "rating": 4.44,
-        "stock": 34,
-        "brand": "Apple",
-        "category": "smartphones",
-        "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+        "id": "12",
+        "title": "Brown Perfume",
+        "description": "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
+        "price": 40,
+        "discountPercentage": 15.66,
+        "rating": 4,
+        "stock": 52,
+        "brand": "Royal_Mirage",
+        "category": "fragrances",
+        "thumbnail": "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg",
         "images": [
-          "https://cdn.dummyjson.com/product-images/2/1.jpg",
-          "https://cdn.dummyjson.com/product-images/2/2.jpg",
-          "https://cdn.dummyjson.com/product-images/2/3.jpg",
-          "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+          "https://cdn.dummyjson.com/product-images/12/1.jpg",
+          "https://cdn.dummyjson.com/product-images/12/2.jpg",
+          "https://cdn.dummyjson.com/product-images/12/3.png",
+          "https://cdn.dummyjson.com/product-images/12/4.jpg",
+          "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
         ]
       },
-      "id": "5cdf",
-      "quantity": 2,
+      "id": "53ea",
+      "quantity": 1,
       "user": "aa51"
     }
   ],
   "orders": [
     {
-      "id": "7d5a",
+      "id": "7606",
       "items": [
         {
           "0": {
@@ -3092,11 +3093,35 @@
             ]
           },
           "id": "5cdf",
-          "quantity": 2,
+          "quantity": 1,
+          "user": "aa51"
+        },
+        {
+          "0": {
+            "id": "12",
+            "title": "Brown Perfume",
+            "description": "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
+            "price": 40,
+            "discountPercentage": 15.66,
+            "rating": 4,
+            "stock": 52,
+            "brand": "Royal_Mirage",
+            "category": "fragrances",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/12/1.jpg",
+              "https://cdn.dummyjson.com/product-images/12/2.jpg",
+              "https://cdn.dummyjson.com/product-images/12/3.png",
+              "https://cdn.dummyjson.com/product-images/12/4.jpg",
+              "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
+            ]
+          },
+          "id": "53ea",
+          "quantity": 1,
           "user": "aa51"
         }
       ],
-      "totalAmount": 1798,
+      "totalAmount": 939,
       "totalItems": 2,
       "user": {
         "id": "aa51",
@@ -3137,50 +3162,61 @@
             "city": "Bastwad",
             "state": "Maharashtra",
             "pinCode": "416106"
+          },
+          {
+            "name": "omkar jagtap",
+            "email": "omkar@gmail.com",
+            "phone": "123456789",
+            "street": "Pune",
+            "city": "Pune",
+            "state": "Maharashtra",
+            "pinCode": "411011"
           }
         ],
         "password": "Pritam@123"
       },
       "paymentMethod": "card",
       "selectedAddress": {
-        "name": "Pritam Sanjay Magdum",
-        "email": "pritammagdum24@gmail.com",
-        "phone": "8698694008",
-        "street": "Magdum Road",
-        "city": "Bastwad",
+        "name": "omkar jagtap",
+        "email": "omkar@gmail.com",
+        "phone": "123456789",
+        "street": "Pune",
+        "city": "Pune",
         "state": "Maharashtra",
-        "pinCode": "416106"
-      }
+        "pinCode": "411011"
+      },
+      "status": "pending"
     },
     {
-      "id": "6c3e",
+      "id": "01e3",
       "items": [
         {
           "0": {
-            "id": "2",
-            "title": "iPhone X",
-            "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-            "price": 899,
-            "discountPercentage": 17.94,
-            "rating": 4.44,
-            "stock": 34,
-            "brand": "Apple",
-            "category": "smartphones",
-            "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+            "id": "12",
+            "title": "Brown Perfume",
+            "description": "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
+            "price": 40,
+            "discountPercentage": 15.66,
+            "rating": 4,
+            "stock": 52,
+            "brand": "Royal_Mirage",
+            "category": "fragrances",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg",
             "images": [
-              "https://cdn.dummyjson.com/product-images/2/1.jpg",
-              "https://cdn.dummyjson.com/product-images/2/2.jpg",
-              "https://cdn.dummyjson.com/product-images/2/3.jpg",
-              "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+              "https://cdn.dummyjson.com/product-images/12/1.jpg",
+              "https://cdn.dummyjson.com/product-images/12/2.jpg",
+              "https://cdn.dummyjson.com/product-images/12/3.png",
+              "https://cdn.dummyjson.com/product-images/12/4.jpg",
+              "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
             ]
           },
-          "id": "5cdf",
-          "quantity": 2,
+          "id": "53ea",
+          "quantity": 1,
           "user": "aa51"
         }
       ],
-      "totalAmount": 1798,
-      "totalItems": 2,
+      "totalAmount": 40,
+      "totalItems": 1,
       "user": {
         "id": "aa51",
         "email": "pritammagdum24@gmail.com",
@@ -3234,37 +3270,39 @@
         "password": "Pritam@123"
       },
       "paymentMethod": "cash",
-      "selectedAddress": null
+      "selectedAddress": null,
+      "status": "pending"
     },
     {
-      "id": "7817",
+      "id": "e4d5",
       "items": [
         {
           "0": {
-            "id": "2",
-            "title": "iPhone X",
-            "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-            "price": 899,
-            "discountPercentage": 17.94,
-            "rating": 4.44,
-            "stock": 34,
-            "brand": "Apple",
-            "category": "smartphones",
-            "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+            "id": "12",
+            "title": "Brown Perfume",
+            "description": "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
+            "price": 40,
+            "discountPercentage": 15.66,
+            "rating": 4,
+            "stock": 52,
+            "brand": "Royal_Mirage",
+            "category": "fragrances",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg",
             "images": [
-              "https://cdn.dummyjson.com/product-images/2/1.jpg",
-              "https://cdn.dummyjson.com/product-images/2/2.jpg",
-              "https://cdn.dummyjson.com/product-images/2/3.jpg",
-              "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+              "https://cdn.dummyjson.com/product-images/12/1.jpg",
+              "https://cdn.dummyjson.com/product-images/12/2.jpg",
+              "https://cdn.dummyjson.com/product-images/12/3.png",
+              "https://cdn.dummyjson.com/product-images/12/4.jpg",
+              "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
             ]
           },
-          "id": "5cdf",
-          "quantity": 2,
+          "id": "53ea",
+          "quantity": 1,
           "user": "aa51"
         }
       ],
-      "totalAmount": 1798,
-      "totalItems": 2,
+      "totalAmount": 40,
+      "totalItems": 1,
       "user": {
         "id": "aa51",
         "email": "pritammagdum24@gmail.com",
@@ -3318,175 +3356,8 @@
         "password": "Pritam@123"
       },
       "paymentMethod": "cash",
-      "selectedAddress": null
-    },
-    {
-      "id": "2e17",
-      "items": [
-        {
-          "0": {
-            "id": "2",
-            "title": "iPhone X",
-            "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-            "price": 899,
-            "discountPercentage": 17.94,
-            "rating": 4.44,
-            "stock": 34,
-            "brand": "Apple",
-            "category": "smartphones",
-            "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
-            "images": [
-              "https://cdn.dummyjson.com/product-images/2/1.jpg",
-              "https://cdn.dummyjson.com/product-images/2/2.jpg",
-              "https://cdn.dummyjson.com/product-images/2/3.jpg",
-              "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
-            ]
-          },
-          "id": "5cdf",
-          "quantity": 2,
-          "user": "aa51"
-        }
-      ],
-      "totalAmount": 1798,
-      "totalItems": 2,
-      "user": {
-        "id": "aa51",
-        "email": "pritammagdum24@gmail.com",
-        "addresses": [
-          {
-            "name": "Pritam Sanjay Magdum",
-            "email": "pritammagdum24@gmail.com",
-            "phone": "8698694008",
-            "street": "Magdum Road",
-            "city": "Bastwad",
-            "state": "Maharashtra",
-            "pinCode": "416106"
-          },
-          {
-            "name": "Pritam Sanjay Magdum",
-            "email": "pritammagdum24@gmail.com",
-            "phone": "8698694008",
-            "street": "Magdum Road",
-            "city": "Bastwad",
-            "state": "Maharashtra",
-            "pinCode": "416106"
-          },
-          {
-            "name": "Pritam Sanjay Magdum",
-            "email": "pritammagdum24@gmail.com",
-            "phone": "8698694008",
-            "street": "Pune",
-            "city": "Bastwad",
-            "state": "Maharashtra",
-            "pinCode": "411011"
-          },
-          {
-            "name": "Sanjay",
-            "email": "pritammagdum24@gmail.com",
-            "phone": "9158344349",
-            "street": "Pune",
-            "city": "Bastwad",
-            "state": "Maharashtra",
-            "pinCode": "416106"
-          },
-          {
-            "name": "omkar jagtap",
-            "email": "omkar@gmail.com",
-            "phone": "123456789",
-            "street": "Pune",
-            "city": "Pune",
-            "state": "Maharashtra",
-            "pinCode": "411011"
-          }
-        ],
-        "password": "Pritam@123"
-      },
-      "paymentMethod": "cash",
-      "selectedAddress": null
-    },
-    {
-      "id": "1520",
-      "items": [
-        {
-          "0": {
-            "id": "2",
-            "title": "iPhone X",
-            "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-            "price": 899,
-            "discountPercentage": 17.94,
-            "rating": 4.44,
-            "stock": 34,
-            "brand": "Apple",
-            "category": "smartphones",
-            "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
-            "images": [
-              "https://cdn.dummyjson.com/product-images/2/1.jpg",
-              "https://cdn.dummyjson.com/product-images/2/2.jpg",
-              "https://cdn.dummyjson.com/product-images/2/3.jpg",
-              "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
-            ]
-          },
-          "id": "5cdf",
-          "quantity": 2,
-          "user": "aa51"
-        }
-      ],
-      "totalAmount": 1798,
-      "totalItems": 2,
-      "user": {
-        "id": "aa51",
-        "email": "pritammagdum24@gmail.com",
-        "addresses": [
-          {
-            "name": "Pritam Sanjay Magdum",
-            "email": "pritammagdum24@gmail.com",
-            "phone": "8698694008",
-            "street": "Magdum Road",
-            "city": "Bastwad",
-            "state": "Maharashtra",
-            "pinCode": "416106"
-          },
-          {
-            "name": "Pritam Sanjay Magdum",
-            "email": "pritammagdum24@gmail.com",
-            "phone": "8698694008",
-            "street": "Magdum Road",
-            "city": "Bastwad",
-            "state": "Maharashtra",
-            "pinCode": "416106"
-          },
-          {
-            "name": "Pritam Sanjay Magdum",
-            "email": "pritammagdum24@gmail.com",
-            "phone": "8698694008",
-            "street": "Pune",
-            "city": "Bastwad",
-            "state": "Maharashtra",
-            "pinCode": "411011"
-          },
-          {
-            "name": "Sanjay",
-            "email": "pritammagdum24@gmail.com",
-            "phone": "9158344349",
-            "street": "Pune",
-            "city": "Bastwad",
-            "state": "Maharashtra",
-            "pinCode": "416106"
-          },
-          {
-            "name": "omkar jagtap",
-            "email": "omkar@gmail.com",
-            "phone": "123456789",
-            "street": "Pune",
-            "city": "Pune",
-            "state": "Maharashtra",
-            "pinCode": "411011"
-          }
-        ],
-        "password": "Pritam@123"
-      },
-      "paymentMethod": "cash",
-      "selectedAddress": null
+      "selectedAddress": null,
+      "status": "pending"
     }
   ]
 }

@@ -44,8 +44,8 @@ function App() {
             <Route exact path='/cart' element={<CartPage />} />
             <Route exact path='/checkout' element={<Checkout />} />
             <Route exact path='/product-detail/:id' element={<ProductDetailPage />} />
-            <Route exact path='/order' element={<OrderSuccessPage />} />
           </Route>
+          <Route exact path='/order-success/:id' element={<OrderSuccessPage />} />
           <Route exact path='/' element={<Protected><Home /></Protected>} />
           <Route exact path='/signup' element={<SignupPage />} />
           <Route exact path='/login' element={<LoginPage />} />
