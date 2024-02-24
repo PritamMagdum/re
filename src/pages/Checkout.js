@@ -19,7 +19,7 @@ function Checkout() {
   const items = useSelector(selectItems);
   const user = useSelector(selectLoggedInUser);
   const [selectedAddress, setSelectedAddress] = useState(null);
-  const [paymentMethod, setPaymentMethod] = useState(null);
+  const [paymentMethod, setPaymentMethod] = useState("cash");
 
   const {
     register,
@@ -48,11 +48,14 @@ function Checkout() {
     }, 50);
   };
 
-  const handleAddress = (e)=>{
+  const handleAddress = (e) => {
     // console.log(e.target.value);
-    setSelectedAddress(user.addresses[e.target.value])
-  }
+    setSelectedAddress(user.addresses[e.target.value]);
+  };
 
+  const handlePayment = (e) => {
+    setPaymentMethod(e.target.value);
+  };
   return (
     <>
       {!items.length && <Navigate to="/" replace={true}></Navigate>}
@@ -297,8 +300,13 @@ function Checkout() {
                       <div className="mt-6 space-y-6">
                         <div className="flex items-center gap-x-3">
                           <input
+                            onChange={handlePayment}
+                            value="cash"
+                            checked={                        
+                              paymentMethod === "cash"
+                            }
+                            // name="payments"
                             id="cash"
-                            name="payments"
                             type="radio"
                             className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           />
@@ -312,7 +320,12 @@ function Checkout() {
                         <div className="flex items-center gap-x-3">
                           <input
                             id="Card"
-                            name="payments"
+                            onChange={handlePayment}
+                            value="card"
+                            checked={
+                              paymentMethod === "card"
+                            }
+                            // name="payments"
                             type="radio"
                             className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           />
