@@ -16,6 +16,7 @@ import Protected from './features/auth/components/Protected';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchItemsByUserIdAsync } from './features/cart/cartSlice';
 import { selectLoggedInUser } from './features/auth/authSlice';
+import PageNotFound from './pages/PageNotFound';
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
           <Route exact path='/' element={<Protected><Home /></Protected>} />
           <Route exact path='/signup' element={<SignupPage />} />
           <Route exact path='/login' element={<LoginPage />} />
+          <Route path='*' element={<PageNotFound />} />
 
         </Routes>
       </Router>
