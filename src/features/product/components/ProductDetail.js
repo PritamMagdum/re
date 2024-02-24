@@ -98,18 +98,17 @@ export default function ProductDetail() {
   const user = useSelector(selectLoggedInUser);
 
   const handleCart = (e) => {
-    const newObj = {...product}
+    const newObj = { ...product };
     newObj.quantity = 2;
-    newObj.user = user.id
+    newObj.user = user.id;
 
-    console.log("New Object -> ",newObj);
+    console.log("New Object -> ", newObj);
     e.preventDefault();
-    dispatch(addToCartAsync({product:product, quantity: 1, user: user.id }));
+    dispatch(addToCartAsync({ product: product, quantity: 1, user: user.id }));
     // dispatch(addToCartAsync({...product, quantity : 1, user:user.id}));
     setTimeout(() => {
       dispatch(fetchItemsByUserIdAsync(user.id));
     }, 500);
-    
   };
 
   useEffect(() => {
@@ -209,7 +208,7 @@ export default function ProductDetail() {
             <div className="mt-4 lg:row-span-3 lg:mt-0">
               <h2 className="sr-only">Product information</h2>
               <p className="text-3xl tracking-tight text-gray-900">
-                {product[0].price}
+                ${product[0].price}
               </p>
 
               {/* Reviews */}

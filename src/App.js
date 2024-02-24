@@ -15,6 +15,7 @@ import { selectLoggedInUser } from "./features/auth/authSlice";
 import PageNotFound from "./pages/PageNotFound";
 import OrderSuccessPage from "./pages/OrderSuccessPage";
 import UserOrdersPage from "./pages/UserOrdersPage";
+import UserProfilePage from "./pages/UserProfilePage";
 
 function App() {
   const dispatch = useDispatch();
@@ -37,6 +38,7 @@ function App() {
             <Route exact path="/cart" element={<CartPage />} />
             <Route exact path="/checkout" element={<Checkout />} />
             <Route exact path="/orders" element={<UserOrdersPage />} />
+            <Route exact path="/profile" element={<UserProfilePage />} />
             <Route
               exact
               path="/product-detail/:id"
