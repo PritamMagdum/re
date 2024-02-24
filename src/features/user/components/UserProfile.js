@@ -35,6 +35,7 @@ export default function UserProfile() {
                   </p>
                 </div>
               </div>
+
               <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
                 <p className="text-sm leading-6 text-gray-900">
                   Phone: {address.phone}
@@ -42,6 +43,41 @@ export default function UserProfile() {
                 <p className="mt-1 text-xs leading-5 text-gray-500">
                   {address.city}
                 </p>
+              </div>
+
+              <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                <button class="flex p-2.5 bg-yellow-500 rounded-xl hover:rounded-3xl hover:bg-yellow-600 transition-all duration-300 text-white my-0.5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                    />
+                  </svg>
+                </button>
+                <button class="inline-flex items-center justify-center w-10 h-10 bg-red-500 hover:bg-red-600 focus:outline-none rounded-xl hover:rounded-3xl my-0.5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-white"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
               </div>
             </div>
           ))}
