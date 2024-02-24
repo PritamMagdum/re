@@ -2951,33 +2951,6 @@
           "pinCode": "416106"
         },
         {
-          "name": "Pritam Sanjay Magdum",
-          "email": "pritammagdum24@gmail.com",
-          "phone": "8698694008",
-          "street": "Magdum Road",
-          "city": "Bastwad",
-          "state": "Maharashtra",
-          "pinCode": "416106"
-        },
-        {
-          "name": "Pritam Sanjay Magdum",
-          "email": "pritammagdum24@gmail.com",
-          "phone": "8698694008",
-          "street": "Pune",
-          "city": "Bastwad",
-          "state": "Maharashtra",
-          "pinCode": "411011"
-        },
-        {
-          "name": "Sanjay",
-          "email": "pritammagdum24@gmail.com",
-          "phone": "9158344349",
-          "street": "Pune",
-          "city": "Bastwad",
-          "state": "Maharashtra",
-          "pinCode": "416106"
-        },
-        {
           "name": "omkar jagtap",
           "email": "omkar@gmail.com",
           "phone": "123456789",
@@ -2996,82 +2969,10 @@
       "password": "Demo@123"
     }
   ],
-  "cart": [
-    {
-      "0": {
-        "id": "2",
-        "title": "iPhone X",
-        "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-        "price": 899,
-        "discountPercentage": 17.94,
-        "rating": 4.44,
-        "stock": 34,
-        "brand": "Apple",
-        "category": "smartphones",
-        "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
-        "images": [
-          "https://cdn.dummyjson.com/product-images/2/1.jpg",
-          "https://cdn.dummyjson.com/product-images/2/2.jpg",
-          "https://cdn.dummyjson.com/product-images/2/3.jpg",
-          "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
-        ]
-      },
-      "id": "f4a2",
-      "quantity": 1,
-      "user": "6d19"
-    },
-    {
-      "0": {
-        "id": "12",
-        "title": "Brown Perfume",
-        "description": "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
-        "price": 40,
-        "discountPercentage": 15.66,
-        "rating": 4,
-        "stock": 52,
-        "brand": "Royal_Mirage",
-        "category": "fragrances",
-        "thumbnail": "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg",
-        "images": [
-          "https://cdn.dummyjson.com/product-images/12/1.jpg",
-          "https://cdn.dummyjson.com/product-images/12/2.jpg",
-          "https://cdn.dummyjson.com/product-images/12/3.png",
-          "https://cdn.dummyjson.com/product-images/12/4.jpg",
-          "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
-        ]
-      },
-      "id": "691f",
-      "quantity": 2,
-      "user": "6d19"
-    },
-    {
-      "0": {
-        "id": "12",
-        "title": "Brown Perfume",
-        "description": "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
-        "price": 40,
-        "discountPercentage": 15.66,
-        "rating": 4,
-        "stock": 52,
-        "brand": "Royal_Mirage",
-        "category": "fragrances",
-        "thumbnail": "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg",
-        "images": [
-          "https://cdn.dummyjson.com/product-images/12/1.jpg",
-          "https://cdn.dummyjson.com/product-images/12/2.jpg",
-          "https://cdn.dummyjson.com/product-images/12/3.png",
-          "https://cdn.dummyjson.com/product-images/12/4.jpg",
-          "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
-        ]
-      },
-      "id": "53ea",
-      "quantity": 1,
-      "user": "aa51"
-    }
-  ],
+  "cart": [],
   "orders": [
     {
-      "id": "7606",
+      "id": "cbd9",
       "items": [
         {
           "0": {
@@ -3092,36 +2993,36 @@
               "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
             ]
           },
-          "id": "5cdf",
+          "id": "f515",
           "quantity": 1,
           "user": "aa51"
         },
         {
           "0": {
-            "id": "12",
-            "title": "Brown Perfume",
-            "description": "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
-            "price": 40,
-            "discountPercentage": 15.66,
-            "rating": 4,
-            "stock": 52,
-            "brand": "Royal_Mirage",
-            "category": "fragrances",
-            "thumbnail": "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg",
+            "id": "1",
+            "title": "iPhone 9",
+            "description": "An apple mobile which is nothing like apple",
+            "price": 549,
+            "discountPercentage": 12.96,
+            "rating": 4.69,
+            "stock": 94,
+            "brand": "Apple",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
             "images": [
-              "https://cdn.dummyjson.com/product-images/12/1.jpg",
-              "https://cdn.dummyjson.com/product-images/12/2.jpg",
-              "https://cdn.dummyjson.com/product-images/12/3.png",
-              "https://cdn.dummyjson.com/product-images/12/4.jpg",
-              "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
+              "https://cdn.dummyjson.com/product-images/1/1.jpg",
+              "https://cdn.dummyjson.com/product-images/1/2.jpg",
+              "https://cdn.dummyjson.com/product-images/1/3.jpg",
+              "https://cdn.dummyjson.com/product-images/1/4.jpg",
+              "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
             ]
           },
-          "id": "53ea",
+          "id": "5f29",
           "quantity": 1,
           "user": "aa51"
         }
       ],
-      "totalAmount": 939,
+      "totalAmount": 1448,
       "totalItems": 2,
       "user": {
         "id": "aa51",
@@ -3137,6 +3038,87 @@
             "pinCode": "416106"
           },
           {
+            "name": "omkar jagtap",
+            "email": "omkar@gmail.com",
+            "phone": "123456789",
+            "street": "Pune",
+            "city": "Pune",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "password": "Pritam@123"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Pritam Sanjay Magdum",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "8698694008",
+        "street": "Magdum Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "416106"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a3c0",
+      "items": [
+        {
+          "0": {
+            "id": "2",
+            "title": "iPhone X",
+            "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+            "price": 899,
+            "discountPercentage": 17.94,
+            "rating": 4.44,
+            "stock": 34,
+            "brand": "Apple",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/2/1.jpg",
+              "https://cdn.dummyjson.com/product-images/2/2.jpg",
+              "https://cdn.dummyjson.com/product-images/2/3.jpg",
+              "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+            ]
+          },
+          "id": "f515",
+          "quantity": 1,
+          "user": "aa51"
+        },
+        {
+          "0": {
+            "id": "1",
+            "title": "iPhone 9",
+            "description": "An apple mobile which is nothing like apple",
+            "price": 549,
+            "discountPercentage": 12.96,
+            "rating": 4.69,
+            "stock": 94,
+            "brand": "Apple",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/1/1.jpg",
+              "https://cdn.dummyjson.com/product-images/1/2.jpg",
+              "https://cdn.dummyjson.com/product-images/1/3.jpg",
+              "https://cdn.dummyjson.com/product-images/1/4.jpg",
+              "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
+            ]
+          },
+          "id": "5f29",
+          "quantity": 1,
+          "user": "aa51"
+        }
+      ],
+      "totalAmount": 1448,
+      "totalItems": 2,
+      "user": {
+        "id": "aa51",
+        "email": "pritammagdum24@gmail.com",
+        "addresses": [
+          {
             "name": "Pritam Sanjay Magdum",
             "email": "pritammagdum24@gmail.com",
             "phone": "8698694008",
@@ -3146,19 +3128,337 @@
             "pinCode": "416106"
           },
           {
+            "name": "omkar jagtap",
+            "email": "omkar@gmail.com",
+            "phone": "123456789",
+            "street": "Pune",
+            "city": "Pune",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "password": "Pritam@123"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Pritam Sanjay Magdum",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "8698694008",
+        "street": "Magdum Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "416106"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a329",
+      "items": [
+        {
+          "0": {
+            "id": "2",
+            "title": "iPhone X",
+            "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+            "price": 899,
+            "discountPercentage": 17.94,
+            "rating": 4.44,
+            "stock": 34,
+            "brand": "Apple",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/2/1.jpg",
+              "https://cdn.dummyjson.com/product-images/2/2.jpg",
+              "https://cdn.dummyjson.com/product-images/2/3.jpg",
+              "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+            ]
+          },
+          "id": "f515",
+          "quantity": 1,
+          "user": "aa51"
+        },
+        {
+          "0": {
+            "id": "1",
+            "title": "iPhone 9",
+            "description": "An apple mobile which is nothing like apple",
+            "price": 549,
+            "discountPercentage": 12.96,
+            "rating": 4.69,
+            "stock": 94,
+            "brand": "Apple",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/1/1.jpg",
+              "https://cdn.dummyjson.com/product-images/1/2.jpg",
+              "https://cdn.dummyjson.com/product-images/1/3.jpg",
+              "https://cdn.dummyjson.com/product-images/1/4.jpg",
+              "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
+            ]
+          },
+          "id": "5f29",
+          "quantity": 1,
+          "user": "aa51"
+        }
+      ],
+      "totalAmount": 1448,
+      "totalItems": 2,
+      "user": {
+        "id": "aa51",
+        "email": "pritammagdum24@gmail.com",
+        "addresses": [
+          {
             "name": "Pritam Sanjay Magdum",
             "email": "pritammagdum24@gmail.com",
             "phone": "8698694008",
-            "street": "Pune",
+            "street": "Magdum Road",
             "city": "Bastwad",
             "state": "Maharashtra",
-            "pinCode": "411011"
+            "pinCode": "416106"
           },
           {
-            "name": "Sanjay",
-            "email": "pritammagdum24@gmail.com",
-            "phone": "9158344349",
+            "name": "omkar jagtap",
+            "email": "omkar@gmail.com",
+            "phone": "123456789",
             "street": "Pune",
+            "city": "Pune",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "password": "Pritam@123"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Pritam Sanjay Magdum",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "8698694008",
+        "street": "Magdum Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "416106"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c62e",
+      "items": [
+        {
+          "0": {
+            "id": "2",
+            "title": "iPhone X",
+            "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+            "price": 899,
+            "discountPercentage": 17.94,
+            "rating": 4.44,
+            "stock": 34,
+            "brand": "Apple",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/2/1.jpg",
+              "https://cdn.dummyjson.com/product-images/2/2.jpg",
+              "https://cdn.dummyjson.com/product-images/2/3.jpg",
+              "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+            ]
+          },
+          "id": "f515",
+          "quantity": 1,
+          "user": "aa51"
+        },
+        {
+          "0": {
+            "id": "1",
+            "title": "iPhone 9",
+            "description": "An apple mobile which is nothing like apple",
+            "price": 549,
+            "discountPercentage": 12.96,
+            "rating": 4.69,
+            "stock": 94,
+            "brand": "Apple",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/1/1.jpg",
+              "https://cdn.dummyjson.com/product-images/1/2.jpg",
+              "https://cdn.dummyjson.com/product-images/1/3.jpg",
+              "https://cdn.dummyjson.com/product-images/1/4.jpg",
+              "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
+            ]
+          },
+          "id": "5f29",
+          "quantity": 1,
+          "user": "aa51"
+        }
+      ],
+      "totalAmount": 1448,
+      "totalItems": 2,
+      "user": {
+        "id": "aa51",
+        "email": "pritammagdum24@gmail.com",
+        "addresses": [
+          {
+            "name": "Pritam Sanjay Magdum",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "8698694008",
+            "street": "Magdum Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "416106"
+          },
+          {
+            "name": "omkar jagtap",
+            "email": "omkar@gmail.com",
+            "phone": "123456789",
+            "street": "Pune",
+            "city": "Pune",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "password": "Pritam@123"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Pritam Sanjay Magdum",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "8698694008",
+        "street": "Magdum Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "416106"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "e371",
+      "items": [
+        {
+          "0": {
+            "id": "2",
+            "title": "iPhone X",
+            "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+            "price": 899,
+            "discountPercentage": 17.94,
+            "rating": 4.44,
+            "stock": 34,
+            "brand": "Apple",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/2/1.jpg",
+              "https://cdn.dummyjson.com/product-images/2/2.jpg",
+              "https://cdn.dummyjson.com/product-images/2/3.jpg",
+              "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+            ]
+          },
+          "id": "f515",
+          "quantity": 1,
+          "user": "aa51"
+        },
+        {
+          "0": {
+            "id": "1",
+            "title": "iPhone 9",
+            "description": "An apple mobile which is nothing like apple",
+            "price": 549,
+            "discountPercentage": 12.96,
+            "rating": 4.69,
+            "stock": 94,
+            "brand": "Apple",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/1/1.jpg",
+              "https://cdn.dummyjson.com/product-images/1/2.jpg",
+              "https://cdn.dummyjson.com/product-images/1/3.jpg",
+              "https://cdn.dummyjson.com/product-images/1/4.jpg",
+              "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
+            ]
+          },
+          "id": "5f29",
+          "quantity": 1,
+          "user": "aa51"
+        }
+      ],
+      "totalAmount": 1448,
+      "totalItems": 2,
+      "user": {
+        "id": "aa51",
+        "email": "pritammagdum24@gmail.com",
+        "addresses": [
+          {
+            "name": "Pritam Sanjay Magdum",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "8698694008",
+            "street": "Magdum Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "416106"
+          },
+          {
+            "name": "omkar jagtap",
+            "email": "omkar@gmail.com",
+            "phone": "123456789",
+            "street": "Pune",
+            "city": "Pune",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "password": "Pritam@123"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Pritam Sanjay Magdum",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "8698694008",
+        "street": "Magdum Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "416106"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "befc",
+      "items": [
+        {
+          "0": {
+            "id": "6",
+            "title": "MacBook Pro",
+            "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+            "price": 1749,
+            "discountPercentage": 11.02,
+            "rating": 4.57,
+            "stock": 83,
+            "brand": "Apple",
+            "category": "laptops",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/6/thumbnail.png",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/6/1.png",
+              "https://cdn.dummyjson.com/product-images/6/2.jpg",
+              "https://cdn.dummyjson.com/product-images/6/3.png",
+              "https://cdn.dummyjson.com/product-images/6/4.jpg"
+            ]
+          },
+          "id": "918d",
+          "quantity": 1,
+          "user": "aa51"
+        }
+      ],
+      "totalAmount": 1749,
+      "totalItems": 1,
+      "user": {
+        "id": "aa51",
+        "email": "pritammagdum24@gmail.com",
+        "addresses": [
+          {
+            "name": "Pritam Sanjay Magdum",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "8698694008",
+            "street": "Magdum Road",
             "city": "Bastwad",
             "state": "Maharashtra",
             "pinCode": "416106"
@@ -3188,35 +3488,58 @@
       "status": "pending"
     },
     {
-      "id": "01e3",
+      "id": "053b",
       "items": [
         {
           "0": {
-            "id": "12",
-            "title": "Brown Perfume",
-            "description": "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
-            "price": 40,
-            "discountPercentage": 15.66,
-            "rating": 4,
-            "stock": 52,
-            "brand": "Royal_Mirage",
-            "category": "fragrances",
-            "thumbnail": "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg",
+            "id": "6",
+            "title": "MacBook Pro",
+            "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+            "price": 1749,
+            "discountPercentage": 11.02,
+            "rating": 4.57,
+            "stock": 83,
+            "brand": "Apple",
+            "category": "laptops",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/6/thumbnail.png",
             "images": [
-              "https://cdn.dummyjson.com/product-images/12/1.jpg",
-              "https://cdn.dummyjson.com/product-images/12/2.jpg",
-              "https://cdn.dummyjson.com/product-images/12/3.png",
-              "https://cdn.dummyjson.com/product-images/12/4.jpg",
-              "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
+              "https://cdn.dummyjson.com/product-images/6/1.png",
+              "https://cdn.dummyjson.com/product-images/6/2.jpg",
+              "https://cdn.dummyjson.com/product-images/6/3.png",
+              "https://cdn.dummyjson.com/product-images/6/4.jpg"
             ]
           },
-          "id": "53ea",
+          "id": "bff2",
+          "quantity": 1,
+          "user": "aa51"
+        },
+        {
+          "0": {
+            "id": "8",
+            "title": "Microsoft Surface Laptop 4",
+            "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
+            "price": 1499,
+            "discountPercentage": 10.23,
+            "rating": 4.43,
+            "stock": 68,
+            "brand": "Microsoft Surface",
+            "category": "laptops",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/8/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/8/1.jpg",
+              "https://cdn.dummyjson.com/product-images/8/2.jpg",
+              "https://cdn.dummyjson.com/product-images/8/3.jpg",
+              "https://cdn.dummyjson.com/product-images/8/4.jpg",
+              "https://cdn.dummyjson.com/product-images/8/thumbnail.jpg"
+            ]
+          },
+          "id": "d1b3",
           "quantity": 1,
           "user": "aa51"
         }
       ],
-      "totalAmount": 40,
-      "totalItems": 1,
+      "totalAmount": 3248,
+      "totalItems": 2,
       "user": {
         "id": "aa51",
         "email": "pritammagdum24@gmail.com",
@@ -3226,33 +3549,6 @@
             "email": "pritammagdum24@gmail.com",
             "phone": "8698694008",
             "street": "Magdum Road",
-            "city": "Bastwad",
-            "state": "Maharashtra",
-            "pinCode": "416106"
-          },
-          {
-            "name": "Pritam Sanjay Magdum",
-            "email": "pritammagdum24@gmail.com",
-            "phone": "8698694008",
-            "street": "Magdum Road",
-            "city": "Bastwad",
-            "state": "Maharashtra",
-            "pinCode": "416106"
-          },
-          {
-            "name": "Pritam Sanjay Magdum",
-            "email": "pritammagdum24@gmail.com",
-            "phone": "8698694008",
-            "street": "Pune",
-            "city": "Bastwad",
-            "state": "Maharashtra",
-            "pinCode": "411011"
-          },
-          {
-            "name": "Sanjay",
-            "email": "pritammagdum24@gmail.com",
-            "phone": "9158344349",
-            "street": "Pune",
             "city": "Bastwad",
             "state": "Maharashtra",
             "pinCode": "416106"
@@ -3269,13 +3565,133 @@
         ],
         "password": "Pritam@123"
       },
-      "paymentMethod": "cash",
-      "selectedAddress": null,
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "omkar jagtap",
+        "email": "omkar@gmail.com",
+        "phone": "123456789",
+        "street": "Pune",
+        "city": "Pune",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
       "status": "pending"
     },
     {
-      "id": "e4d5",
+      "id": "93cf",
       "items": [
+        {
+          "0": {
+            "id": "2",
+            "title": "iPhone X",
+            "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+            "price": 899,
+            "discountPercentage": 17.94,
+            "rating": 4.44,
+            "stock": 34,
+            "brand": "Apple",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/2/1.jpg",
+              "https://cdn.dummyjson.com/product-images/2/2.jpg",
+              "https://cdn.dummyjson.com/product-images/2/3.jpg",
+              "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+            ]
+          },
+          "id": "0b4e",
+          "quantity": 5,
+          "user": "aa51"
+        },
+        {
+          "0": {
+            "id": "6",
+            "title": "MacBook Pro",
+            "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+            "price": 1749,
+            "discountPercentage": 11.02,
+            "rating": 4.57,
+            "stock": 83,
+            "brand": "Apple",
+            "category": "laptops",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/6/thumbnail.png",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/6/1.png",
+              "https://cdn.dummyjson.com/product-images/6/2.jpg",
+              "https://cdn.dummyjson.com/product-images/6/3.png",
+              "https://cdn.dummyjson.com/product-images/6/4.jpg"
+            ]
+          },
+          "id": "34b7",
+          "quantity": 5,
+          "user": "aa51"
+        }
+      ],
+      "totalAmount": 13240,
+      "totalItems": 10,
+      "user": {
+        "id": "aa51",
+        "email": "pritammagdum24@gmail.com",
+        "addresses": [
+          {
+            "name": "Pritam Sanjay Magdum",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "8698694008",
+            "street": "Magdum Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "416106"
+          },
+          {
+            "name": "omkar jagtap",
+            "email": "omkar@gmail.com",
+            "phone": "123456789",
+            "street": "Pune",
+            "city": "Pune",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "password": "Pritam@123"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Pritam Sanjay Magdum",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "8698694008",
+        "street": "Magdum Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "416106"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "7435",
+      "items": [
+        {
+          "0": {
+            "id": "6",
+            "title": "MacBook Pro",
+            "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+            "price": 1749,
+            "discountPercentage": 11.02,
+            "rating": 4.57,
+            "stock": 83,
+            "brand": "Apple",
+            "category": "laptops",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/6/thumbnail.png",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/6/1.png",
+              "https://cdn.dummyjson.com/product-images/6/2.jpg",
+              "https://cdn.dummyjson.com/product-images/6/3.png",
+              "https://cdn.dummyjson.com/product-images/6/4.jpg"
+            ]
+          },
+          "id": "1779",
+          "quantity": 1,
+          "user": "aa51"
+        },
         {
           "0": {
             "id": "12",
@@ -3296,13 +3712,13 @@
               "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
             ]
           },
-          "id": "53ea",
+          "id": "ea49",
           "quantity": 1,
           "user": "aa51"
         }
       ],
-      "totalAmount": 40,
-      "totalItems": 1,
+      "totalAmount": 1789,
+      "totalItems": 2,
       "user": {
         "id": "aa51",
         "email": "pritammagdum24@gmail.com",
@@ -3312,33 +3728,6 @@
             "email": "pritammagdum24@gmail.com",
             "phone": "8698694008",
             "street": "Magdum Road",
-            "city": "Bastwad",
-            "state": "Maharashtra",
-            "pinCode": "416106"
-          },
-          {
-            "name": "Pritam Sanjay Magdum",
-            "email": "pritammagdum24@gmail.com",
-            "phone": "8698694008",
-            "street": "Magdum Road",
-            "city": "Bastwad",
-            "state": "Maharashtra",
-            "pinCode": "416106"
-          },
-          {
-            "name": "Pritam Sanjay Magdum",
-            "email": "pritammagdum24@gmail.com",
-            "phone": "8698694008",
-            "street": "Pune",
-            "city": "Bastwad",
-            "state": "Maharashtra",
-            "pinCode": "411011"
-          },
-          {
-            "name": "Sanjay",
-            "email": "pritammagdum24@gmail.com",
-            "phone": "9158344349",
-            "street": "Pune",
             "city": "Bastwad",
             "state": "Maharashtra",
             "pinCode": "416106"
@@ -3356,7 +3745,194 @@
         "password": "Pritam@123"
       },
       "paymentMethod": "cash",
-      "selectedAddress": null,
+      "selectedAddress": {
+        "name": "Pritam Sanjay Magdum",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "8698694008",
+        "street": "Magdum Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "416106"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "61a7",
+      "items": [
+        {
+          "0": {
+            "id": "6",
+            "title": "MacBook Pro",
+            "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+            "price": 1749,
+            "discountPercentage": 11.02,
+            "rating": 4.57,
+            "stock": 83,
+            "brand": "Apple",
+            "category": "laptops",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/6/thumbnail.png",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/6/1.png",
+              "https://cdn.dummyjson.com/product-images/6/2.jpg",
+              "https://cdn.dummyjson.com/product-images/6/3.png",
+              "https://cdn.dummyjson.com/product-images/6/4.jpg"
+            ]
+          },
+          "id": "1779",
+          "quantity": 1,
+          "user": "aa51"
+        },
+        {
+          "0": {
+            "id": "12",
+            "title": "Brown Perfume",
+            "description": "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
+            "price": 40,
+            "discountPercentage": 15.66,
+            "rating": 4,
+            "stock": 52,
+            "brand": "Royal_Mirage",
+            "category": "fragrances",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/12/1.jpg",
+              "https://cdn.dummyjson.com/product-images/12/2.jpg",
+              "https://cdn.dummyjson.com/product-images/12/3.png",
+              "https://cdn.dummyjson.com/product-images/12/4.jpg",
+              "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
+            ]
+          },
+          "id": "ea49",
+          "quantity": 1,
+          "user": "aa51"
+        }
+      ],
+      "totalAmount": 1789,
+      "totalItems": 2,
+      "user": {
+        "id": "aa51",
+        "email": "pritammagdum24@gmail.com",
+        "addresses": [
+          {
+            "name": "Pritam Sanjay Magdum",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "8698694008",
+            "street": "Magdum Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "416106"
+          },
+          {
+            "name": "omkar jagtap",
+            "email": "omkar@gmail.com",
+            "phone": "123456789",
+            "street": "Pune",
+            "city": "Pune",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "password": "Pritam@123"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "omkar jagtap",
+        "email": "omkar@gmail.com",
+        "phone": "123456789",
+        "street": "Pune",
+        "city": "Pune",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "b7f2",
+      "items": [
+        {
+          "0": {
+            "id": "5",
+            "title": "Huawei P30",
+            "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+            "price": 499,
+            "discountPercentage": 10.58,
+            "rating": 4.09,
+            "stock": 32,
+            "brand": "Huawei",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/5/1.jpg",
+              "https://cdn.dummyjson.com/product-images/5/2.jpg",
+              "https://cdn.dummyjson.com/product-images/5/3.jpg"
+            ]
+          },
+          "id": "39af",
+          "quantity": 5,
+          "user": "aa51"
+        },
+        {
+          "0": {
+            "id": "12",
+            "title": "Brown Perfume",
+            "description": "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
+            "price": 40,
+            "discountPercentage": 15.66,
+            "rating": 4,
+            "stock": 52,
+            "brand": "Royal_Mirage",
+            "category": "fragrances",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/12/1.jpg",
+              "https://cdn.dummyjson.com/product-images/12/2.jpg",
+              "https://cdn.dummyjson.com/product-images/12/3.png",
+              "https://cdn.dummyjson.com/product-images/12/4.jpg",
+              "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
+            ]
+          },
+          "id": "1049",
+          "quantity": 5,
+          "user": "aa51"
+        }
+      ],
+      "totalAmount": 2695,
+      "totalItems": 10,
+      "user": {
+        "id": "aa51",
+        "email": "pritammagdum24@gmail.com",
+        "addresses": [
+          {
+            "name": "Pritam Sanjay Magdum",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "8698694008",
+            "street": "Magdum Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "416106"
+          },
+          {
+            "name": "omkar jagtap",
+            "email": "omkar@gmail.com",
+            "phone": "123456789",
+            "street": "Pune",
+            "city": "Pune",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "password": "Pritam@123"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Pritam Sanjay Magdum",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "8698694008",
+        "street": "Magdum Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "416106"
+      },
       "status": "pending"
     }
   ]

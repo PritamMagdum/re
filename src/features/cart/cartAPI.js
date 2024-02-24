@@ -62,6 +62,7 @@ export function addToCart(item) {
 
 export function fetchItemsByUserId(userId) {
   return new Promise(async (resolve) => {
+    console.log("fetched userId -->", userId);
     // TODO : we will not hard-code server URL here
     const responce = await fetch(`http://localhost:8080/cart?user=${userId}`);
     const data = await responce.json();
@@ -91,7 +92,7 @@ export function updateCart(update) {
 export function deleteItemFromCart(itemId) {
   return new Promise(async (resolve) => {
     // console.log("Before send --> ", sendData);
-    console.log("Deleted Item ID: -->", itemId)
+    console.log("Deleted itemId: -->", itemId);
     const response = await fetch(`http://localhost:8080/cart/${itemId}`, {
       method: "DELETE",
       headers: {
@@ -100,6 +101,28 @@ export function deleteItemFromCart(itemId) {
     });
     const data = await response.json();
     // Resolve with the merged data
-    resolve({data:{id:itemId}});
+    resolve({ data: { id: itemId } });
+  });
+}
+
+export function resetCart(userId) {
+  console.log("resetCart userId -->", userId);
+  // get all the items of user and then delete each item
+  return new Promise(async (resolve) => {
+    const response = await fetchItemsByUserId(userId);
+    const items = await response.data;
+    console.log("responseed by fetchItemByUserId -->", items);
+    items.forEach((item) => {
+      console.log("HERE IS THE ISSUE -->", item.id);
+      setTimeout(() => {
+        deleteItemFromCart(item.id);
+      }, 50);
+    });
+
+    // for (let item in items) {
+    //   console.log("HERE IS THE ISSUE -->", item);
+    //   await deleteItemFromCart(item);
+    // }
+    resolve({ status: "success" });
   });
 }
