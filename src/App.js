@@ -14,7 +14,7 @@ import { fetchItemsByUserIdAsync } from "./features/cart/cartSlice";
 import { selectLoggedInUser } from "./features/auth/authSlice";
 import PageNotFound from "./pages/PageNotFound";
 import OrderSuccessPage from "./pages/OrderSuccessPage";
-import UserOrders from "./features/user/components/UserOrders";
+import UserOrdersPage from "./pages/UserOrdersPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -36,6 +36,7 @@ function App() {
             <Route exact path="/cart" element={<CartPage />} />
             <Route exact path="/cart" element={<CartPage />} />
             <Route exact path="/checkout" element={<Checkout />} />
+            <Route exact path="/orders" element={<UserOrdersPage />} />
             <Route
               exact
               path="/product-detail/:id"
@@ -52,13 +53,14 @@ function App() {
             path="/"
             element={
               <Protected>
-                <Home />
+                {" "}
+                <Home />{" "}
               </Protected>
             }
           />
           <Route exact path="/signup" element={<SignupPage />} />
           <Route exact path="/login" element={<LoginPage />} />
-          <Route exact path="/orders" element={<UserOrders />} />
+
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>
