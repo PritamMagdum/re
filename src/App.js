@@ -22,6 +22,7 @@ import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import AdminHome from "./pages/AdminHome";
 import ProtectedAdmin from "./features/auth/components/ProtectedAdmin";
 import AdminProductDetailPage from "./pages/AdminProductDetailPage";
+import AdminProductFormPage from "./pages/AdminProductFormPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -48,6 +49,15 @@ function App() {
             <Route exact path="/profile" element={<UserProfilePage />} />
             <Route
               exact
+              path="/"
+              element={
+                <Protected>
+                  <Home />
+                </Protected>
+              }
+            />
+            <Route
+              exact
               path="/product-detail/:id"
               element={<ProductDetailPage />}
             />
@@ -62,19 +72,16 @@ function App() {
             <Route exact path="/admin" element={<AdminHome />} />
             <Route
               exact
+              path="/admin/product-form"
+              element={<AdminProductFormPage />}
+            />
+            <Route
+              exact
               path="/admin/product-detail/:id"
               element={<AdminProductDetailPage />}
             />
           </Route>
-          <Route
-            exact
-            path="/"
-            element={
-              <Protected>
-                <Home />
-              </Protected>
-            }
-          />
+
           <Route exact path="/signup" element={<SignupPage />} />
           <Route exact path="/logout" element={<Logout />} />
           <Route exact path="/login" element={<LoginPage />} />
