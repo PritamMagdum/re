@@ -135,9 +135,18 @@ export default function AdminProductList() {
             </h1>
 
             <div className="flex items-center">
+              <div>
+                <button
+                  // onClick={handleSubmit}
+                  // type="submit"
+                  className="rounded-md mx-3 bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                  Add New Product
+                </button>
+              </div>
               <Menu as="div" className="relative inline-block text-left">
                 <div>
-                  <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
+                  <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900 ">
                     Sort
                     <ChevronDownIcon
                       className="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
@@ -205,6 +214,7 @@ export default function AdminProductList() {
 
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
               {/* Filters */}
+
               <DesktopFilter
                 filters={filters}
                 handleFilter={handleFilter}
@@ -494,44 +504,58 @@ function ProductGrid({ products }) {
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
           {/* {console.log(products)} */}
           {products?.data?.map((product) => (
-            <Link to={`/product-detail/${product.id}`} key={product.id}>
-              <div className="group relative border-solid border-2 p-2 rounded-md">
-                <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                  <img
-                    src={product.thumbnail}
-                    alt={product.title}
-                    className="h-full w-full object-cover object-center lg:h-full lg:w-full"
-                  />
-                </div>
-                <div className="mt-4 flex justify-between">
-                  <div>
-                    <h3 className="text-sm text-gray-700">
-                      <div href={product.thumbnail}>
-                        <span aria-hidden="true" className="absolute inset-0" />
-                        {product.title}
-                      </div>
-                    </h3>
-                    <p className="mt-1 text-sm inline text-gray-500">
-                      <StarIcon className="w-6 h-6 inline text-yellow-300"></StarIcon>
-                      <span className="align-bottom px-0.5">
-                        {product.rating}
-                      </span>{" "}
-                    </p>
+            <div>
+              <Link to={`/product-detail/${product.id}`} key={product.id}>
+                <div className="group relative border-solid border-2 p-2 rounded-md">
+                  <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                    <img
+                      src={product.thumbnail}
+                      alt={product.title}
+                      className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                    />
                   </div>
-                  <div>
-                    <p className="text-sm font-medium text-gray-900">
-                      $
-                      {Math.round(
-                        product.price * (1 - product.discountPercentage / 100)
-                      )}
-                    </p>
-                    <p className="text-sm font-medium line-through text-gray-400">
-                      ${product.price}
-                    </p>
+                  <div className="mt-4 flex justify-between">
+                    <div>
+                      <h3 className="text-sm text-gray-700">
+                        <div href={product.thumbnail}>
+                          <span
+                            aria-hidden="true"
+                            className="absolute inset-0"
+                          />
+                          {product.title}
+                        </div>
+                      </h3>
+                      <p className="mt-1 text-sm inline text-gray-500">
+                        <StarIcon className="w-6 h-6 inline text-yellow-300"></StarIcon>
+                        <span className="align-bottom px-0.5">
+                          {product.rating}
+                        </span>{" "}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-gray-900">
+                        $
+                        {Math.round(
+                          product.price * (1 - product.discountPercentage / 100)
+                        )}
+                      </p>
+                      <p className="text-sm font-medium line-through text-gray-400">
+                        ${product.price}
+                      </p>
+                    </div>
                   </div>
                 </div>
+              </Link>
+              <div>
+                <button
+                  // onClick={handleSubmit}
+                  // type="submit"
+                  className="rounded-md my-2 bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                  Edit Product
+                </button>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>
