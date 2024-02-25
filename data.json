@@ -2995,7 +2995,31 @@
       "role": "admin"
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "0": {
+        "id": "6",
+        "title": "MacBook Pro",
+        "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+        "price": 1749,
+        "discountPercentage": 11.02,
+        "rating": 4.57,
+        "stock": 83,
+        "brand": "Apple",
+        "category": "laptops",
+        "thumbnail": "https://cdn.dummyjson.com/product-images/6/thumbnail.png",
+        "images": [
+          "https://cdn.dummyjson.com/product-images/6/1.png",
+          "https://cdn.dummyjson.com/product-images/6/2.jpg",
+          "https://cdn.dummyjson.com/product-images/6/3.png",
+          "https://cdn.dummyjson.com/product-images/6/4.jpg"
+        ]
+      },
+      "id": "7faf",
+      "quantity": 1,
+      "user": "124a"
+    }
+  ],
   "orders": [
     {
       "id": "7939",
