@@ -16,6 +16,7 @@ export default function UserProfile() {
   const {
     register,
     handleSubmit,
+    setValue,
     reset,
     watch,
     formState: { errors },
@@ -25,6 +26,7 @@ export default function UserProfile() {
     const newUser = { ...user, addresses: [...user.addresses] };
     newUser.addresses.splice(index, 1, updatedAddress);
     dispatch(updateUserAsync(newUser));
+    setSelectedEditIndex(-1);
     setTimeout(() => {
       dispatch(fetchLoggedInUserAsync(user.id));
       dispatch(fetchLoggedInUserOrdersAsync(user.id));
@@ -40,6 +42,18 @@ export default function UserProfile() {
       dispatch(fetchLoggedInUserAsync(user.id));
       dispatch(fetchLoggedInUserOrdersAsync(user.id));
     }, 25);
+  };
+
+  const handleEditForm = (index) => {
+    setSelectedEditIndex(index);
+    const address = user.addresses[index];
+    setValue("name", address.name);
+    setValue("email", address.email);
+    setValue("phone", address.phone);
+    setValue("pinCode", address.pinCode);
+    setValue("city", address.city);
+    setValue("state", address.state);
+    setValue("street", address.street);
   };
 
   return (
@@ -92,7 +106,6 @@ export default function UserProfile() {
                               {...register("name", {
                                 required: "Name is Required",
                               })}
-                              value={address.name}
                               id="name"
                               autoComplete="given-name"
                               className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -113,7 +126,6 @@ export default function UserProfile() {
                               {...register("email", {
                                 required: "Email is Required",
                               })}
-                              value={address.email}
                               type="email"
                               autoComplete="email"
                               className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -133,7 +145,6 @@ export default function UserProfile() {
                               {...register("phone", {
                                 required: "Phone is Required",
                               })}
-                              value={address.phone}
                               type="tel"
                               autoComplete="phone"
                               className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -155,7 +166,6 @@ export default function UserProfile() {
                                 required: "Street Address is Required",
                               })}
                               id="street"
-                              value={address.street}
                               autoComplete="street"
                               className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                             />
@@ -175,7 +185,6 @@ export default function UserProfile() {
                               {...register("city", {
                                 required: "City is Required",
                               })}
-                              value={address.city}
                               id="city"
                               autoComplete="address-level2"
                               className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -196,7 +205,6 @@ export default function UserProfile() {
                               {...register("state", {
                                 required: "State is Required",
                               })}
-                              value={address.state}
                               id="state"
                               autoComplete="address-level1"
                               className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -217,7 +225,6 @@ export default function UserProfile() {
                               {...register("pinCode", {
                                 required: "Pin Code is Required",
                               })}
-                              value={address.pinCode}
                               id="pinCode"
                               autoComplete="pinCode"
                               className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -227,11 +234,18 @@ export default function UserProfile() {
                       </div>
                       <div className="mt-6 flex items-center justify-end gap-x-4">
                         <button
+                          onClick={(e) => setSelectedEditIndex(-1)}
+                          type="button"
+                          className="rounded-md bg-gray-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                        >
+                          Cancel
+                        </button>
+                        <button
                           onClick={handleSubmit}
                           type="submit"
                           className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                         >
-                          Edit Address
+                          Save Address
                         </button>
                       </div>
                     </div>
@@ -267,7 +281,7 @@ export default function UserProfile() {
 
                 <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
                   <button
-                    onClick={(e) => handleEdit(e, index)}
+                    onClick={(e) => handleEditForm(index)}
                     className="flex p-2.5 bg-yellow-500 rounded-xl hover:rounded-3xl hover:bg-yellow-600 transition-all duration-300 text-white my-0.5"
                   >
                     <svg
