@@ -1,8 +1,5 @@
 import { Link, Navigate, useNavigate } from "react-router-dom";
-import {
-  selectLoggedInUser,
-  updateUserAsync,
-} from "../features/auth/authSlice";
+import { updateUserAsync } from "../features/auth/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import {
   deleteItemFromCartAsync,
@@ -12,13 +9,17 @@ import {
 } from "../features/cart/cartSlice";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { createOrderAsync, selectCurrentOrder } from "../features/order/orderSlice";
+import {
+  createOrderAsync,
+  selectCurrentOrder,
+} from "../features/order/orderSlice";
+import { selectUserInfo } from "../features/user/userSlice";
 
 function Checkout() {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(true);
   const items = useSelector(selectItems);
-  const user = useSelector(selectLoggedInUser);
+  const user = useSelector(selectUserInfo);
   const [selectedAddress, setSelectedAddress] = useState(null);
   const [paymentMethod, setPaymentMethod] = useState("cash");
   const navigate = useNavigate();
@@ -60,20 +61,32 @@ function Checkout() {
     setPaymentMethod(e.target.value);
   };
 
-  const handleOrder = (e)=>{
-    const order = { items, totalAmount, totalItems, user, paymentMethod, selectedAddress, status : 'pending'};
+  const handleOrder = (e) => {
+    const order = {
+      items,
+      totalAmount,
+      totalItems,
+      user,
+      paymentMethod,
+      selectedAddress,
+      status: "pending",
+    };
     dispatch(createOrderAsync(order));
     // TODO : Redirect to order-success page
     // TODO : Clear cart after oder
     // TODO : on Server change the stock number of items
     // navigate("/order-success");
-    
-  }
+  };
 
   return (
     <>
       {!items.length && <Navigate to="/" replace={true}></Navigate>}
-      {currentOrder && <Navigate to={`/order-success/${currentOrder.id}`} replace={true}></Navigate>}
+      {currentOrder && (
+        <Navigate
+          to={`/order-success/${currentOrder.id}`}
+          replace={true}
+        ></Navigate>
+      )}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
           <div className="lg:col-span-3">
@@ -317,9 +330,7 @@ function Checkout() {
                           <input
                             onChange={handlePayment}
                             value="cash"
-                            checked={                        
-                              paymentMethod === "cash"
-                            }
+                            checked={paymentMethod === "cash"}
                             // name="payments"
                             id="cash"
                             type="radio"
@@ -337,9 +348,7 @@ function Checkout() {
                             id="Card"
                             onChange={handlePayment}
                             value="card"
-                            checked={
-                              paymentMethod === "card"
-                            }
+                            checked={paymentMethod === "card"}
                             // name="payments"
                             type="radio"
                             className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
@@ -444,7 +453,7 @@ function Checkout() {
                 </p>
                 <div className="mt-6">
                   <div
-                  onClick={handleOrder}
+                    onClick={handleOrder}
                     className="flex items-center cursor-pointer justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
                   >
                     Pay or Order

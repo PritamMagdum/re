@@ -3934,6 +3934,72 @@
         "pinCode": "416106"
       },
       "status": "pending"
+    },
+    {
+      "id": "6046",
+      "items": [
+        {
+          "0": {
+            "id": "6",
+            "title": "MacBook Pro",
+            "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+            "price": 1749,
+            "discountPercentage": 11.02,
+            "rating": 4.57,
+            "stock": 83,
+            "brand": "Apple",
+            "category": "laptops",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/6/thumbnail.png",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/6/1.png",
+              "https://cdn.dummyjson.com/product-images/6/2.jpg",
+              "https://cdn.dummyjson.com/product-images/6/3.png",
+              "https://cdn.dummyjson.com/product-images/6/4.jpg"
+            ]
+          },
+          "id": "6047",
+          "quantity": 1,
+          "user": "aa51"
+        }
+      ],
+      "totalAmount": 1749,
+      "totalItems": 1,
+      "user": {
+        "id": "aa51",
+        "email": "pritammagdum24@gmail.com",
+        "addresses": [
+          {
+            "name": "Pritam Sanjay Magdum",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "8698694008",
+            "street": "Magdum Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "416106"
+          },
+          {
+            "name": "omkar jagtap",
+            "email": "omkar@gmail.com",
+            "phone": "123456789",
+            "street": "Pune",
+            "city": "Pune",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "password": "Pritam@123"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Pritam Sanjay Magdum",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "8698694008",
+        "street": "Magdum Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "416106"
+      },
+      "status": "pending"
     }
   ]
 }

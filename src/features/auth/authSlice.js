@@ -1,16 +1,15 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { checkUser, fetchCount, updateUser } from './authAPI';
-import { createUser } from './authAPI';
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { checkUser, createUser } from "./authAPI";
+import { updateUser } from "../user/userAPI";
 
 const initialState = {
   loggedInUser: null,
-  status: 'idle',
+  status: "idle",
   error: null,
-
 };
 
 export const createUserAsync = createAsyncThunk(
-  'user/createUser',
+  "user/createUser",
   async (userData) => {
     const response = await createUser(userData);
     // The value we return becomes the `fulfilled` action payload
@@ -18,16 +17,14 @@ export const createUserAsync = createAsyncThunk(
   }
 );
 
-
 export const checkUserAsync = createAsyncThunk(
-  'user/checkUser',
+  "user/checkUser",
   async (loginInfo) => {
     const response = await checkUser(loginInfo);
     // The value we return becomes the `fulfilled` action payload
     return response.data;
   }
 );
-
 
 export const updateUserAsync = createAsyncThunk(
   "user/updateUser",
@@ -39,13 +36,13 @@ export const updateUserAsync = createAsyncThunk(
 );
 
 export const counterSlice = createSlice({
-  name: 'user',
+  name: "user",
   initialState,
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
     increment: (state) => {
       state.value += 1;
-    }
+    },
   },
 
   extraReducers: (builder) => {
@@ -80,7 +77,7 @@ export const counterSlice = createSlice({
 
 export const { increment } = counterSlice.actions;
 
-export const selectLoggedInUser = (state) => state.auth.loggedInUser
-export const selectError = (state) => state.auth.error
+export const selectLoggedInUser = (state) => state.auth.loggedInUser;
+export const selectError = (state) => state.auth.error;
 
 export default counterSlice.reducer;

@@ -8,3 +8,26 @@ export function fetchLoggedInUserOrders(userId) {
     resolve({ data });
   });
 }
+
+export function fetchLoggedInUser(userId) {
+  return new Promise(async (resolve) => {
+    const responce = await fetch(`http://localhost:8080/users/${userId}`);
+    const data = await responce.json();
+    resolve({ data });
+  });
+}
+
+export function updateUser(update) {
+  return new Promise(async (resolve) => {
+    const responce = await fetch(`http://localhost:8080/users/${update.id}`, {
+      method: "PATCH",
+      body: JSON.stringify(update),
+      headers: {
+        "content-type": "application/json",
+      },
+    });
+    const data = await responce.json();
+    // TODO: On server it will only return some information of users (not password)
+    resolve({ data });
+  });
+}
