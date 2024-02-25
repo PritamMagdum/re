@@ -2969,31 +2969,7 @@
       "password": "Demo@123"
     }
   ],
-  "cart": [
-    {
-      "0": {
-        "id": "6",
-        "title": "MacBook Pro",
-        "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
-        "price": 1749,
-        "discountPercentage": 11.02,
-        "rating": 4.57,
-        "stock": 83,
-        "brand": "Apple",
-        "category": "laptops",
-        "thumbnail": "https://cdn.dummyjson.com/product-images/6/thumbnail.png",
-        "images": [
-          "https://cdn.dummyjson.com/product-images/6/1.png",
-          "https://cdn.dummyjson.com/product-images/6/2.jpg",
-          "https://cdn.dummyjson.com/product-images/6/3.png",
-          "https://cdn.dummyjson.com/product-images/6/4.jpg"
-        ]
-      },
-      "id": "de27",
-      "quantity": 2,
-      "user": "aa51"
-    }
-  ],
+  "cart": [],
   "orders": [
     {
       "id": "7939",
@@ -3074,6 +3050,96 @@
         "city": "Narhegaon",
         "state": "Maharashtra",
         "pinCode": "411011"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "5b01",
+      "items": [
+        {
+          "0": {
+            "id": "6",
+            "title": "MacBook Pro",
+            "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+            "price": 1749,
+            "discountPercentage": 11.02,
+            "rating": 4.57,
+            "stock": 83,
+            "brand": "Apple",
+            "category": "laptops",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/6/thumbnail.png",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/6/1.png",
+              "https://cdn.dummyjson.com/product-images/6/2.jpg",
+              "https://cdn.dummyjson.com/product-images/6/3.png",
+              "https://cdn.dummyjson.com/product-images/6/4.jpg"
+            ]
+          },
+          "id": "de27",
+          "quantity": 5,
+          "user": "aa51"
+        },
+        {
+          "0": {
+            "id": "12",
+            "title": "Brown Perfume",
+            "description": "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
+            "price": 40,
+            "discountPercentage": 15.66,
+            "rating": 4,
+            "stock": 52,
+            "brand": "Royal_Mirage",
+            "category": "fragrances",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/12/1.jpg",
+              "https://cdn.dummyjson.com/product-images/12/2.jpg",
+              "https://cdn.dummyjson.com/product-images/12/3.png",
+              "https://cdn.dummyjson.com/product-images/12/4.jpg",
+              "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
+            ]
+          },
+          "id": "72da",
+          "quantity": 1,
+          "user": "aa51"
+        }
+      ],
+      "totalAmount": 8785,
+      "totalItems": 6,
+      "user": {
+        "id": "aa51",
+        "email": "pritammagdum24@gmail.com",
+        "addresses": [
+          {
+            "name": "Pritam Magdum",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "Majarewadi Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "416106"
+          },
+          {
+            "name": "Keshav Brother",
+            "email": "keshav@gmail.com",
+            "phone": "1234567890",
+            "pinCode": "411011",
+            "city": "Karjat",
+            "state": "Karjat",
+            "street": "Karjat"
+          }
+        ],
+        "password": "Pritam@123"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Keshav Brother",
+        "email": "keshav@gmail.com",
+        "phone": "1234567890",
+        "pinCode": "411011",
+        "city": "Karjat",
+        "state": "Karjat",
+        "street": "Karjat"
       },
       "status": "pending"
     }

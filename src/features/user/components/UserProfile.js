@@ -14,6 +14,8 @@ export default function UserProfile() {
   const [selectedEditIndex, setSelectedEditIndex] = useState(-1);
   const [showAddAddressForm, setShowAddAddressForm] = useState(false);
 
+  // TODO : Adding Payment section in upcomming days
+
   const {
     register,
     handleSubmit,
