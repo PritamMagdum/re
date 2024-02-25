@@ -70,7 +70,28 @@ export default function UserProfile() {
         </div>
 
         <div className="border-t border-gray-200 px-4 py-6 sm:px-6 my-3">
-          <p className="mt-0.5 text-sm text-gray-500">Your Addresses :</p>
+          <div className="flex justify-between">
+            <p className="mt-0.5 text-2xl text-gray-500">Your Addresses :</p>
+            <button
+              // onClick={(e) => handleAddForm()}
+              className="flex p-2.5 bg-green-500 rounded-xl hover:rounded-3xl hover:bg-green-600 transition-all duration-300 text-white my-0.5 mx-3"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                />
+              </svg>
+            </button>
+          </div>
           {user.addresses.map((address, index) => (
             <div>
               {selectedEditIndex === index ? (
