@@ -19,6 +19,9 @@ import UserProfilePage from "./pages/UserProfilePage";
 import { fetchLoggedInUserAsync } from "./features/user/userSlice";
 import Logout from "./features/auth/components/Logout";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
+import AdminHome from "./pages/AdminHome";
+import ProtectedAdmin from "./features/auth/components/ProtectedAdmin";
+import AdminProductDetailPage from "./pages/AdminProductDetailPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -52,6 +55,15 @@ function App() {
               exact
               path="/order-success/:id"
               element={<OrderSuccessPage />}
+            />
+          </Route>
+
+          <Route element={<ProtectedAdmin />}>
+            <Route exact path="/admin" element={<AdminHome />} />
+            <Route
+              exact
+              path="/admin/product-detail/:id"
+              element={<AdminProductDetailPage />}
             />
           </Route>
           <Route

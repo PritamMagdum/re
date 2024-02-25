@@ -10,13 +10,16 @@ function ProtectedAdmin(children) {
   if (!user) {
     <Navigate to="/login" replace={true}></Navigate>;
   }
-  if (user && user.role !== "admin") {
-    <Navigate to="/" replace={true}></Navigate>;
-  }
+  // if (user) {
+  //   user.role === "admin" ? <Outlet /> : <Navigate to="/" />;
+  // }
+  // if (user && user.role === "admin") {
+  //   <Navigate to="/" replace={true}></Navigate>;
+  // }
   // return (
-  //     user ? <Outlet /> : <Navigate to="/login" />
+  //     user  ? <Outlet /> : <Navigate to="/login" />
   // )
-  return children;
+  return user.role === "admin" ? <Outlet /> : <Navigate to="/" />;
 }
 
 export default ProtectedAdmin;

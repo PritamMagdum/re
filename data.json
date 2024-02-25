@@ -2940,24 +2940,25 @@
     {
       "id": "aa51",
       "email": "pritammagdum24@gmail.com",
+      "role": "user",
       "addresses": [
         {
-          "name": "Pritam Magdum",
+          "name": "Pritam",
           "email": "pritammagdum24@gmail.com",
-          "phone": "08698694008",
-          "street": "Majarewadi Road",
+          "phone": "8698694008",
+          "street": "Pune",
           "city": "Bastwad",
           "state": "Maharashtra",
           "pinCode": "416106"
         },
         {
-          "name": "Keshav Brother",
-          "email": "keshav@gmail.com",
-          "phone": "1234567890",
-          "pinCode": "411011",
-          "city": "Karjat",
-          "state": "Karjat",
-          "street": "Karjat"
+          "name": "Pritam",
+          "email": "pritammagdum24@gmail.com",
+          "phone": "08698694008",
+          "street": "sdfsd",
+          "city": "Bastwad",
+          "state": "Maharashtra",
+          "pinCode": "sdfsd"
         }
       ],
       "password": "Pritam@123"
@@ -2965,6 +2966,7 @@
     {
       "id": "6d19",
       "email": "demo@gmail.com",
+      "role": "user",
       "addresses": [],
       "password": "Demo@123"
     },
@@ -2974,6 +2976,23 @@
       "password": "Demo1@123",
       "addresses": [],
       "role": "user"
+    },
+    {
+      "id": "124a",
+      "email": "admin@gmail.com",
+      "password": "Admin@123",
+      "addresses": [
+        {
+          "name": "Pritam",
+          "email": "pritammagdum24@gmail.com",
+          "phone": "08698694008",
+          "street": "FC Road",
+          "city": "Bastwad",
+          "state": "Maharashtra",
+          "pinCode": "411011"
+        }
+      ],
+      "role": "admin"
     }
   ],
   "cart": [],
@@ -3233,6 +3252,139 @@
         "city": "Bastwad",
         "state": "Maharashtra",
         "pinCode": "416106"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "9bf2",
+      "items": [
+        {
+          "0": {
+            "id": "2",
+            "title": "iPhone X",
+            "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+            "price": 899,
+            "discountPercentage": 17.94,
+            "rating": 4.44,
+            "stock": 34,
+            "brand": "Apple",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/2/1.jpg",
+              "https://cdn.dummyjson.com/product-images/2/2.jpg",
+              "https://cdn.dummyjson.com/product-images/2/3.jpg",
+              "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+            ]
+          },
+          "id": "382c",
+          "quantity": 2,
+          "user": "aa51"
+        }
+      ],
+      "totalAmount": 1798,
+      "totalItems": 2,
+      "user": {
+        "id": "aa51",
+        "email": "pritammagdum24@gmail.com",
+        "addresses": [
+          {
+            "name": "Pritam Magdum",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "Majarewadi Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "416106"
+          },
+          {
+            "name": "Keshav Brother",
+            "email": "keshav@gmail.com",
+            "phone": "1234567890",
+            "pinCode": "411011",
+            "city": "Karjat",
+            "state": "Karjat",
+            "street": "Karjat"
+          },
+          {
+            "name": "Sanjay",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "09158344349",
+            "street": "sdfdf",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "sdff"
+          }
+        ],
+        "password": "Pritam@123"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Keshav Brother",
+        "email": "keshav@gmail.com",
+        "phone": "1234567890",
+        "pinCode": "411011",
+        "city": "Karjat",
+        "state": "Karjat",
+        "street": "Karjat"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "be31",
+      "items": [
+        {
+          "0": {
+            "id": "2",
+            "title": "iPhone X",
+            "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+            "price": 899,
+            "discountPercentage": 17.94,
+            "rating": 4.44,
+            "stock": 34,
+            "brand": "Apple",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/2/1.jpg",
+              "https://cdn.dummyjson.com/product-images/2/2.jpg",
+              "https://cdn.dummyjson.com/product-images/2/3.jpg",
+              "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+            ]
+          },
+          "id": "0ff8",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 899,
+      "totalItems": 1,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
       },
       "status": "pending"
     }

@@ -47,7 +47,7 @@ export default function UserProfile() {
     setTimeout(() => {
       dispatch(fetchLoggedInUserAsync(user.id));
       dispatch(fetchLoggedInUserOrdersAsync(user.id));
-    }, 25);
+    }, 20);
   };
 
   const handleEditForm = (index) => {
@@ -72,6 +72,11 @@ export default function UserProfile() {
           <h3 className="text-xl font-bold tracking-tight my-2 text-red-500">
             Email Address : {user.email}
           </h3>
+          {user.role === "admin" && (
+            <h3 className="text-xl font-bold tracking-tight my-2 text-red-500">
+              Role : {user.role}
+            </h3>
+          )}
           <hr className="my-5" />
         </div>
 
