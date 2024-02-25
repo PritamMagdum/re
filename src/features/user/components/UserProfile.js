@@ -1,16 +1,27 @@
 import { useSelector, useDispatch } from "react-redux";
-import { selectUserInfo } from "../userSlice";
+import {
+  fetchLoggedInUserAsync,
+  fetchLoggedInUserOrdersAsync,
+  selectUserInfo,
+  updateUserAsync,
+} from "../userSlice";
 
 export default function UserProfile() {
   const user = useSelector(selectUserInfo);
   const dispatch = useDispatch();
-
   const handleEdit = (e) => {
     console.log("handleEdit is Clicked");
   };
 
-  const handleRemove = (e) => {
-    console.log("handleRemove is Clicked");
+  const handleRemove = (e, index) => {
+    // console.log("handleRemove is Clicked");
+    const newUser = { ...user, addresses: [...user.addresses] };
+    newUser.addresses.splice(index, 1);
+    dispatch(updateUserAsync(newUser));
+    setTimeout(() => {
+      dispatch(fetchLoggedInUserAsync(user.id));
+      dispatch(fetchLoggedInUserOrdersAsync(user.id));
+    }, 25);
   };
 
   return (
@@ -29,7 +40,10 @@ export default function UserProfile() {
         <div className="border-t border-gray-200 px-4 py-6 sm:px-6 my-3">
           <p className="mt-0.5 text-sm text-gray-500">Your Addresses :</p>
           {user.addresses.map((address, index) => (
-            <div className="flex justify-between gap-x-6 py-5 border-2 px-2 border-gray-200 rounded-md my-1">
+            <div
+              key={index}
+              className="flex justify-between gap-x-6 py-5 border-2 px-2 border-gray-200 rounded-md my-1"
+            >
               <div className="flex min-w-0 gap-x-4">
                 <div className="min-w-0 flex-auto">
                   <p className="text-sm font-semibold leading-6 text-gray-900">
@@ -60,7 +74,7 @@ export default function UserProfile() {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
+                    className="h-6 w-6"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -82,7 +96,7 @@ export default function UserProfile() {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="w-6 h-6 text-white"
+                    className="w-6 h-6 text-white"
                   >
                     <path
                       strokeLinecap="round"
