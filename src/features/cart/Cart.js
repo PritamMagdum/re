@@ -1,24 +1,22 @@
-import React, { useState, Fragment, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useState, Fragment, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import {
   deleteItemFromCartAsync,
   fetchItemsByUserIdAsync,
   selectItems,
   updateCartAsync,
-} from './cartSlice';
-import { Dialog, Transition } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
-import { Link, Navigate } from 'react-router-dom';
-import { fetchItemsByUserId } from './cartAPI';
-import { selectLoggedInUser } from '../auth/authSlice';
-
-
+} from "./cartSlice";
+import { Dialog, Transition } from "@headlessui/react";
+import { XMarkIcon } from "@heroicons/react/24/outline";
+import { Link, Navigate } from "react-router-dom";
+import { fetchItemsByUserId } from "./cartAPI";
+import { selectLoggedInUser } from "../auth/authSlice";
 
 export default function Cart() {
   // const count = useSelector(selectCount);
   const dispatch = useDispatch();
-  const [open, setOpen] = useState(true)
-  const items = useSelector(selectItems)
+  const [open, setOpen] = useState(true);
+  const items = useSelector(selectItems);
   const user = useSelector(selectLoggedInUser);
   // console.log("Items are -> ",items);
 
@@ -27,22 +25,25 @@ export default function Cart() {
   //   return total + itemTotal;
   // }, 0);
 
-  const totalAmount = items.reduce((amount, item)=> item[0].price * item.quantity + amount, 0)
-  const totalItems = items.reduce((total, item)=> item.quantity + total, 0)
-  
-    const handleQuantity = (e, item) => {
-      console.log("e is ->",e.target.value)
-      console.log("item is -> ",item)
-      dispatch(updateCartAsync({ ...item, quantity: +e.target.value }));
-      dispatch(fetchItemsByUserIdAsync(user.id))
-    };
+  const totalAmount = items.reduce(
+    (amount, item) => item[0].price * item.quantity + amount,
+    0
+  );
+  const totalItems = items.reduce((total, item) => item.quantity + total, 0);
 
-    const handleRemove = (e, id)=>{
-      dispatch(deleteItemFromCartAsync(id));
-      setTimeout(() => {
-        dispatch(fetchItemsByUserIdAsync(user.id));
-      }, 50);
-    }
+  const handleQuantity = (e, item) => {
+    // console.log("e is ->",e.target.value)
+    // console.log("item is -> ",item)
+    dispatch(updateCartAsync({ ...item, quantity: +e.target.value }));
+    dispatch(fetchItemsByUserIdAsync(user.id));
+  };
+
+  const handleRemove = (e, id) => {
+    dispatch(deleteItemFromCartAsync(id));
+    setTimeout(() => {
+      dispatch(fetchItemsByUserIdAsync(user.id));
+    }, 50);
+  };
 
   return (
     <div>

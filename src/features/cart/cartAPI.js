@@ -25,8 +25,8 @@
 
 export function addToCart(item) {
   return new Promise(async (resolve) => {
-    console.log("Before Add --> ", item);
-    console.log("product --> ", ...item.product);
+    // console.log("Before Add --> ", item);
+    // console.log("product --> ", ...item.product);
 
     const sendData = {
       ...item.product,
@@ -34,7 +34,7 @@ export function addToCart(item) {
       user: item.user,
     };
 
-    console.log("Before send --> ", sendData);
+    // console.log("Before send --> ", sendData);
     const response = await fetch("http://localhost:8080/cart", {
       method: "POST",
       // body: JSON.stringify(item),
@@ -54,7 +54,7 @@ export function addToCart(item) {
     //   user: item.user
     // };
 
-    console.log("Affter Add --> ", newData);
+    // console.log("Affter Add --> ", newData);
     // Resolve with the merged data
     resolve(newData);
   });
@@ -62,11 +62,11 @@ export function addToCart(item) {
 
 export function fetchItemsByUserId(userId) {
   return new Promise(async (resolve) => {
-    console.log("fetched userId -->", userId);
+    // console.log("fetched userId -->", userId);
     // TODO : we will not hard-code server URL here
     const responce = await fetch(`http://localhost:8080/cart?user=${userId}`);
     const data = await responce.json();
-    console.log("comes fetchItemsById ->", data);
+    // console.log("comes fetchItemsById ->", data);
     resolve({ data });
   });
 }
@@ -92,7 +92,7 @@ export function updateCart(update) {
 export function deleteItemFromCart(itemId) {
   return new Promise(async (resolve) => {
     // console.log("Before send --> ", sendData);
-    console.log("Deleted itemId: -->", itemId);
+    // console.log("Deleted itemId: -->", itemId);
     const response = await fetch(`http://localhost:8080/cart/${itemId}`, {
       method: "DELETE",
       headers: {
@@ -106,14 +106,14 @@ export function deleteItemFromCart(itemId) {
 }
 
 export function resetCart(userId) {
-  console.log("resetCart userId -->", userId);
+  // console.log("resetCart userId -->", userId);
   // get all the items of user and then delete each item
   return new Promise(async (resolve) => {
     const response = await fetchItemsByUserId(userId);
     const items = await response.data;
-    console.log("responseed by fetchItemByUserId -->", items);
+    // console.log("responseed by fetchItemByUserId -->", items);
     items.forEach((item) => {
-      console.log("HERE IS THE ISSUE -->", item.id);
+      // console.log("HERE IS THE ISSUE -->", item.id);
       setTimeout(() => {
         deleteItemFromCart(item.id);
       }, 50);

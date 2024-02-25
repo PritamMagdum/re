@@ -11,9 +11,7 @@ function Logout() {
     dispatch(signOutAsync());
   });
 
-  return (
-    <div>{!user && <Navigate to="/logout" replace={true}></Navigate>}</div>
-  );
+  return <div>{!user && <Navigate to="/" replace={true}></Navigate>}</div>;
 }
 
 export default Logout;

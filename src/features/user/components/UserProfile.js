@@ -16,14 +16,7 @@ export default function UserProfile() {
 
   // TODO : Adding Payment section in upcomming days
 
-  const {
-    register,
-    handleSubmit,
-    setValue,
-    reset,
-    watch,
-    formState: { errors },
-  } = useForm();
+  const { register, handleSubmit, setValue, reset } = useForm();
 
   const handleEdit = (updatedAddress, index) => {
     const newUser = { ...user, addresses: [...user.addresses] };
@@ -288,7 +281,7 @@ export default function UserProfile() {
             </form>
           ) : null}
           {user.addresses.map((address, index) => (
-            <div>
+            <div key={index}>
               {selectedEditIndex === index ? (
                 <form
                   noValidate

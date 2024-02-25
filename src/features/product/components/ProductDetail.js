@@ -102,7 +102,7 @@ export default function ProductDetail() {
     newObj.quantity = 2;
     newObj.user = user.id;
 
-    console.log("New Object -> ", newObj);
+    // console.log("New Object -> ", newObj);
     e.preventDefault();
     dispatch(addToCartAsync({ product: product, quantity: 1, user: user.id }));
     // dispatch(addToCartAsync({...product, quantity : 1, user:user.id}));

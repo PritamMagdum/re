@@ -19,7 +19,7 @@ export function checkUser(userInfo) {
     const password = userInfo.password;
     const responce = await fetch(`http://localhost:8080/users?email=${email}`);
     const data = await responce.json();
-    console.log(data);
+    // console.log(data);
     if (data.length) {
       if (password === data[0].password) {
         resolve({ data: data[0] });
