@@ -2945,10 +2945,19 @@
           "name": "Pritam Magdum",
           "email": "pritammagdum24@gmail.com",
           "phone": "08698694008",
-          "pinCode": "416106",
+          "street": "Majarewadi Road",
           "city": "Bastwad",
           "state": "Maharashtra",
-          "street": "Majarewadi Road"
+          "pinCode": "416106"
+        },
+        {
+          "name": "Keshav Brother",
+          "email": "keshav@gmail.com",
+          "phone": "1234567890",
+          "pinCode": "411011",
+          "city": "Karjat",
+          "state": "Karjat",
+          "street": "Karjat"
         }
       ],
       "password": "Pritam@123"
