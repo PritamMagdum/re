@@ -2940,7 +2940,17 @@
     {
       "id": "aa51",
       "email": "pritammagdum24@gmail.com",
-      "addresses": [],
+      "addresses": [
+        {
+          "name": "Pritam",
+          "email": "pritammagdum24@gmail.com",
+          "phone": "08698694008",
+          "street": "sdfsdfs",
+          "city": "Bastwad",
+          "state": "Maharashtra",
+          "pinCode": "sdfsf"
+        }
+      ],
       "password": "Pritam@123"
     },
     {
