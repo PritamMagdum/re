@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { useDispatch, useSelector } from "react-redux";
 import {
+  clearSelectedProduct,
   createProductAsync,
   fetchAllProductsAsync,
   fetchProductByIdAsync,
@@ -31,11 +32,15 @@ function ProductForm() {
   const selectedProduct = useSelector(selectProductById);
 
   useEffect(() => {
-    if (params.id) dispatch(fetchProductByIdAsync(params.id));
+    if (params.id) {
+      dispatch(fetchProductByIdAsync(params.id));
+    } else {
+      dispatch(clearSelectedProduct());
+    }
   }, [params.id, dispatch]);
 
   useEffect(() => {
-    if (selectedProduct) {
+    if (selectedProduct && params.id) {
       console.log(selectedProduct);
       setValue("title", selectedProduct[0].title);
       setValue("description", selectedProduct[0].description);
@@ -54,7 +59,7 @@ function ProductForm() {
 
       // selectedProduct[0].images.map(image=>)
     }
-  }, [selectedProduct, setValue]);
+  }, [selectedProduct, params.id, setValue]);
 
   const onSubmit = handleSubmit(async (data) => {
     // Add Product

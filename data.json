@@ -9,13 +9,13 @@
       "rating": 0,
       "stock": 899,
       "brand": "Apple",
-      "category": "laptops",
+      "category": "smartphones",
       "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
       "images": [
         "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
         "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
         "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
-        "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+        null,
         "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
       ]
     },
