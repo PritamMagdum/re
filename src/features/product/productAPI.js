@@ -32,6 +32,28 @@ export function createProduct(product) {
   });
 }
 
+export function updateProduct(update) {
+  console.log("This is updateProduct -->", update);
+  return new Promise(async (resolve) => {
+    // console.log("Before send --> ", sendData);
+    const response = await fetch(
+      `http://localhost:8080/products/${update.id}`,
+      {
+        method: "PATCH",
+        body: JSON.stringify(update),
+        headers: {
+          "content-type": "application/json",
+        },
+      }
+    );
+
+    const newData = await response.json();
+
+    // Resolve with the merged data
+    resolve(newData);
+  });
+}
+
 export function fetchProductsByFilters(filter, sort, pagination) {
   // TODO : On server we will support multi values
   // Suppose filter is comming like  {"category":"smartphone"}

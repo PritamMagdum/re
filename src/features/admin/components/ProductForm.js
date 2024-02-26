@@ -8,9 +8,11 @@ import {
   selectBrands,
   selectCategories,
   selectProductById,
+  updateProductAsync,
 } from "../../product/productSlice";
 import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
+import { fetchAllProducts, fetchProductById } from "../../product/productAPI";
 
 function ProductForm() {
   const brands = useSelector(selectBrands);
@@ -48,7 +50,7 @@ function ProductForm() {
       setValue("image1", selectedProduct[0].images[1]);
       setValue("image2", selectedProduct[0].images[2]);
       setValue("image3", selectedProduct[0].images[3]);
-      setValue("image4", selectedProduct[0].images[4]);
+      // setValue("image4", selectedProduct[0].images[4]);
 
       // selectedProduct[0].images.map(image=>)
     }
@@ -65,7 +67,6 @@ function ProductForm() {
       product.image4,
       product.thumbnail,
     ];
-    product.rating = 0;
     delete product["image1"];
     delete product["image2"];
     delete product["image3"];
@@ -76,8 +77,17 @@ function ProductForm() {
     console.log(product);
 
     try {
-      await dispatch(createProductAsync(product));
-      navigate("/admin"); // Navigate after successful product creation
+      if (params.id) {
+        product.id = params.id;
+        product.rating = product.selectedProduct || 0;
+
+        dispatch(updateProductAsync(product));
+        // dispatch(fetchAllProducts());
+        // navigate("/admin");
+      } else {
+        await dispatch(createProductAsync(product));
+        navigate("/admin"); // Navigate after successful product creation
+      }
     } catch (error) {
       // Handle any potential errors
       console.error("Error creating product:", error);
@@ -354,7 +364,7 @@ function ProductForm() {
             </div>
           </div>
 
-          <div className="sm:col-span-4">
+          {/* <div className="sm:col-span-4">
             <label
               htmlFor="image4"
               className="block text-sm font-medium leading-6 text-gray-900"
@@ -365,15 +375,14 @@ function ProductForm() {
               <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
                 <input
                   type="text"
-                  {...register("image4", {
-                    required: "image is required",
-                  })}
+                  {...register("image4")}
                   id="image4"
+                  placeholder="Optional"
                   className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="border-b border-gray-900/10 pb-12">
             <h2 className="text-base font-semibold leading-7 text-gray-900">

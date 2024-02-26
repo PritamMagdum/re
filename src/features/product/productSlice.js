@@ -7,6 +7,7 @@ import {
   fetchFilters,
   fetchProductById,
   createProduct,
+  updateProduct,
 } from "./productAPI";
 
 const initialState = {
@@ -43,6 +44,20 @@ export const createProductAsync = createAsyncThunk(
     const response = await createProduct(product);
     // The value we return becomes the `fulfilled` action payload
     return response.data;
+  }
+);
+
+export const updateProductAsync = createAsyncThunk(
+  "product/update",
+  async (update) => {
+    const response = await updateProduct(update);
+    // The value we return becomes the `fulfilled` action payload
+    console.log(
+      "this is UpdateProductAsync response with data -->",
+      response.data
+    );
+    console.log("this is UpdateProductAsync only response -->", response);
+    return response;
   }
 );
 
@@ -148,6 +163,29 @@ export const productSlice = createSlice({
         console.log(action.payload);
         state.products.push(action.payload);
         // state.products = [...state.products, action.payload];
+      })
+      .addCase(updateProductAsync.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(updateProductAsync.fulfilled, (state, action) => {
+        state.status = "idle";
+        console.log("Payload id-->", action.payload.id);
+        console.log("Payload -->", action.payload);
+        // const index = state.products.findIndex(
+        //   (product) => product.id === action.payload.id
+        // );
+
+        // state.products.map((product) => {
+        //   if (product.id === action.payload.id) {
+        //     console.log("Product is -->", product);
+        //     product = action.payload;
+        //   }
+        // });
+
+        // console.log("index -->", index);
+        // if (index) {
+        //   state.products[index] = action.payload;
+        // }
       });
   },
 });

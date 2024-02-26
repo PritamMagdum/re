@@ -2,20 +2,20 @@
   "products": [
     {
       "id": "1",
-      "title": "iPhone 9",
+      "title": "iPhone 12 Pro MAX and MAX",
       "description": "An apple mobile which is nothing like apple",
-      "price": 549,
-      "discountPercentage": 12.96,
-      "rating": 4.69,
-      "stock": 94,
+      "price": 3000,
+      "discountPercentage": 88,
+      "rating": 0,
+      "stock": 899,
       "brand": "Apple",
-      "category": "smartphones",
+      "category": "laptops",
       "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
       "images": [
-        "https://cdn.dummyjson.com/product-images/1/1.jpg",
-        "https://cdn.dummyjson.com/product-images/1/2.jpg",
-        "https://cdn.dummyjson.com/product-images/1/3.jpg",
-        "https://cdn.dummyjson.com/product-images/1/4.jpg",
+        "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+        "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+        "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+        "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
         "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
       ]
     },
@@ -48,24 +48,26 @@
       "brand": "Samsung",
       "category": "smartphones",
       "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-      "images": ["https://cdn.dummyjson.com/product-images/3/1.jpg"]
+      "images": [
+        "https://cdn.dummyjson.com/product-images/3/1.jpg"
+      ]
     },
     {
       "id": "4",
       "title": "OPPOF19",
       "description": "OPPO F19 is officially announced on April 2021.",
-      "price": 280,
+      "price": 800,
       "discountPercentage": 17.91,
-      "rating": 4.3,
+      "rating": 0,
       "stock": 123,
       "brand": "OPPO",
       "category": "smartphones",
       "thumbnail": "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg",
       "images": [
-        "https://cdn.dummyjson.com/product-images/4/1.jpg",
         "https://cdn.dummyjson.com/product-images/4/2.jpg",
         "https://cdn.dummyjson.com/product-images/4/3.jpg",
         "https://cdn.dummyjson.com/product-images/4/4.jpg",
+        "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg",
         "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg"
       ]
     },
@@ -73,17 +75,19 @@
       "id": "5",
       "title": "Huawei P30",
       "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
-      "price": 499,
+      "price": 500,
       "discountPercentage": 10.58,
-      "rating": 4.09,
+      "rating": 0,
       "stock": 32,
       "brand": "Huawei",
       "category": "smartphones",
       "thumbnail": "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg",
       "images": [
-        "https://cdn.dummyjson.com/product-images/5/1.jpg",
         "https://cdn.dummyjson.com/product-images/5/2.jpg",
-        "https://cdn.dummyjson.com/product-images/5/3.jpg"
+        "https://cdn.dummyjson.com/product-images/5/3.jpg",
+        "https://random.imagecdn.app/500/150",
+        "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+        "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg"
       ]
     },
     {
@@ -166,15 +170,16 @@
       "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
       "price": 1099,
       "discountPercentage": 6.18,
-      "rating": 4.43,
+      "rating": 0,
       "stock": 89,
       "brand": "HP Pavilion",
       "category": "laptops",
       "thumbnail": "https://cdn.dummyjson.com/product-images/10/thumbnail.jpeg",
       "images": [
-        "https://cdn.dummyjson.com/product-images/10/1.jpg",
         "https://cdn.dummyjson.com/product-images/10/2.jpg",
         "https://cdn.dummyjson.com/product-images/10/3.jpg",
+        "https://cdn.dummyjson.com/product-images/10/thumbnail.jpeg",
+        "",
         "https://cdn.dummyjson.com/product-images/10/thumbnail.jpeg"
       ]
     },
@@ -1426,7 +1431,9 @@
       "brand": "Fashion Jewellery",
       "category": "womens-jewellery",
       "thumbnail": "https://cdn.dummyjson.com/product-images/78/thumbnail.jpg",
-      "images": ["https://cdn.dummyjson.com/product-images/78/thumbnail.jpg"]
+      "images": [
+        "https://cdn.dummyjson.com/product-images/78/thumbnail.jpg"
+      ]
     },
     {
       "id": "79",
@@ -1439,7 +1446,9 @@
       "brand": "Fashion Jewellery",
       "category": "womens-jewellery",
       "thumbnail": "https://cdn.dummyjson.com/product-images/79/thumbnail.jpg",
-      "images": ["https://cdn.dummyjson.com/product-images/79/1.jpg"]
+      "images": [
+        "https://cdn.dummyjson.com/product-images/79/1.jpg"
+      ]
     },
     {
       "id": "80",
@@ -1832,6 +1841,25 @@
         "https://cdn.dummyjson.com/product-images/100/3.jpg",
         "https://cdn.dummyjson.com/product-images/100/thumbnail.jpg"
       ]
+    },
+    {
+      "id": "b4c3",
+      "title": "IPHONE 15 Pro MAX",
+      "description": "Brand is Brand.",
+      "brand": "Apple",
+      "category": "smartphones",
+      "price": 5000,
+      "discountPercentage": 44,
+      "stock": 87,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+        "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+        "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+        "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+        "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
+      ],
+      "rating": 0
     }
   ],
   "brands": [
@@ -2998,31 +3026,7 @@
       "role": "admin"
     }
   ],
-  "cart": [
-    {
-      "0": {
-        "id": "6",
-        "title": "MacBook Pro",
-        "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
-        "price": 1749,
-        "discountPercentage": 11.02,
-        "rating": 4.57,
-        "stock": 83,
-        "brand": "Apple",
-        "category": "laptops",
-        "thumbnail": "https://cdn.dummyjson.com/product-images/6/thumbnail.png",
-        "images": [
-          "https://cdn.dummyjson.com/product-images/6/1.png",
-          "https://cdn.dummyjson.com/product-images/6/2.jpg",
-          "https://cdn.dummyjson.com/product-images/6/3.png",
-          "https://cdn.dummyjson.com/product-images/6/4.jpg"
-        ]
-      },
-      "id": "7faf",
-      "quantity": 1,
-      "user": "124a"
-    }
-  ],
+  "cart": [],
   "orders": [
     {
       "id": "7939",
@@ -3211,7 +3215,9 @@
             "brand": "Samsung",
             "category": "smartphones",
             "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-            "images": ["https://cdn.dummyjson.com/product-images/3/1.jpg"]
+            "images": [
+              "https://cdn.dummyjson.com/product-images/3/1.jpg"
+            ]
           },
           "id": "5f6f",
           "quantity": 1,
@@ -3402,6 +3408,73 @@
         "role": "admin"
       },
       "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3aab",
+      "items": [
+        {
+          "0": {
+            "id": "6",
+            "title": "MacBook Pro",
+            "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+            "price": 1749,
+            "discountPercentage": 11.02,
+            "rating": 4.57,
+            "stock": 83,
+            "brand": "Apple",
+            "category": "laptops",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/6/thumbnail.png",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/6/1.png",
+              "https://cdn.dummyjson.com/product-images/6/2.jpg",
+              "https://cdn.dummyjson.com/product-images/6/3.png",
+              "https://cdn.dummyjson.com/product-images/6/4.jpg"
+            ]
+          },
+          "id": "7faf",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 1749,
+      "totalItems": 1,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "card",
       "selectedAddress": {
         "name": "Pritam",
         "email": "pritammagdum24@gmail.com",
