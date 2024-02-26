@@ -12,9 +12,9 @@
       "category": "smartphones",
       "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
       "images": [
+        "https://cdn.dummyjson.com/product-images/1/4.jpg",
         "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
-        "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
-        "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+        "https://cdn.dummyjson.com/product-images/4/4.jpg",
         null,
         "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
       ]
