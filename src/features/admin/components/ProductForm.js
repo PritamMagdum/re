@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   clearSelectedProduct,
   createProductAsync,
+  deleteProductAsync,
   fetchAllProductsAsync,
   fetchProductByIdAsync,
   selectBrands,
@@ -81,7 +82,7 @@ function ProductForm() {
     product.price = +product.price;
     product.stock = +product.stock;
     product.discountPercentage = +product.discountPercentage;
-    console.log(product);
+    // console.log(product);
 
     try {
       if (params.id) {
@@ -102,9 +103,8 @@ function ProductForm() {
 
   const handleDelete = () => {
     const product = { ...selectedProduct };
-    // product.deleted = true;
-    // console.log("This is product -->", product);
-    // dispatch(updateProductAsync());
+    dispatch(deleteProductAsync(product[0].id));
+    reset();
   };
 
   return (
@@ -490,12 +490,12 @@ function ProductForm() {
             Cancel
           </button>
           {selectedProduct && (
-            <button
+            <div
               onClick={handleDelete}
               className="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Delete
-            </button>
+            </div>
           )}
           <button
             type="submit"

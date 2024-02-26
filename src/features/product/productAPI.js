@@ -54,6 +54,25 @@ export function updateProduct(update) {
   });
 }
 
+export function deleteProduct(deleted) {
+  // console.log("This is updateProduct -->", deleted);
+  return new Promise(async (resolve) => {
+    // console.log("Before send --> ", sendData);
+    const response = await fetch(`http://localhost:8080/products/${deleted}`, {
+      method: "DELETE",
+      // body: JSON.stringify(deleted),
+      // headers: {
+      //   "content-type": "application/json",
+      // },
+    });
+
+    const newData = await response.json();
+
+    // Resolve with the merged data
+    resolve(newData);
+  });
+}
+
 export function fetchProductsByFilters(filter, sort, pagination) {
   // TODO : On server we will support multi values
   // Suppose filter is comming like  {"category":"smartphone"}
