@@ -48,9 +48,7 @@
       "brand": "Samsung",
       "category": "smartphones",
       "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/3/1.jpg"
-      ]
+      "images": ["https://cdn.dummyjson.com/product-images/3/1.jpg"]
     },
     {
       "id": "4",
@@ -1428,9 +1426,7 @@
       "brand": "Fashion Jewellery",
       "category": "womens-jewellery",
       "thumbnail": "https://cdn.dummyjson.com/product-images/78/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/78/thumbnail.jpg"
-      ]
+      "images": ["https://cdn.dummyjson.com/product-images/78/thumbnail.jpg"]
     },
     {
       "id": "79",
@@ -1443,9 +1439,7 @@
       "brand": "Fashion Jewellery",
       "category": "womens-jewellery",
       "thumbnail": "https://cdn.dummyjson.com/product-images/79/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/79/1.jpg"
-      ]
+      "images": ["https://cdn.dummyjson.com/product-images/79/1.jpg"]
     },
     {
       "id": "80",
@@ -2990,6 +2984,15 @@
           "city": "Bastwad",
           "state": "Maharashtra",
           "pinCode": "411011"
+        },
+        {
+          "name": "Pritam",
+          "email": "pritammagdum24@gmail.com",
+          "phone": "08698694008",
+          "street": "FC Road",
+          "city": "Bastwad",
+          "state": "Maharashtra",
+          "pinCode": "411011"
         }
       ],
       "role": "admin"
@@ -3208,9 +3211,7 @@
             "brand": "Samsung",
             "category": "smartphones",
             "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-            "images": [
-              "https://cdn.dummyjson.com/product-images/3/1.jpg"
-            ]
+            "images": ["https://cdn.dummyjson.com/product-images/3/1.jpg"]
           },
           "id": "5f6f",
           "quantity": 1,

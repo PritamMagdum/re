@@ -1,10 +1,63 @@
 import React from "react";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  createProductAsync,
+  fetchAllProductsAsync,
+  selectBrands,
+  selectCategories,
+} from "../../product/productSlice";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 function ProductForm() {
+  const brands = useSelector(selectBrands);
+  const categories = useSelector(selectCategories);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = handleSubmit(async (data) => {
+    // Add Product
+
+    const product = { ...data };
+    product.images = [
+      product.image1,
+      product.image2,
+      product.image3,
+      product.image4,
+      product.thumbnail,
+    ];
+    product.rating = 0;
+    delete product["image1"];
+    delete product["image2"];
+    delete product["image3"];
+    delete product["image4"];
+    console.log(product);
+
+    try {
+      await dispatch(createProductAsync(product));
+      navigate("/admin"); // Navigate after successful product creation
+    } catch (error) {
+      // Handle any potential errors
+      console.error("Error creating product:", error);
+    }
+  });
+
   return (
     <div>
-      <form>
+      <form
+        noValidate
+        // onSubmit={handleSubmit((data) => {
+
+        // })}
+        onSubmit={onSubmit}
+      >
         <div className="space-y-12 bg-white p-12">
           <div className="border-b border-gray-900/10 pb-12">
             <h2 className="text-base font-semibold leading-7 text-gray-900">
@@ -18,40 +71,20 @@ function ProductForm() {
             <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
               <div className="sm:col-span-4">
                 <label
-                  htmlFor="username"
+                  htmlFor="title"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
                   Product Name
-                  {/* 
-                  {
-      "id": "1",
-      "title": "iPhone 9",
-      "description": "An apple mobile which is nothing like apple",
-      "price": 549,
-      "discountPercentage": 12.96,
-      "rating": 4.69,
-      "stock": 94,
-      "brand": "Apple",
-      "category": "smartphones",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/1/1.jpg",
-        "https://cdn.dummyjson.com/product-images/1/2.jpg",
-        "https://cdn.dummyjson.com/product-images/1/3.jpg",
-        "https://cdn.dummyjson.com/product-images/1/4.jpg",
-        "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
-      ]
-    },
-                  */}
                 </label>
                 <div className="mt-2">
                   <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
                     <input
                       type="text"
-                      name="title"
+                      {...register("title", {
+                        required: "title is required",
+                      })}
                       id="title"
                       className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-                      placeholder="janesmith"
                     />
                   </div>
                 </div>
@@ -59,7 +92,7 @@ function ProductForm() {
 
               <div className="col-span-full">
                 <label
-                  htmlFor="about"
+                  htmlFor="description"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
                   Description
@@ -67,7 +100,9 @@ function ProductForm() {
                 <div className="mt-2">
                   <textarea
                     id="description"
-                    name="description"
+                    {...register("description", {
+                      required: "description is required",
+                    })}
                     rows={3}
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     defaultValue={""}
@@ -77,28 +112,230 @@ function ProductForm() {
                   Write a few sentences about Product.
                 </p>
               </div>
+
+              <div className="col-span-full">
+                <label
+                  htmlFor="brand"
+                  className="block text-sm font-medium leading-6 text-gray-900"
+                >
+                  Brand
+                </label>
+                <div className="mt-2">
+                  <select
+                    className="border rounded-md"
+                    {...register("brand", {
+                      required: "brand is required",
+                    })}
+                  >
+                    <option>&larr; Choose Brand &rarr;</option>
+                    {brands &&
+                      brands.map((brand) => (
+                        <option value={brand.value}>{brand.label}</option>
+                      ))}
+                  </select>
+                </div>
+                <p className="mt-3 text-sm leading-6 text-gray-600">
+                  Write a few sentences about Product.
+                </p>
+              </div>
+
+              <div className="col-span-full">
+                <label
+                  htmlFor="categories"
+                  className="block text-sm font-medium leading-6 text-gray-900"
+                >
+                  Categories
+                </label>
+                <div className="mt-2">
+                  <select
+                    className="border rounded-md"
+                    {...register("category", {
+                      required: "category is required",
+                    })}
+                  >
+                    <option>&larr; Choose Category &rarr;</option>
+                    {categories &&
+                      categories.map((category) => (
+                        <option value={category.value}>{category.label}</option>
+                      ))}
+                  </select>
+                </div>
+                <p className="mt-3 text-sm leading-6 text-gray-600">
+                  Write a few sentences about Product.
+                </p>
+              </div>
             </div>
           </div>
 
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-            <div className="sm:col-span-6">
+            <div className="sm:col-span-2">
               <label
-                htmlFor="title"
+                htmlFor="price"
                 className="block text-sm font-medium leading-6 text-gray-900"
               >
-                Product Name
+                Price
               </label>
               <div className="mt-2">
                 <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 ">
                   <input
-                    type="text"
-                    // {...register("title", {
-                    //   required: "name is required",
-                    // })}
-                    id="title"
+                    type="number"
+                    {...register("price", {
+                      required: "price is required",
+                      min: 1,
+                      max: 10000,
+                    })}
+                    id="price"
                     className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
                   />
                 </div>
+              </div>
+            </div>
+            <div className="sm:col-span-2">
+              <label
+                htmlFor="discountPercentage"
+                className="block text-sm font-medium leading-6 text-gray-900"
+              >
+                Discount Percentage
+              </label>
+              <div className="mt-2">
+                <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 ">
+                  <input
+                    type="number"
+                    {...register("discountPercentage", {
+                      required: "discountPercentage is required",
+                      min: 0,
+                      max: 100,
+                    })}
+                    id="discountPercentage"
+                    className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="sm:col-span-2">
+              <label
+                htmlFor="stock"
+                className="block text-sm font-medium leading-6 text-gray-900"
+              >
+                Stock
+              </label>
+              <div className="mt-2">
+                <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 ">
+                  <input
+                    type="number"
+                    {...register("stock", {
+                      required: "stock is required",
+                      min: 0,
+                    })}
+                    id="stock"
+                    className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="sm:col-span-4">
+            <label
+              htmlFor="thumbnail"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Thumbnail
+            </label>
+            <div className="mt-2">
+              <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
+                <input
+                  type="text"
+                  {...register("thumbnail", {
+                    required: "thumbnail is required",
+                  })}
+                  id="thumbnail"
+                  className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="sm:col-span-4">
+            <label
+              htmlFor="image1"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Image 1
+            </label>
+            <div className="mt-2">
+              <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
+                <input
+                  type="text"
+                  {...register("image1", {
+                    required: "image is required",
+                  })}
+                  id="image1"
+                  className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="sm:col-span-4">
+            <label
+              htmlFor="image2"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Image 2
+            </label>
+            <div className="mt-2">
+              <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
+                <input
+                  type="text"
+                  {...register("image2", {
+                    required: "image is required",
+                  })}
+                  id="image2"
+                  className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="sm:col-span-4">
+            <label
+              htmlFor="image3"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Image 3
+            </label>
+            <div className="mt-2">
+              <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
+                <input
+                  type="text"
+                  {...register("image3", {
+                    required: "image is required",
+                  })}
+                  id="image3"
+                  className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="sm:col-span-4">
+            <label
+              htmlFor="image4"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Image 4
+            </label>
+            <div className="mt-2">
+              <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
+                <input
+                  type="text"
+                  {...register("image4", {
+                    required: "image is required",
+                  })}
+                  id="image4"
+                  className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                />
               </div>
             </div>
           </div>
