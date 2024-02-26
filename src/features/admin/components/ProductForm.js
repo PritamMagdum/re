@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { useDispatch, useSelector } from "react-redux";
 import {
   createProductAsync,
   fetchAllProductsAsync,
+  fetchProductByIdAsync,
   selectBrands,
   selectCategories,
+  selectProductById,
 } from "../../product/productSlice";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 function ProductForm() {
   const brands = useSelector(selectBrands);
@@ -19,8 +21,38 @@ function ProductForm() {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm();
+
+  const params = useParams();
+  const selectedProduct = useSelector(selectProductById);
+
+  useEffect(() => {
+    if (params.id) dispatch(fetchProductByIdAsync(params.id));
+  }, [params.id, dispatch]);
+
+  useEffect(() => {
+    if (selectedProduct) {
+      console.log(selectedProduct);
+      setValue("title", selectedProduct[0].title);
+      setValue("description", selectedProduct[0].description);
+      setValue("price", selectedProduct[0].price);
+      setValue("discountPercentage", selectedProduct[0].discountPercentage);
+      setValue("rating", selectedProduct[0].rating);
+      setValue("stock", selectedProduct[0].stock);
+      setValue("brand", selectedProduct[0].brand);
+      setValue("category", selectedProduct[0].category);
+      setValue("thumbnail", selectedProduct[0].thumbnail);
+      setValue("images", selectedProduct[0].images[0]);
+      setValue("image1", selectedProduct[0].images[1]);
+      setValue("image2", selectedProduct[0].images[2]);
+      setValue("image3", selectedProduct[0].images[3]);
+      setValue("image4", selectedProduct[0].images[4]);
+
+      // selectedProduct[0].images.map(image=>)
+    }
+  }, [selectedProduct, setValue]);
 
   const onSubmit = handleSubmit(async (data) => {
     // Add Product
@@ -38,6 +70,9 @@ function ProductForm() {
     delete product["image2"];
     delete product["image3"];
     delete product["image4"];
+    product.price = +product.price;
+    product.stock = +product.stock;
+    product.discountPercentage = +product.discountPercentage;
     console.log(product);
 
     try {

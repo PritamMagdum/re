@@ -77,6 +77,11 @@ function App() {
             />
             <Route
               exact
+              path="/admin/product-form/edit/:id"
+              element={<AdminProductFormPage />}
+            />
+            <Route
+              exact
               path="/admin/product-detail/:id"
               element={<AdminProductDetailPage />}
             />
