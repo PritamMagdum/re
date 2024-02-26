@@ -5,15 +5,15 @@ function AdminOrders() {
     <>
       {/* component */}
       <div className="overflow-x-auto">
-        <div className="min-w-screen min-h-screen bg-gray-100 flex items-center justify-center bg-gray-100 font-sans overflow-hidden">
-          <div className="w-full lg:w-5/6">
+        <div className="min-w-screen min-h-screen bg-gray-100 flex items-center justify-center font-sans overflow-hidden">
+          <div className="w-full">
             <div className="bg-white shadow-md rounded my-6">
               <table className="min-w-max w-full table-auto">
                 <thead>
                   <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
-                    <th className="py-3 px-6 text-left">Project</th>
-                    <th className="py-3 px-6 text-left">Client</th>
-                    <th className="py-3 px-6 text-center">Users</th>
+                    <th className="py-3 px-6 text-left">Order Number</th>
+                    <th className="py-3 px-6 text-left">Items</th>
+                    <th className="py-3 px-6 text-center">Total Amount</th>
                     <th className="py-3 px-6 text-center">Status</th>
                     <th className="py-3 px-6 text-center">Actions</th>
                   </tr>

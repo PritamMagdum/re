@@ -15,9 +15,11 @@ const navigation = [
   { name: "Team", link: "#", user: true },
   { name: "Projects", link: "#", user: true },
   { name: "Calendar", link: "#", user: true },
+
   { name: "Admin", link: "/admin", admin: true },
   { name: "Orders", link: "/admin/orders", admin: true },
 ];
+
 const userNavigation = [
   { name: "My Profile", link: "/profile" },
   { name: "My Orders", link: "/orders" },
