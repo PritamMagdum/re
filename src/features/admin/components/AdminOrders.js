@@ -16,9 +16,17 @@ function AdminOrders() {
 
   useEffect(() => {
     const pagination = { _page: page, _per_page: ITEMS_PER_PAGE };
-    console.log("This is pagination -->", pagination);
+    // console.log("This is pagination -->", pagination);
     dispatch(fetchAllOrdersAsync(pagination));
   }, [dispatch, page]);
+
+  const handleShow = (data) => {
+    console.log("handleShow Clicked");
+  };
+
+  const handleEdit = (data) => {
+    console.log("handleEdit Clicked");
+  };
 
   return (
     <>
@@ -34,9 +42,10 @@ function AdminOrders() {
                     <th className="py-3 px-6 text-center">Total Amount</th>
                     <th className="py-3 px-6 text-center">Shipping Address</th>
                     <th className="py-3 px-6 text-center">Status</th>
-                    <th className="py-3 px-6 text-center">
+                    <th className="py-3 px-6 text-center">Actions</th>
+                    {/* <th className="py-3 px-6 text-center">
                       {console.log("this is orders -->", orders)}
-                    </th>
+                    </th> */}
                   </tr>
                 </thead>
                 <tbody className="text-gray-600 text-sm font-light">
@@ -88,7 +97,18 @@ function AdminOrders() {
                           </span>
                         </td>
                         <td className="py-3 px-6 text-center">
-                          <div className="flex item-center justify-center"></div>
+                          <div className="flex item-center justify-center">
+                            <div className="w-6 mr-2 transform cursor-pointer mx-1 hover:text-purple-500 hover:scale-110">
+                              <EyeIcon
+                                onClick={(e) => handleShow(order)}
+                              ></EyeIcon>
+                            </div>
+                            <div className="w-6 mr-2 transform cursor-pointer mx-1 hover:text-purple-500 hover:scale-110">
+                              <PencilIcon
+                                onClick={(e) => handleEdit(order)}
+                              ></PencilIcon>
+                            </div>
+                          </div>
                         </td>
                       </tr>
                     ))}
