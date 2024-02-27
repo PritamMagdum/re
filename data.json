@@ -3465,6 +3465,1230 @@
         "pinCode": "411011"
       },
       "status": "pending"
+    },
+    {
+      "id": "faa7",
+      "items": [
+        {
+          "0": {
+            "id": "3",
+            "title": "Samsung Universe 9",
+            "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+            "price": 1249,
+            "discountPercentage": 15.46,
+            "rating": 4.09,
+            "stock": 36,
+            "brand": "Samsung",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/3/1.jpg"
+            ]
+          },
+          "id": "23f1",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 1249,
+      "totalItems": 1,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "bd1d",
+      "items": [
+        {
+          "0": {
+            "id": "3",
+            "title": "Samsung Universe 9",
+            "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+            "price": 1249,
+            "discountPercentage": 15.46,
+            "rating": 4.09,
+            "stock": 36,
+            "brand": "Samsung",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/3/1.jpg"
+            ]
+          },
+          "id": "23f1",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 1249,
+      "totalItems": 1,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "65e1",
+      "items": [
+        {
+          "0": {
+            "id": "3",
+            "title": "Samsung Universe 9",
+            "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+            "price": 1249,
+            "discountPercentage": 15.46,
+            "rating": 4.09,
+            "stock": 36,
+            "brand": "Samsung",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/3/1.jpg"
+            ]
+          },
+          "id": "23f1",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 1249,
+      "totalItems": 1,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "758a",
+      "items": [
+        {
+          "0": {
+            "id": "3",
+            "title": "Samsung Universe 9",
+            "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+            "price": 1249,
+            "discountPercentage": 15.46,
+            "rating": 4.09,
+            "stock": 36,
+            "brand": "Samsung",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/3/1.jpg"
+            ]
+          },
+          "id": "23f1",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 1249,
+      "totalItems": 1,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "20b2",
+      "items": [
+        {
+          "0": {
+            "id": "9",
+            "title": "Infinix INBOOK",
+            "description": "Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey – 1 Year Warranty",
+            "price": 1099,
+            "discountPercentage": 11.83,
+            "rating": 4.54,
+            "stock": 96,
+            "brand": "Infinix",
+            "category": "laptops",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/9/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/9/1.jpg",
+              "https://cdn.dummyjson.com/product-images/9/2.png",
+              "https://cdn.dummyjson.com/product-images/9/3.png",
+              "https://cdn.dummyjson.com/product-images/9/4.jpg",
+              "https://cdn.dummyjson.com/product-images/9/thumbnail.jpg"
+            ]
+          },
+          "id": "d0ec",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 1099,
+      "totalItems": 1,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c5f0",
+      "items": [
+        {
+          "0": {
+            "id": "12",
+            "title": "Brown Perfume",
+            "description": "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
+            "price": 40,
+            "discountPercentage": 15.66,
+            "rating": 4,
+            "stock": 52,
+            "brand": "Royal_Mirage",
+            "category": "fragrances",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/12/1.jpg",
+              "https://cdn.dummyjson.com/product-images/12/2.jpg",
+              "https://cdn.dummyjson.com/product-images/12/3.png",
+              "https://cdn.dummyjson.com/product-images/12/4.jpg",
+              "https://cdn.dummyjson.com/product-images/12/thumbnail.jpg"
+            ]
+          },
+          "id": "218a",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 40,
+      "totalItems": 1,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "0da9",
+      "items": [
+        {
+          "0": {
+            "id": "11",
+            "title": "perfume Oil",
+            "description": "Mega Discount, Impression of Acqua Di Gio by GiorgioArmani concentrated attar perfume Oil",
+            "price": 13,
+            "discountPercentage": 8.4,
+            "rating": 4.26,
+            "stock": 65,
+            "brand": "Impression of Acqua Di Gio",
+            "category": "fragrances",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/11/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/11/1.jpg",
+              "https://cdn.dummyjson.com/product-images/11/2.jpg",
+              "https://cdn.dummyjson.com/product-images/11/3.jpg",
+              "https://cdn.dummyjson.com/product-images/11/thumbnail.jpg"
+            ]
+          },
+          "id": "ce00",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 13,
+      "totalItems": 1,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "cancelled"
+    },
+    {
+      "id": "da37",
+      "items": [
+        {
+          "0": {
+            "id": "11",
+            "title": "perfume Oil",
+            "description": "Mega Discount, Impression of Acqua Di Gio by GiorgioArmani concentrated attar perfume Oil",
+            "price": 13,
+            "discountPercentage": 8.4,
+            "rating": 4.26,
+            "stock": 65,
+            "brand": "Impression of Acqua Di Gio",
+            "category": "fragrances",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/11/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/11/1.jpg",
+              "https://cdn.dummyjson.com/product-images/11/2.jpg",
+              "https://cdn.dummyjson.com/product-images/11/3.jpg",
+              "https://cdn.dummyjson.com/product-images/11/thumbnail.jpg"
+            ]
+          },
+          "id": "ce00",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 13,
+      "totalItems": 1,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "a88b",
+      "items": [
+        {
+          "0": {
+            "id": "11",
+            "title": "perfume Oil",
+            "description": "Mega Discount, Impression of Acqua Di Gio by GiorgioArmani concentrated attar perfume Oil",
+            "price": 13,
+            "discountPercentage": 8.4,
+            "rating": 4.26,
+            "stock": 65,
+            "brand": "Impression of Acqua Di Gio",
+            "category": "fragrances",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/11/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/11/1.jpg",
+              "https://cdn.dummyjson.com/product-images/11/2.jpg",
+              "https://cdn.dummyjson.com/product-images/11/3.jpg",
+              "https://cdn.dummyjson.com/product-images/11/thumbnail.jpg"
+            ]
+          },
+          "id": "2911",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 13,
+      "totalItems": 1,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "87f2",
+      "items": [
+        {
+          "0": {
+            "id": "11",
+            "title": "perfume Oil",
+            "description": "Mega Discount, Impression of Acqua Di Gio by GiorgioArmani concentrated attar perfume Oil",
+            "price": 13,
+            "discountPercentage": 8.4,
+            "rating": 4.26,
+            "stock": 65,
+            "brand": "Impression of Acqua Di Gio",
+            "category": "fragrances",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/11/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/11/1.jpg",
+              "https://cdn.dummyjson.com/product-images/11/2.jpg",
+              "https://cdn.dummyjson.com/product-images/11/3.jpg",
+              "https://cdn.dummyjson.com/product-images/11/thumbnail.jpg"
+            ]
+          },
+          "id": "2911",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 13,
+      "totalItems": 1,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "af82",
+      "items": [
+        {
+          "0": {
+            "id": "11",
+            "title": "perfume Oil",
+            "description": "Mega Discount, Impression of Acqua Di Gio by GiorgioArmani concentrated attar perfume Oil",
+            "price": 13,
+            "discountPercentage": 8.4,
+            "rating": 4.26,
+            "stock": 65,
+            "brand": "Impression of Acqua Di Gio",
+            "category": "fragrances",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/11/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/11/1.jpg",
+              "https://cdn.dummyjson.com/product-images/11/2.jpg",
+              "https://cdn.dummyjson.com/product-images/11/3.jpg",
+              "https://cdn.dummyjson.com/product-images/11/thumbnail.jpg"
+            ]
+          },
+          "id": "2911",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 13,
+      "totalItems": 1,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "dispatched"
+    },
+    {
+      "id": "7964",
+      "items": [
+        {
+          "0": {
+            "id": "24",
+            "title": "cereals muesli fruit nuts",
+            "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+            "price": 46,
+            "discountPercentage": 16.8,
+            "rating": 4.94,
+            "stock": 113,
+            "brand": "fauji",
+            "category": "groceries",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/24/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/24/1.jpg",
+              "https://cdn.dummyjson.com/product-images/24/2.jpg",
+              "https://cdn.dummyjson.com/product-images/24/3.jpg",
+              "https://cdn.dummyjson.com/product-images/24/4.jpg",
+              "https://cdn.dummyjson.com/product-images/24/thumbnail.jpg"
+            ]
+          },
+          "id": "6499",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 46,
+      "totalItems": 1,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "7f14",
+      "items": [
+        {
+          "0": {
+            "id": "24",
+            "title": "cereals muesli fruit nuts",
+            "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+            "price": 46,
+            "discountPercentage": 16.8,
+            "rating": 4.94,
+            "stock": 113,
+            "brand": "fauji",
+            "category": "groceries",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/24/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/24/1.jpg",
+              "https://cdn.dummyjson.com/product-images/24/2.jpg",
+              "https://cdn.dummyjson.com/product-images/24/3.jpg",
+              "https://cdn.dummyjson.com/product-images/24/4.jpg",
+              "https://cdn.dummyjson.com/product-images/24/thumbnail.jpg"
+            ]
+          },
+          "id": "6499",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 46,
+      "totalItems": 1,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3cae",
+      "items": [
+        {
+          "0": {
+            "id": "24",
+            "title": "cereals muesli fruit nuts",
+            "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+            "price": 46,
+            "discountPercentage": 16.8,
+            "rating": 4.94,
+            "stock": 113,
+            "brand": "fauji",
+            "category": "groceries",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/24/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/24/1.jpg",
+              "https://cdn.dummyjson.com/product-images/24/2.jpg",
+              "https://cdn.dummyjson.com/product-images/24/3.jpg",
+              "https://cdn.dummyjson.com/product-images/24/4.jpg",
+              "https://cdn.dummyjson.com/product-images/24/thumbnail.jpg"
+            ]
+          },
+          "id": "6499",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 46,
+      "totalItems": 1,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "7f28",
+      "items": [
+        {
+          "0": {
+            "id": "7",
+            "title": "Samsung Galaxy Book",
+            "description": "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
+            "price": 1499,
+            "discountPercentage": 4.15,
+            "rating": 4.25,
+            "stock": 50,
+            "brand": "Samsung",
+            "category": "laptops",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/7/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/7/1.jpg",
+              "https://cdn.dummyjson.com/product-images/7/2.jpg",
+              "https://cdn.dummyjson.com/product-images/7/3.jpg",
+              "https://cdn.dummyjson.com/product-images/7/thumbnail.jpg"
+            ]
+          },
+          "id": "0572",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 1499,
+      "totalItems": 1,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "2c17",
+      "items": [
+        {
+          "0": {
+            "id": "8",
+            "title": "Microsoft Surface Laptop 4",
+            "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
+            "price": 1499,
+            "discountPercentage": 10.23,
+            "rating": 4.43,
+            "stock": 68,
+            "brand": "Microsoft Surface",
+            "category": "laptops",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/8/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/8/1.jpg",
+              "https://cdn.dummyjson.com/product-images/8/2.jpg",
+              "https://cdn.dummyjson.com/product-images/8/3.jpg",
+              "https://cdn.dummyjson.com/product-images/8/4.jpg",
+              "https://cdn.dummyjson.com/product-images/8/thumbnail.jpg"
+            ]
+          },
+          "id": "79e5",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 1499,
+      "totalItems": 1,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "5488",
+      "items": [
+        {
+          "0": {
+            "id": "1",
+            "title": "iPhone 12 Pro MAX and MAX",
+            "description": "An apple mobile which is nothing like apple",
+            "price": 300,
+            "discountPercentage": 88,
+            "rating": 0,
+            "stock": 900,
+            "brand": "Apple",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+              "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+              "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+              "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
+            ]
+          },
+          "id": "9a40",
+          "quantity": 1,
+          "user": "aa51"
+        },
+        {
+          "0": {
+            "id": "2",
+            "title": "iPhone X",
+            "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+            "price": 899,
+            "discountPercentage": 17.94,
+            "rating": 4.44,
+            "stock": 34,
+            "brand": "Apple",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/2/1.jpg",
+              "https://cdn.dummyjson.com/product-images/2/2.jpg",
+              "https://cdn.dummyjson.com/product-images/2/3.jpg",
+              "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+            ]
+          },
+          "id": "301d",
+          "quantity": 1,
+          "user": "aa51"
+        }
+      ],
+      "totalAmount": 1199,
+      "totalItems": 2,
+      "user": {
+        "id": "aa51",
+        "email": "pritammagdum24@gmail.com",
+        "role": "user",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "8698694008",
+            "street": "Pune",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "416106"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "sdfsd",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "sdfsd"
+          }
+        ],
+        "password": "Pritam@123"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "8698694008",
+        "street": "Pune",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "416106"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "3d03",
+      "items": [
+        {
+          "0": {
+            "id": "9",
+            "title": "Infinix INBOOK",
+            "description": "Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey – 1 Year Warranty",
+            "price": 1099,
+            "discountPercentage": 11.83,
+            "rating": 4.54,
+            "stock": 96,
+            "brand": "Infinix",
+            "category": "laptops",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/9/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/9/1.jpg",
+              "https://cdn.dummyjson.com/product-images/9/2.png",
+              "https://cdn.dummyjson.com/product-images/9/3.png",
+              "https://cdn.dummyjson.com/product-images/9/4.jpg",
+              "https://cdn.dummyjson.com/product-images/9/thumbnail.jpg"
+            ]
+          },
+          "id": "ad67",
+          "quantity": 1,
+          "user": "aa51"
+        }
+      ],
+      "totalAmount": 1099,
+      "totalItems": 1,
+      "user": {
+        "id": "aa51",
+        "email": "pritammagdum24@gmail.com",
+        "role": "user",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "8698694008",
+            "street": "Pune",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "416106"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "sdfsd",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "sdfsd"
+          }
+        ],
+        "password": "Pritam@123"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "8698694008",
+        "street": "Pune",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "416106"
+      },
+      "status": "delivered"
     }
   ]
 }

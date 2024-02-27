@@ -49,7 +49,7 @@ function Checkout() {
     dispatch(deleteItemFromCartAsync(id));
     setTimeout(() => {
       dispatch(fetchItemsByUserIdAsync(user.id));
-    }, 50);
+    }, 40);
   };
 
   const handleAddress = (e) => {

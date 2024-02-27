@@ -1,7 +1,7 @@
 // A mock function to mimic making an async request for data
 export function createOrder(order) {
   return new Promise(async (resolve) => {
-    const responce = await fetch("http://localhost:8080/orders", {
+    const responce = await fetch("http://localhost:8080/orders/", {
       method: "POST",
       body: JSON.stringify(order),
       headers: {

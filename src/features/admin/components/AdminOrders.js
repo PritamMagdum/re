@@ -8,6 +8,7 @@ import {
   selectTotalOrders,
   updateOrderAsync,
 } from "../../order/orderSlice";
+import Pagination from "../../common/Pagination";
 
 function AdminOrders() {
   const dispatch = useDispatch();
@@ -15,12 +16,6 @@ function AdminOrders() {
   const orders = useSelector(selectOrders);
   const totalOrders = useSelector(selectTotalOrders);
   const [editableOrderId, setEditableOrderId] = useState(-1);
-
-  useEffect(() => {
-    const pagination = { _page: page, _per_page: ITEMS_PER_PAGE };
-    // console.log("This is pagination -->", pagination);
-    dispatch(fetchAllOrdersAsync(pagination));
-  }, [dispatch, page]);
 
   const handleEdit = (order) => {
     console.log("order id is --->", order.id);
@@ -40,6 +35,17 @@ function AdminOrders() {
     }, 15);
     setEditableOrderId(-1);
   };
+
+  const handlePage = (page) => {
+    setPage(page);
+    const pagination = { _page: page, _per_page: ITEMS_PER_PAGE };
+    dispatch(fetchAllOrdersAsync(pagination));
+  };
+
+  useEffect(() => {
+    const pagination = { _page: page, _per_page: ITEMS_PER_PAGE };
+    dispatch(fetchAllOrdersAsync(pagination));
+  }, [dispatch, page]);
 
   const chooseColor = (status) => {
     switch (status) {
@@ -158,6 +164,11 @@ function AdminOrders() {
             </div>
           </div>
         </div>
+        <Pagination
+          page={page}
+          totalItems={totalOrders}
+          handlePage={handlePage}
+        ></Pagination>
       </div>
     </>
   );
