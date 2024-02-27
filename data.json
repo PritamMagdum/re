@@ -7,7 +7,7 @@
       "price": 300,
       "discountPercentage": 88,
       "rating": 0,
-      "stock": 900,
+      "stock": 0,
       "brand": "Apple",
       "category": "smartphones",
       "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
@@ -47,9 +47,7 @@
       "brand": "Samsung",
       "category": "smartphones",
       "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/3/1.jpg"
-      ]
+      "images": ["https://cdn.dummyjson.com/product-images/3/1.jpg"]
     },
     {
       "id": "4",
@@ -1430,9 +1428,7 @@
       "brand": "Fashion Jewellery",
       "category": "womens-jewellery",
       "thumbnail": "https://cdn.dummyjson.com/product-images/78/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/78/thumbnail.jpg"
-      ]
+      "images": ["https://cdn.dummyjson.com/product-images/78/thumbnail.jpg"]
     },
     {
       "id": "79",
@@ -1445,9 +1441,7 @@
       "brand": "Fashion Jewellery",
       "category": "womens-jewellery",
       "thumbnail": "https://cdn.dummyjson.com/product-images/79/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/79/1.jpg"
-      ]
+      "images": ["https://cdn.dummyjson.com/product-images/79/1.jpg"]
     },
     {
       "id": "80",
@@ -3195,9 +3189,7 @@
             "brand": "Samsung",
             "category": "smartphones",
             "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-            "images": [
-              "https://cdn.dummyjson.com/product-images/3/1.jpg"
-            ]
+            "images": ["https://cdn.dummyjson.com/product-images/3/1.jpg"]
           },
           "id": "5f6f",
           "quantity": 1,
@@ -3481,9 +3473,7 @@
             "brand": "Samsung",
             "category": "smartphones",
             "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-            "images": [
-              "https://cdn.dummyjson.com/product-images/3/1.jpg"
-            ]
+            "images": ["https://cdn.dummyjson.com/product-images/3/1.jpg"]
           },
           "id": "23f1",
           "quantity": 1,
@@ -3545,9 +3535,7 @@
             "brand": "Samsung",
             "category": "smartphones",
             "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-            "images": [
-              "https://cdn.dummyjson.com/product-images/3/1.jpg"
-            ]
+            "images": ["https://cdn.dummyjson.com/product-images/3/1.jpg"]
           },
           "id": "23f1",
           "quantity": 1,
@@ -3609,9 +3597,7 @@
             "brand": "Samsung",
             "category": "smartphones",
             "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-            "images": [
-              "https://cdn.dummyjson.com/product-images/3/1.jpg"
-            ]
+            "images": ["https://cdn.dummyjson.com/product-images/3/1.jpg"]
           },
           "id": "23f1",
           "quantity": 1,
@@ -3673,9 +3659,7 @@
             "brand": "Samsung",
             "category": "smartphones",
             "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
-            "images": [
-              "https://cdn.dummyjson.com/product-images/3/1.jpg"
-            ]
+            "images": ["https://cdn.dummyjson.com/product-images/3/1.jpg"]
           },
           "id": "23f1",
           "quantity": 1,
@@ -4975,6 +4959,202 @@
         "role": "admin"
       },
       "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "0c53",
+      "items": [
+        {
+          "0": {
+            "id": "2",
+            "title": "iPhone X",
+            "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+            "price": 899,
+            "discountPercentage": 17.94,
+            "rating": 4.44,
+            "stock": 34,
+            "brand": "Apple",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/2/1.jpg",
+              "https://cdn.dummyjson.com/product-images/2/2.jpg",
+              "https://cdn.dummyjson.com/product-images/2/3.jpg",
+              "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+            ]
+          },
+          "id": "0a87",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 899,
+      "totalItems": 1,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "082f",
+      "items": [
+        {
+          "0": {
+            "id": "2",
+            "title": "iPhone X",
+            "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+            "price": 899,
+            "discountPercentage": 17.94,
+            "rating": 4.44,
+            "stock": 34,
+            "brand": "Apple",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/2/1.jpg",
+              "https://cdn.dummyjson.com/product-images/2/2.jpg",
+              "https://cdn.dummyjson.com/product-images/2/3.jpg",
+              "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+            ]
+          },
+          "id": "0a87",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 899,
+      "totalItems": 1,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ae0d",
+      "items": [
+        {
+          "0": {
+            "id": "3",
+            "title": "Samsung Universe 9",
+            "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+            "price": 1249,
+            "discountPercentage": 15.46,
+            "rating": 4.09,
+            "stock": 36,
+            "brand": "Samsung",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
+            "images": ["https://cdn.dummyjson.com/product-images/3/1.jpg"]
+          },
+          "id": "9a98",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 1249,
+      "totalItems": 1,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "card",
       "selectedAddress": {
         "name": "Pritam",
         "email": "pritammagdum24@gmail.com",

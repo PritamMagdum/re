@@ -532,6 +532,14 @@ function ProductGrid({ products }) {
                     </p>
                   </div>
                 </div>
+                {product.stock <= 0 && (
+                  <div>
+                    <p className="text-sm text-red-400">
+                      {console.log("product one : ", product)}
+                      Out of Stock -Better Luck Next Time
+                    </p>
+                  </div>
+                )}
               </div>
             </Link>
           ))}
