@@ -10,9 +10,9 @@ const initialState = {
 // We may need more information of current order
 
 export const createOrderAsync = createAsyncThunk(
-  "counter/fetchAllOrders",
-  async (pagination) => {
-    const response = await createOrder(pagination);
+  "counter/createOrder",
+  async (order) => {
+    const response = await createOrder(order);
     // The value we return becomes the `fulfilled` action payload
     // console.log("response pay order -->", response);
     return response.data;
@@ -29,9 +29,9 @@ export const updateOrderAsync = createAsyncThunk(
 );
 
 export const fetchAllOrdersAsync = createAsyncThunk(
-  "counter/createOrder",
-  async (order) => {
-    const response = await fetchAllOrders(order);
+  "counter/fetchAllOrders",
+  async ({ sort, pagination }) => {
+    const response = await fetchAllOrders(sort, pagination);
     // The value we return becomes the `fulfilled` action payload
     return response.data;
   }

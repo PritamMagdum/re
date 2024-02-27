@@ -16,6 +16,7 @@ function AdminOrders() {
   const orders = useSelector(selectOrders);
   const totalOrders = useSelector(selectTotalOrders);
   const [editableOrderId, setEditableOrderId] = useState(-1);
+  const [sort, setSort] = useState({});
 
   const handleEdit = (order) => {
     console.log("order id is --->", order.id);
@@ -38,14 +39,23 @@ function AdminOrders() {
 
   const handlePage = (page) => {
     setPage(page);
-    const pagination = { _page: page, _per_page: ITEMS_PER_PAGE };
-    dispatch(fetchAllOrdersAsync(pagination));
+    // const pagination = { _page: page, _per_page: ITEMS_PER_PAGE };
+    // dispatch(fetchAllOrdersAsync(pagination));
   };
 
   useEffect(() => {
     const pagination = { _page: page, _per_page: ITEMS_PER_PAGE };
-    dispatch(fetchAllOrdersAsync(pagination));
-  }, [dispatch, page]);
+    const sort = {};
+    dispatch(fetchAllOrdersAsync({ sort, pagination }));
+  }, [dispatch, page, sort]);
+
+  const handleSort = (sortOption) => {
+    // TODO : Find the solution of asc and desc sort
+
+    const sort = { _sort: sortOption.sort, _order: sortOption.order };
+    console.log(sort);
+    setSort(sort);
+  };
 
   const chooseColor = (status) => {
     switch (status) {
@@ -71,7 +81,17 @@ function AdminOrders() {
               <table className="min-w-max w-full table-auto">
                 <thead>
                   <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
-                    <th className="py-3 px-6 text-left">Order</th>
+                    <th
+                      className="py-3 px-6 text-left"
+                      onClick={(e) =>
+                        handleSort({
+                          sort: "id",
+                          order: sort?._order == "asc" ? "desc" : "asc",
+                        })
+                      }
+                    >
+                      Order
+                    </th>
                     <th className="py-3 px-6 text-left">Items</th>
                     <th className="py-3 px-6 text-center">Total Amount</th>
                     <th className="py-3 px-6 text-center">Shipping Address</th>

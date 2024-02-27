@@ -3264,7 +3264,7 @@
         "state": "Maharashtra",
         "pinCode": "416106"
       },
-      "status": "dispatched"
+      "status": "delivered"
     },
     {
       "id": "9bf2",
@@ -3592,7 +3592,7 @@
         "state": "Maharashtra",
         "pinCode": "411011"
       },
-      "status": "pending"
+      "status": "cancelled"
     },
     {
       "id": "65e1",
@@ -4689,6 +4689,302 @@
         "pinCode": "416106"
       },
       "status": "delivered"
+    },
+    {
+      "id": "9380",
+      "items": [
+        {
+          "0": {
+            "id": "5",
+            "title": "Huawei P30",
+            "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+            "price": 500,
+            "discountPercentage": 10.58,
+            "rating": 0,
+            "stock": 32,
+            "brand": "Huawei",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/5/2.jpg",
+              "https://cdn.dummyjson.com/product-images/5/3.jpg",
+              "https://random.imagecdn.app/500/150",
+              "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+              "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg"
+            ]
+          },
+          "id": "2d8f",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 500,
+      "totalItems": 1,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "54be",
+      "items": [
+        {
+          "0": {
+            "id": "5",
+            "title": "Huawei P30",
+            "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+            "price": 500,
+            "discountPercentage": 10.58,
+            "rating": 0,
+            "stock": 32,
+            "brand": "Huawei",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/5/2.jpg",
+              "https://cdn.dummyjson.com/product-images/5/3.jpg",
+              "https://random.imagecdn.app/500/150",
+              "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+              "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg"
+            ]
+          },
+          "id": "b599",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 500,
+      "totalItems": 1,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "49dd",
+      "items": [
+        {
+          "0": {
+            "id": "5",
+            "title": "Huawei P30",
+            "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+            "price": 500,
+            "discountPercentage": 10.58,
+            "rating": 0,
+            "stock": 32,
+            "brand": "Huawei",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/5/2.jpg",
+              "https://cdn.dummyjson.com/product-images/5/3.jpg",
+              "https://random.imagecdn.app/500/150",
+              "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+              "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg"
+            ]
+          },
+          "id": "b599",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 500,
+      "totalItems": 1,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "bcb7",
+      "items": [
+        {
+          "0": {
+            "id": "5",
+            "title": "Huawei P30",
+            "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+            "price": 500,
+            "discountPercentage": 10.58,
+            "rating": 0,
+            "stock": 32,
+            "brand": "Huawei",
+            "category": "smartphones",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/5/2.jpg",
+              "https://cdn.dummyjson.com/product-images/5/3.jpg",
+              "https://random.imagecdn.app/500/150",
+              "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+              "https://cdn.dummyjson.com/product-images/5/thumbnail.jpg"
+            ]
+          },
+          "id": "b599",
+          "quantity": 1,
+          "user": "124a"
+        },
+        {
+          "0": {
+            "id": "8",
+            "title": "Microsoft Surface Laptop 4",
+            "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
+            "price": 1499,
+            "discountPercentage": 10.23,
+            "rating": 4.43,
+            "stock": 68,
+            "brand": "Microsoft Surface",
+            "category": "laptops",
+            "thumbnail": "https://cdn.dummyjson.com/product-images/8/thumbnail.jpg",
+            "images": [
+              "https://cdn.dummyjson.com/product-images/8/1.jpg",
+              "https://cdn.dummyjson.com/product-images/8/2.jpg",
+              "https://cdn.dummyjson.com/product-images/8/3.jpg",
+              "https://cdn.dummyjson.com/product-images/8/4.jpg",
+              "https://cdn.dummyjson.com/product-images/8/thumbnail.jpg"
+            ]
+          },
+          "id": "9858",
+          "quantity": 1,
+          "user": "124a"
+        }
+      ],
+      "totalAmount": 1999,
+      "totalItems": 2,
+      "user": {
+        "id": "124a",
+        "email": "admin@gmail.com",
+        "password": "Admin@123",
+        "addresses": [
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          },
+          {
+            "name": "Pritam",
+            "email": "pritammagdum24@gmail.com",
+            "phone": "08698694008",
+            "street": "FC Road",
+            "city": "Bastwad",
+            "state": "Maharashtra",
+            "pinCode": "411011"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Pritam",
+        "email": "pritammagdum24@gmail.com",
+        "phone": "08698694008",
+        "street": "FC Road",
+        "city": "Bastwad",
+        "state": "Maharashtra",
+        "pinCode": "411011"
+      },
+      "status": "pending"
     }
   ]
 }
