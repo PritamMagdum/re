@@ -14,7 +14,7 @@ function AdminOrders() {
   const [page, setPage] = useState(1);
   const orders = useSelector(selectOrders);
   const totalOrders = useSelector(selectTotalOrders);
-  const [editableOrderId, setEditableOrderId] = useState();
+  const [editableOrderId, setEditableOrderId] = useState(-1);
 
   useEffect(() => {
     const pagination = { _page: page, _per_page: ITEMS_PER_PAGE };
@@ -38,6 +38,22 @@ function AdminOrders() {
       const pagination = { _page: page, _per_page: ITEMS_PER_PAGE };
       dispatch(fetchAllOrdersAsync(pagination));
     }, 15);
+    setEditableOrderId(-1);
+  };
+
+  const chooseColor = (status) => {
+    switch (status) {
+      case "pending":
+        return `bg-gray-200 text-black`;
+      case "dispatched":
+        return `bg-yellow-200 text-yellow-700`;
+      case "delivered":
+        return `bg-green-200 text-green-700`;
+      case "cancelled":
+        return `bg-red-200 text-red-700`;
+      default:
+        return `bg-pink-200 text-pink-700`;
+    }
   };
 
   return (
@@ -112,7 +128,11 @@ function AdminOrders() {
                               <option value="cancelled">Cancelled</option>
                             </select>
                           ) : (
-                            <span className="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs">
+                            <span
+                              className={`${chooseColor(
+                                order.status
+                              )} py-1 px-3 rounded-full text-xs`}
+                            >
                               {order.status}
                             </span>
                           )}
