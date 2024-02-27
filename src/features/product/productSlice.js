@@ -66,12 +66,6 @@ export const deleteProductAsync = createAsyncThunk(
   "product/delete",
   async (deleted) => {
     const response = await deleteProduct(deleted);
-    // The value we return becomes the `fulfilled` action payload
-    // console.log(
-    //   "this is UpdateProductAsync response with data -->",
-    //   response.data
-    // );
-    // console.log("this is UpdateProductAsync only response -->", response);
     return response.data;
   }
 );

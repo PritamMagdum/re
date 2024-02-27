@@ -14,6 +14,21 @@ export function createOrder(order) {
   });
 }
 
+export function updateOrder(order) {
+  return new Promise(async (resolve) => {
+    const responce = await fetch(`http://localhost:8080/orders/${order.id}`, {
+      method: "PATCH",
+      body: JSON.stringify(order),
+      headers: {
+        "content-type": "application/json",
+      },
+    });
+
+    const data = await responce.json();
+    resolve({ data });
+  });
+}
+
 export function fetchAllOrders(pagination) {
   let queryString = "";
 

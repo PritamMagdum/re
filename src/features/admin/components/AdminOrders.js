@@ -6,6 +6,7 @@ import {
   fetchAllOrdersAsync,
   selectOrders,
   selectTotalOrders,
+  updateOrderAsync,
 } from "../../order/orderSlice";
 
 function AdminOrders() {
@@ -31,7 +32,12 @@ function AdminOrders() {
   };
 
   const handleUpdate = (e, order) => {
-    // dispatch();
+    const updatedOrder = { ...order, status: e.target.value };
+    dispatch(updateOrderAsync(updatedOrder));
+    setTimeout(() => {
+      const pagination = { _page: page, _per_page: ITEMS_PER_PAGE };
+      dispatch(fetchAllOrdersAsync(pagination));
+    }, 15);
   };
 
   return (
@@ -49,13 +55,13 @@ function AdminOrders() {
                     <th className="py-3 px-6 text-center">Shipping Address</th>
                     <th className="py-3 px-6 text-center">Status</th>
                     <th className="py-3 px-6 text-center">Actions</th>
-                    {/* <th className="py-3 px-6 text-center">
+                    <th className="py-3 px-6 text-center">
                       {console.log("this is orders -->", orders)}
-                    </th> */}
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="text-gray-600 text-sm font-light">
-                  {orders &&
+                  {orders.data &&
                     orders.data.map((order) => (
                       <tr className="border-b border-gray-200 hover:bg-gray-100">
                         <td className="py-3 px-6 text-left whitespace-nowrap">
@@ -98,15 +104,18 @@ function AdminOrders() {
                           </div>
                         </td>
                         <td className="py-3 px-6 text-center">
-                          <span className="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs">
-                            {order.status}
-                          </span>
-                          <select onChange={(e) => handleUpdate(e, order)}>
-                            <option value="pending">Pending</option>
-                            <option value="dispatched">Dispatched</option>
-                            <option value="delivered">Delivered</option>
-                            <option value="cancelled">Cancelled</option>
-                          </select>
+                          {order.id === editableOrderId ? (
+                            <select onChange={(e) => handleUpdate(e, order)}>
+                              <option value="pending">Pending</option>
+                              <option value="dispatched">Dispatched</option>
+                              <option value="delivered">Delivered</option>
+                              <option value="cancelled">Cancelled</option>
+                            </select>
+                          ) : (
+                            <span className="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs">
+                              {order.status}
+                            </span>
+                          )}
                         </td>
                         <td className="py-3 px-6 text-center">
                           <div className="flex item-center justify-center">

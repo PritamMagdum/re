@@ -3088,7 +3088,7 @@
         "state": "Maharashtra",
         "pinCode": "411011"
       },
-      "status": "pending"
+      "status": "cancelled"
     },
     {
       "id": "5b01",
@@ -3178,7 +3178,7 @@
         "state": "Karjat",
         "street": "Karjat"
       },
-      "status": "pending"
+      "status": "delivered"
     },
     {
       "id": "0a82",
@@ -3264,7 +3264,7 @@
         "state": "Maharashtra",
         "pinCode": "416106"
       },
-      "status": "pending"
+      "status": "dispatched"
     },
     {
       "id": "9bf2",
