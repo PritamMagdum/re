@@ -4,18 +4,17 @@
       "id": "1",
       "title": "iPhone 12 Pro MAX and MAX",
       "description": "An apple mobile which is nothing like apple",
-      "price": 3000,
+      "price": 300,
       "discountPercentage": 88,
       "rating": 0,
-      "stock": 899,
+      "stock": 900,
       "brand": "Apple",
       "category": "smartphones",
       "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
       "images": [
-        "https://cdn.dummyjson.com/product-images/1/4.jpg",
         "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
-        "https://cdn.dummyjson.com/product-images/4/4.jpg",
-        null,
+        "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+        "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
         "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
       ]
     },

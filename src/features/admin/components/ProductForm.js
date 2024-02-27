@@ -71,7 +71,7 @@ function ProductForm() {
       product.image1,
       product.image2,
       product.image3,
-      product.image4,
+      // product.image4,
       product.thumbnail,
     ];
     product.rating = 0;

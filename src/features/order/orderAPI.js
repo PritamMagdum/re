@@ -4,12 +4,30 @@ export function createOrder(order) {
     const responce = await fetch("http://localhost:8080/orders", {
       method: "POST",
       body: JSON.stringify(order),
-      headers : {
-        'content-type' : 'application/json'
-      }
+      headers: {
+        "content-type": "application/json",
+      },
     });
-  
+
     const data = await responce.json();
     resolve({ data });
+  });
+}
+
+export function fetchAllOrders(pagination) {
+  let queryString = "";
+
+  for (let key in pagination) {
+    queryString += `${key}=${pagination[key]}&`;
+  }
+
+  return new Promise(async (resolve) => {
+    // TODO : we will not hard-code server URL here
+    const response = await fetch("http://localhost:8080/orders?" + queryString);
+    // console.log("this is response ---->", response)
+    const data = await response.json();
+    // console.log("this is data ---->", data.items)
+    const totalOrders = await data.items;
+    resolve({ data: { orders: data, totalOrders: +totalOrders } });
   });
 }
