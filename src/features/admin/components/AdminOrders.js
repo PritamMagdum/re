@@ -13,6 +13,7 @@ function AdminOrders() {
   const [page, setPage] = useState(1);
   const orders = useSelector(selectOrders);
   const totalOrders = useSelector(selectTotalOrders);
+  const [editableOrderId, setEditableOrderId] = useState();
 
   useEffect(() => {
     const pagination = { _page: page, _per_page: ITEMS_PER_PAGE };
@@ -20,12 +21,17 @@ function AdminOrders() {
     dispatch(fetchAllOrdersAsync(pagination));
   }, [dispatch, page]);
 
-  const handleShow = (data) => {
-    console.log("handleShow Clicked");
+  const handleEdit = (order) => {
+    console.log("order id is --->", order.id);
+    setEditableOrderId(order.id);
   };
 
-  const handleEdit = (data) => {
+  const handleShow = (order) => {
     console.log("handleEdit Clicked");
+  };
+
+  const handleUpdate = (e, order) => {
+    // dispatch();
   };
 
   return (
@@ -95,6 +101,12 @@ function AdminOrders() {
                           <span className="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs">
                             {order.status}
                           </span>
+                          <select onChange={(e) => handleUpdate(e, order)}>
+                            <option value="pending">Pending</option>
+                            <option value="dispatched">Dispatched</option>
+                            <option value="delivered">Delivered</option>
+                            <option value="cancelled">Cancelled</option>
+                          </select>
                         </td>
                         <td className="py-3 px-6 text-center">
                           <div className="flex item-center justify-center">
