@@ -29,13 +29,13 @@ export function addToCart(item) {
     // console.log("product --> ", ...item.product);
 
     const sendData = {
-      ...item.product,
+      product: item.product,
       quantity: item.quantity,
       user: item.user,
     };
-
-    // console.log("Before send --> ", sendData);
-    const response = await fetch("http://localhost:8080/cart", {
+    console.log("item is -->", item);
+    console.log("Before send --> ", sendData);
+    const response = await fetch("http://localhost:8080/cart/", {
       method: "POST",
       // body: JSON.stringify(item),
       body: JSON.stringify(sendData),
@@ -54,7 +54,7 @@ export function addToCart(item) {
     //   user: item.user
     // };
 
-    // console.log("Affter Add --> ", newData);
+    console.log("Affter Add --> ", newData);
     // Resolve with the merged data
     resolve(newData);
   });

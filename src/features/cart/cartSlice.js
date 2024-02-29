@@ -15,6 +15,7 @@ const initialState = {
 export const addToCartAsync = createAsyncThunk(
   "cart/addToCart",
   async (item) => {
+    console.log("item from async is -->", item);
     const response = await addToCart(item);
     // The value we return becomes the `fulfilled` action payload
     // console.log("This is comes from addToCart ()--->", response);
@@ -75,6 +76,7 @@ export const cartSlice = createSlice({
       })
       .addCase(addToCartAsync.fulfilled, (state, action) => {
         state.status = "idle";
+        console.log("addToCart payload is-->", action.payload);
         state.items.push(action.payload);
       })
       .addCase(fetchItemsByUserIdAsync.pending, (state) => {
@@ -90,7 +92,7 @@ export const cartSlice = createSlice({
       .addCase(updateCartAsync.fulfilled, (state, action) => {
         state.status = "idle";
         const index = state.items.findIndex(
-          (item) => item.id === action.payload
+          (item) => item.id === action.payload.id
         );
         state.items[index] = action.payload;
       })
@@ -100,7 +102,7 @@ export const cartSlice = createSlice({
       .addCase(deleteItemFromCartAsync.fulfilled, (state, action) => {
         state.status = "idle";
         const index = state.items.findIndex(
-          (item) => item.id === action.payload
+          (item) => item.id === action.payload.id
         );
         state.items.splice(index, 1);
       })

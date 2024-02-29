@@ -31,7 +31,7 @@ import { ITEMS_PER_PAGE } from "../../../app/constants";
 import { fetchBrands } from "../productAPI";
 import Pagination from "../../common/Pagination";
 
-// let totalItems = 55;
+// var totalItems = 100;
 
 const fetchBrandsData = fetchBrands();
 
@@ -50,6 +50,7 @@ export default function ProductList() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const products = useSelector(selectAllProducts);
   const totalItems = useSelector(selectTotalItems);
+  // const totalItems = Request.get("X-Total-Count");
   const brands = useSelector(selectBrands);
   const categories = useSelector(selectCategories);
   // const filters = useSelector(selectFilters);
@@ -221,11 +222,13 @@ export default function ProductList() {
           </section>
 
           {/* Pagination Part Started */}
+
           <Pagination
             page={page}
             totalItems={totalItems}
             handlePage={handlePage}
           ></Pagination>
+
           {/* Pagination Part Ended */}
         </main>
       </div>
@@ -495,7 +498,8 @@ function ProductGrid({ products }) {
       <div className="mx-auto max-w-2xl px-4 py-0 sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8">
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
           {/* {console.log(products)} */}
-          {products?.data?.map((product) => (
+          {/* {products?.data?.map((product) => ( */}
+          {products?.map((product) => (
             <Link to={`/product-detail/${product.id}`} key={product.id}>
               <div className="group relative border-solid border-2 p-2 rounded-md">
                 <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
@@ -535,7 +539,7 @@ function ProductGrid({ products }) {
                 {product.stock <= 0 && (
                   <div>
                     <p className="text-sm text-red-400">
-                      {console.log("product one : ", product)}
+                      {/* {console.log("product one : ", product)} */}
                       Out of Stock -Better Luck Next Time
                     </p>
                   </div>

@@ -26,7 +26,7 @@ export default function Cart() {
   // }, 0);
 
   const totalAmount = items.reduce(
-    (amount, item) => item[0].price * item.quantity + amount,
+    (amount, item) => item.product.price * item.quantity + amount,
     0
   );
   const totalItems = items.reduce((total, item) => item.quantity + total, 0);
@@ -34,7 +34,7 @@ export default function Cart() {
   const handleQuantity = (e, item) => {
     // console.log("e is ->",e.target.value)
     // console.log("item is -> ",item)
-    dispatch(updateCartAsync({ ...item, quantity: +e.target.value }));
+    dispatch(updateCartAsync({ id: item.id, quantity: +e.target.value }));
     dispatch(fetchItemsByUserIdAsync(user.id));
   };
 
@@ -47,6 +47,7 @@ export default function Cart() {
 
   return (
     <div>
+      {console.log("items are --->", items)}
       {!items.length && <Navigate to="/" replace={true}></Navigate>}
       <div className="mx-auto max-w-7xl px-4 bg-white sm:px-6 lg:px-8">
         <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
@@ -61,8 +62,8 @@ export default function Cart() {
                   <li key={item.id} className="flex py-6">
                     <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                       <img
-                        src={item[0].thumbnail}
-                        alt={item[0].title}
+                        src={item.product.thumbnail}
+                        alt={item.product.title}
                         className="h-full w-full object-cover object-center"
                       />
                     </div>
@@ -71,12 +72,12 @@ export default function Cart() {
                       <div>
                         <div className="flex justify-between text-base font-medium text-gray-900">
                           <h3>
-                            <a href={item.href}>{item.title}</a>
+                            <a href={item.product.id}>{item.product.title}</a>
                           </h3>
-                          <p className="ml-4">${item[0].price}</p>
+                          <p className="ml-4">${item.product.price}</p>
                         </div>
                         <p className="mt-1 text-sm text-gray-500">
-                          {item.brand}
+                          {item.product.brand}
                         </p>
                       </div>
                       <div className="flex flex-1 items-end justify-between text-sm">

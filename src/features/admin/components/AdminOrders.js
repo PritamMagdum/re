@@ -29,25 +29,28 @@ function AdminOrders() {
 
   const handleUpdate = (e, order) => {
     const updatedOrder = { ...order, status: e.target.value };
+
     dispatch(updateOrderAsync(updatedOrder));
     setTimeout(() => {
       const pagination = { _page: page, _per_page: ITEMS_PER_PAGE };
       dispatch(fetchAllOrdersAsync(pagination));
-    }, 15);
+    }, 5);
     setEditableOrderId(-1);
   };
 
   const handlePage = (page) => {
     setPage(page);
-    // const pagination = { _page: page, _per_page: ITEMS_PER_PAGE };
-    // dispatch(fetchAllOrdersAsync(pagination));
+    const pagination = { _page: page, _per_page: ITEMS_PER_PAGE };
+    dispatch(fetchAllOrdersAsync(pagination));
   };
 
   useEffect(() => {
     const pagination = { _page: page, _per_page: ITEMS_PER_PAGE };
-    const sort = {};
-    dispatch(fetchAllOrdersAsync({ sort, pagination }));
-  }, [dispatch, page, sort]);
+    // const sort = {};
+    // dispatch(fetchAllOrdersAsync({ sort, pagination }));
+    dispatch(fetchAllOrdersAsync(pagination));
+    // }, [dispatch, page, sort]);
+  }, [dispatch, page]);
 
   const handleSort = (sortOption) => {
     // TODO : Find the solution of asc and desc sort

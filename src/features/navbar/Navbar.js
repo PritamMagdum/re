@@ -11,12 +11,12 @@ import { fetchItemsByUserIdAsync, selectItems } from "../cart/cartSlice";
 import { selectLoggedInUser } from "../auth/authSlice";
 
 const navigation = [
-  { name: "Dashboard", link: "#", user: true },
-  { name: "Team", link: "#", user: true },
-  { name: "Projects", link: "#", user: true },
-  { name: "Calendar", link: "#", user: true },
+  { name: "Home", link: "/", user: true },
+  { name: "About", link: "/about", user: true },
+  { name: "ContactUs", link: "/contact", user: true },
 
-  { name: "Admin", link: "/admin", admin: true },
+  { name: "Home", link: "/", admin: true },
+  { name: "Edit Mode", link: "/admin", admin: true },
   { name: "Orders", link: "/admin/orders", admin: true },
 ];
 

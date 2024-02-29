@@ -4,7 +4,11 @@ import { RadioGroup } from "@headlessui/react";
 import { fetchProductByIdAsync, selectProductById } from "../productSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { addToCartAsync, fetchItemsByUserIdAsync } from "../../cart/cartSlice";
+import {
+  addToCartAsync,
+  fetchItemsByUserIdAsync,
+  selectItems,
+} from "../../cart/cartSlice";
 import { selectLoggedInUser } from "../../auth/authSlice";
 
 // const product = {
@@ -96,19 +100,30 @@ export default function ProductDetail() {
   const dispatch = useDispatch();
   const params = useParams();
   const user = useSelector(selectLoggedInUser);
+  const items = useSelector(selectItems);
 
   const handleCart = (e) => {
-    const newObj = { ...product };
-    newObj.quantity = 2;
-    newObj.user = user.id;
-
-    // console.log("New Object -> ", newObj);
+    console.log("params and params.id-->", params, params.id);
     e.preventDefault();
-    dispatch(addToCartAsync({ product: product, quantity: 1, user: user.id }));
-    // dispatch(addToCartAsync({...product, quantity : 1, user:user.id}));
-    setTimeout(() => {
-      dispatch(fetchItemsByUserIdAsync(user.id));
-    }, 500);
+    console.log("items is --->", items);
+    console.log("product id --->", product.id);
+    if (items.findIndex((item) => item.product.id === product.id) < 0) {
+      console.log({ items, product });
+      const newItem = {
+        // product: "65df1e16e4738c911e1172bd",
+        product: product.id,
+        quantity: 1,
+        user: user.id,
+      };
+      dispatch(addToCartAsync(newItem));
+      console.log("newItem is -->", newItem);
+      // alert.error("item added to cart");
+      setTimeout(() => {
+        dispatch(fetchItemsByUserIdAsync(user.id));
+      }, 500);
+    } else {
+      console.log("product is already added");
+    }
   };
 
   useEffect(() => {
@@ -166,22 +181,22 @@ export default function ProductDetail() {
           <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
             <div className="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
               <img
-                src={product[0].images[0]}
-                alt={product[0].title}
+                src={product.images[0]}
+                alt={product.title}
                 className="h-full w-full object-cover object-center"
               />
             </div>
             <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
               <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
                 <img
-                  src={product[0].images[1]}
+                  src={product.images[1]}
                   alt={product.title}
                   className="h-full w-full object-cover object-center"
                 />
               </div>
               <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
                 <img
-                  src={product[0].images[2]}
+                  src={product.images[2]}
                   alt={product.title}
                   className="h-full w-full object-cover object-center"
                 />
@@ -189,8 +204,8 @@ export default function ProductDetail() {
             </div>
             <div className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
               <img
-                src={product[0].images[3]}
-                alt={product[0].title}
+                src={product.images[3]}
+                alt={product.title}
                 className="h-full w-full object-cover object-center"
               />
             </div>
@@ -200,7 +215,7 @@ export default function ProductDetail() {
           <div className="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
             <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
               <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-                {product[0].title}
+                {product.title}
               </h1>
             </div>
 
@@ -208,7 +223,7 @@ export default function ProductDetail() {
             <div className="mt-4 lg:row-span-3 lg:mt-0">
               <h2 className="sr-only">Product information</h2>
               <p className="text-3xl tracking-tight text-gray-900">
-                ${product[0].price}
+                ${product.price}
               </p>
 
               {/* Reviews */}
@@ -220,7 +235,7 @@ export default function ProductDetail() {
                       <StarIcon
                         key={rating}
                         className={classNames(
-                          product[0].rating > rating
+                          product.rating > rating
                             ? "text-gray-900"
                             : "text-gray-200",
                           "h-5 w-5 flex-shrink-0"
@@ -229,7 +244,7 @@ export default function ProductDetail() {
                       />
                     ))}
                   </div>
-                  <p className="sr-only">{product[0].rating} out of 5 stars</p>
+                  <p className="sr-only">{product.rating} out of 5 stars</p>
                   {/* <a href={reviews.href} className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">
                                     {reviews.totalCount} reviews
                                 </a> */}
@@ -377,7 +392,7 @@ export default function ProductDetail() {
 
                 <div className="space-y-6">
                   <p className="text-base text-gray-900">
-                    {product[0].description}
+                    {product.description}
                   </p>
                 </div>
               </div>
@@ -402,9 +417,7 @@ export default function ProductDetail() {
                 <h2 className="text-sm font-medium text-gray-900">Details</h2>
 
                 <div className="mt-4 space-y-6">
-                  <p className="text-sm text-gray-600">
-                    {product[0].description}
-                  </p>
+                  <p className="text-sm text-gray-600">{product.description}</p>
                 </div>
               </div>
             </div>

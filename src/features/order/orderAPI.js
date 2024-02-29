@@ -29,12 +29,13 @@ export function updateOrder(order) {
   });
 }
 
-export function fetchAllOrders(sort, pagination) {
+// export function fetchAllOrders(sort, pagination) {
+export function fetchAllOrders(pagination) {
   let queryString = "";
 
-  for (let key in sort) {
-    queryString += `${key}=${sort[key]}&`;
-  }
+  // for (let key in sort) {
+  //   queryString += `${key}=${sort[key]}&`;
+  // }
 
   for (let key in pagination) {
     queryString += `${key}=${pagination[key]}&`;

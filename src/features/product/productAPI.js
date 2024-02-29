@@ -11,7 +11,8 @@ export function fetchAllProducts() {
 export function fetchProductById(id) {
   return new Promise(async (resolve) => {
     // TODO : we will not hard-code server URL here
-    const responce = await fetch(`http://localhost:8080/products?id=${id}`);
+    // const responce = await fetch(`http://localhost:8080/products?id=${id}`);
+    const responce = await fetch(`http://localhost:8080/products/${id}`);
     const data = await responce.json();
     resolve({ data });
   });
@@ -77,7 +78,7 @@ export function fetchProductsByFilters(filter, sort, pagination) {
   // TODO : On server we will support multi values
   // Suppose filter is comming like  {"category":"smartphone"}
   // filter : {"category" : ["smartphone", "Laptops"]}
-  // pagination : {_page:1, _limit:10}
+  // pagination : {_page:1, _per_page:10}
 
   let queryString = "";
   for (let key in filter) {
