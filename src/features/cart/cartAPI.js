@@ -33,8 +33,8 @@ export function addToCart(item) {
       quantity: item.quantity,
       user: item.user,
     };
-    console.log("item is -->", item);
-    console.log("Before send --> ", sendData);
+    // console.log("item is -->", item);
+    // console.log("Before send --> ", sendData);
     const response = await fetch("http://localhost:8080/cart/", {
       method: "POST",
       // body: JSON.stringify(item),

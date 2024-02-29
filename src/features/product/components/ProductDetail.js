@@ -103,14 +103,13 @@ export default function ProductDetail() {
   const items = useSelector(selectItems);
 
   const handleCart = (e) => {
-    console.log("params and params.id-->", params, params.id);
+    // console.log("params and params.id-->", params, params.id);
     e.preventDefault();
-    console.log("items is --->", items);
-    console.log("product id --->", product.id);
+    // console.log("items is --->", items);
+    // console.log("product id --->", product.id);
     if (items.findIndex((item) => item.product.id === product.id) < 0) {
-      console.log({ items, product });
+      // console.log({ items, product });
       const newItem = {
-        // product: "65df1e16e4738c911e1172bd",
         product: product.id,
         quantity: 1,
         user: user.id,
