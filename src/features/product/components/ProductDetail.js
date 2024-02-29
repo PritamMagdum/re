@@ -122,6 +122,7 @@ export default function ProductDetail() {
         dispatch(fetchItemsByUserIdAsync(user.id));
       }, 500);
     } else {
+      alert("Product is already added");
       console.log("product is already added");
     }
   };
