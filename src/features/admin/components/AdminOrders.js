@@ -106,8 +106,8 @@ function AdminOrders() {
                   </tr>
                 </thead>
                 <tbody className="text-gray-600 text-sm font-light">
-                  {orders.data &&
-                    orders.data.map((order) => (
+                  {orders &&
+                    orders.map((order) => (
                       <tr className="border-b border-gray-200 hover:bg-gray-100">
                         <td className="py-3 px-6 text-left whitespace-nowrap">
                           <div className="flex items-center">
@@ -121,12 +121,12 @@ function AdminOrders() {
                               <div className="mr-2">
                                 <img
                                   className="w-6 h-6 rounded-full"
-                                  src={item[0].thumbnail}
+                                  src={item.product.thumbnail}
                                 />
                               </div>
                               <span>
-                                {item[0].title} - #{item.quantity} - $
-                                {item[0].price}
+                                {item.product.title} - #{item.quantity} - $
+                                {item.product.price}
                               </span>
                             </div>
                           ))}

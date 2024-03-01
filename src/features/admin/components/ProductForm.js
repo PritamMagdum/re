@@ -44,22 +44,22 @@ function ProductForm() {
   useEffect(() => {
     if (selectedProduct && params.id) {
       console.log(selectedProduct);
-      setValue("title", selectedProduct[0].title);
-      setValue("description", selectedProduct[0].description);
-      setValue("price", selectedProduct[0].price);
-      setValue("discountPercentage", selectedProduct[0].discountPercentage);
-      setValue("rating", selectedProduct[0].rating);
-      setValue("stock", selectedProduct[0].stock);
-      setValue("brand", selectedProduct[0].brand);
-      setValue("category", selectedProduct[0].category);
-      setValue("thumbnail", selectedProduct[0].thumbnail);
-      setValue("images", selectedProduct[0].images[0]);
-      setValue("image1", selectedProduct[0].images[1]);
-      setValue("image2", selectedProduct[0].images[2]);
-      setValue("image3", selectedProduct[0].images[3]);
-      // setValue("image4", selectedProduct[0].images[4]);
+      setValue("title", selectedProduct.title);
+      setValue("description", selectedProduct.description);
+      setValue("price", selectedProduct.price);
+      setValue("discountPercentage", selectedProduct.discountPercentage);
+      setValue("rating", selectedProduct.rating);
+      setValue("stock", selectedProduct.stock);
+      setValue("brand", selectedProduct.brand);
+      setValue("category", selectedProduct.category);
+      setValue("thumbnail", selectedProduct.thumbnail);
+      setValue("images", selectedProduct.images[0]);
+      setValue("image1", selectedProduct.images[1]);
+      setValue("image2", selectedProduct.images[2]);
+      setValue("image3", selectedProduct.images[3]);
+      // setValue("image4", selectedProduct.images[4]);
 
-      // selectedProduct[0].images.map(image=>)
+      // selectedProduct.images.map(image=>)
     }
   }, [selectedProduct, params.id, setValue]);
 
