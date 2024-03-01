@@ -29,12 +29,12 @@ function AdminOrders() {
 
   const handleUpdate = (e, order) => {
     const updatedOrder = { ...order, status: e.target.value };
-
+    console.log("handle update updatedOrder -->", updatedOrder);
     dispatch(updateOrderAsync(updatedOrder));
     setTimeout(() => {
       const pagination = { _page: page, _per_page: ITEMS_PER_PAGE };
       dispatch(fetchAllOrdersAsync(pagination));
-    }, 5);
+    }, 10);
     setEditableOrderId(-1);
   };
 
@@ -106,9 +106,12 @@ function AdminOrders() {
                   </tr>
                 </thead>
                 <tbody className="text-gray-600 text-sm font-light">
-                  {orders &&
-                    orders.map((order) => (
-                      <tr className="border-b border-gray-200 hover:bg-gray-100">
+                  {orders[0] &&
+                    orders?.map((order, index) => (
+                      <tr
+                        key={index}
+                        className="border-b border-gray-200 hover:bg-gray-100"
+                      >
                         <td className="py-3 px-6 text-left whitespace-nowrap">
                           <div className="flex items-center">
                             <div className="mr-2"></div>
