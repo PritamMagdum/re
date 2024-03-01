@@ -90,9 +90,11 @@ function ProductForm() {
         product.rating = selectedProduct.rating || 0;
 
         dispatch(updateProductAsync(product));
+        alert("Product Edited Successfully!");
         reset();
       } else {
         await dispatch(createProductAsync(product));
+        alert("Product Edited Successfully!");
         navigate("/admin"); // Navigate after successful product creation
       }
     } catch (error) {
