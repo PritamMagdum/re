@@ -73,7 +73,7 @@ export function fetchItemsByUserId(userId) {
 
 export function updateCart(update) {
   return new Promise(async (resolve) => {
-    // console.log("Before send --> ", sendData);
+    console.log("Before send --> ", update.id);
     const response = await fetch(`http://localhost:8080/cart/${update.id}`, {
       method: "PATCH",
       body: JSON.stringify(update),
@@ -83,7 +83,7 @@ export function updateCart(update) {
     });
 
     const newData = await response.json();
-
+    console.log("After send --> ", newData);
     // Resolve with the merged data
     resolve(newData);
   });

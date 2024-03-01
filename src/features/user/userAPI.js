@@ -2,7 +2,7 @@
 export function fetchLoggedInUserOrders(userId) {
   return new Promise(async (resolve) => {
     const responce = await fetch(
-      `http://localhost:8080/orders/?user.id=${userId}`
+      `http://localhost:8080/orders/?user=${userId}`
     );
     const data = await responce.json();
     resolve({ data });

@@ -35,7 +35,7 @@ export default function Cart() {
     // console.log("e is ->",e.target.value)
     // console.log("item is -> ",item)
     dispatch(updateCartAsync({ id: item.id, quantity: +e.target.value }));
-    dispatch(fetchItemsByUserIdAsync(user.id));
+    // dispatch(fetchItemsByUserIdAsync(user.id));
   };
 
   const handleRemove = (e, id) => {
