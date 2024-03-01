@@ -9,7 +9,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 
 export default function UserProfile() {
-  const user = useSelector(selectUserInfo);
+  const userInfo = useSelector(selectUserInfo);
   const dispatch = useDispatch();
   const [selectedEditIndex, setSelectedEditIndex] = useState(-1);
   const [showAddAddressForm, setShowAddAddressForm] = useState(false);
@@ -19,40 +19,43 @@ export default function UserProfile() {
   const { register, handleSubmit, setValue, reset } = useForm();
 
   const handleEdit = (updatedAddress, index) => {
-    const newUser = { ...user, addresses: [...user.addresses] };
+    const newUser = { ...userInfo, addresses: [...userInfo.addresses] };
     newUser.addresses.splice(index, 1, updatedAddress);
     dispatch(updateUserAsync(newUser));
     setSelectedEditIndex(-1);
     setTimeout(() => {
-      dispatch(fetchLoggedInUserAsync(user.id));
-      dispatch(fetchLoggedInUserOrdersAsync(user.id));
+      dispatch(fetchLoggedInUserAsync(userInfo.id));
+      dispatch(fetchLoggedInUserOrdersAsync(userInfo.id));
     }, 25);
   };
 
   const handleRemove = (e, index) => {
     // console.log("handleRemove is Clicked");
-    const newUser = { ...user, addresses: [...user.addresses] };
+    const newUser = { ...userInfo, addresses: [...userInfo.addresses] };
     newUser.addresses.splice(index, 1);
     dispatch(updateUserAsync(newUser));
     setTimeout(() => {
-      dispatch(fetchLoggedInUserAsync(user.id));
-      dispatch(fetchLoggedInUserOrdersAsync(user.id));
+      dispatch(fetchLoggedInUserAsync(userInfo.id));
+      dispatch(fetchLoggedInUserOrdersAsync(userInfo.id));
     }, 25);
   };
 
   const handleAdd = (address) => {
-    const newUser = { ...user, addresses: [...user.addresses, address] };
+    const newUser = {
+      ...userInfo,
+      addresses: [...userInfo.addresses, address],
+    };
     dispatch(updateUserAsync(newUser));
     setShowAddAddressForm(false);
     setTimeout(() => {
-      dispatch(fetchLoggedInUserAsync(user.id));
-      dispatch(fetchLoggedInUserOrdersAsync(user.id));
+      dispatch(fetchLoggedInUserAsync(userInfo.id));
+      dispatch(fetchLoggedInUserOrdersAsync(userInfo.id));
     }, 20);
   };
 
   const handleEditForm = (index) => {
     setSelectedEditIndex(index);
-    const address = user.addresses[index];
+    const address = userInfo.addresses[index];
     setValue("name", address.name);
     setValue("email", address.email);
     setValue("phone", address.phone);
@@ -67,14 +70,14 @@ export default function UserProfile() {
       <div className="mx-auto max-w-7xl px-4 bg-white sm:px-6 lg:px-8">
         <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
           <h1 className="text-4xl font-bold tracking-tight my-3 text-gray-900">
-            Name : {user.name ? user.name : "Hello User"}
+            Name : {userInfo.name ? userInfo.name : "Hello User"}
           </h1>
           <h3 className="text-xl font-bold tracking-tight my-2 text-red-500">
-            Email Address : {user.email}
+            Email Address : {userInfo.email}
           </h3>
-          {user.role === "admin" && (
+          {userInfo.role === "admin" && (
             <h3 className="text-xl font-bold tracking-tight my-2 text-red-500">
-              Role : {user.role}
+              Role : {userInfo.role}
             </h3>
           )}
           <hr className="my-5" />
@@ -285,7 +288,7 @@ export default function UserProfile() {
               </div>
             </form>
           ) : null}
-          {user.addresses.map((address, index) => (
+          {userInfo.addresses.map((address, index) => (
             <div key={index}>
               {selectedEditIndex === index ? (
                 <form

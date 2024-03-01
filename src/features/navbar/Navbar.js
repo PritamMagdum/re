@@ -187,6 +187,7 @@ function Navbar({ children }) {
                     <div className="flex-shrink-0">
                       <img
                         className="h-10 w-10 rounded-full"
+                        // The Below User information should be comes from userInfo
                         src={user.imageUrl}
                         alt=""
                       />
