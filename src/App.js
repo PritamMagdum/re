@@ -32,8 +32,8 @@ function App() {
   useEffect(() => {
     if (user) {
       // console.log("This is comes from app.js file ------>", user);
-      dispatch(fetchItemsByUserIdAsync(user.id));
-      dispatch(fetchLoggedInUserAsync(user.id));
+      dispatch(fetchItemsByUserIdAsync());
+      dispatch(fetchLoggedInUserAsync());
     }
   }, [dispatch, user]);
 

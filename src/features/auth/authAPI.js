@@ -27,11 +27,10 @@ export function checkUser(userInfo) {
         const data = await responce.json();
         console.log({ data });
         resolve({ data });
+      } else {
+        const error = await responce.text();
+        reject(error);
       }
-      //  else {
-      //   const error = await responce.json();
-      //   reject(error);
-      // }
     } catch (error) {
       reject(error);
     }

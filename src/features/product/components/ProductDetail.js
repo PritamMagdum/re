@@ -99,7 +99,7 @@ export default function ProductDetail() {
   const product = useSelector(selectProductById);
   const dispatch = useDispatch();
   const params = useParams();
-  const user = useSelector(selectLoggedInUser);
+  // const user = useSelector(selectLoggedInUser);
   const items = useSelector(selectItems);
 
   const handleCart = (e) => {
@@ -112,15 +112,15 @@ export default function ProductDetail() {
       const newItem = {
         product: product.id,
         quantity: 1,
-        user: user.id,
+        // user: user.id,
       };
       dispatch(addToCartAsync(newItem));
 
       console.log("newItem is -->", newItem);
       alert("item added to cart Successfully");
-      setTimeout(() => {
-        dispatch(fetchItemsByUserIdAsync(user.id));
-      }, 500);
+      // setTimeout(() => {
+      //   dispatch(fetchItemsByUserIdAsync(user.id));
+      // }, 500);
     } else {
       alert("Product is already added");
       console.log("product is already added");

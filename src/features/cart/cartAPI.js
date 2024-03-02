@@ -28,24 +28,24 @@ export function addToCart(item) {
     // console.log("Before Add --> ", item);
     // console.log("product --> ", ...item.product);
 
-    const sendData = {
-      product: item.product,
-      quantity: item.quantity,
-      user: item.user,
-    };
+    // const sendData = {
+    //   product: item.product,
+    //   quantity: item.quantity,
+    //   user: item.user,
+    // };
     // console.log("item is -->", item);
-    // console.log("Before send --> ", sendData);
+    console.log("Before send --> ", item);
     const response = await fetch("http://localhost:8080/cart/", {
       method: "POST",
       // body: JSON.stringify(item),
-      body: JSON.stringify(sendData),
+      body: JSON.stringify(item),
       headers: {
         "content-type": "application/json",
       },
     });
 
     // const responseData = await response.json();
-    const newData = await response.json();
+    const data = await response.json();
 
     // const data = {
     //   ...item.product,
@@ -54,17 +54,17 @@ export function addToCart(item) {
     //   user: item.user
     // };
 
-    console.log("Affter Add --> ", newData);
+    console.log("Affter Add --> ", data);
     // Resolve with the merged data
-    resolve(newData);
+    resolve({ data });
   });
 }
 
-export function fetchItemsByUserId(userId) {
+export function fetchItemsByUserId() {
   return new Promise(async (resolve) => {
     // console.log("fetched userId -->", userId);
     // TODO : we will not hard-code server URL here
-    const responce = await fetch(`http://localhost:8080/cart?user=${userId}`);
+    const responce = await fetch(`http://localhost:8080/cart`);
     const data = await responce.json();
     // console.log("comes fetchItemsById ->", data);
     resolve({ data });
@@ -105,11 +105,11 @@ export function deleteItemFromCart(itemId) {
   });
 }
 
-export function resetCart(userId) {
+export function resetCart() {
   // console.log("resetCart userId -->", userId);
   // get all the items of user and then delete each item
   return new Promise(async (resolve) => {
-    const response = await fetchItemsByUserId(userId);
+    const response = await fetchItemsByUserId();
     const items = await response.data;
     // console.log("responseed by fetchItemByUserId -->", items);
     items.forEach((item) => {

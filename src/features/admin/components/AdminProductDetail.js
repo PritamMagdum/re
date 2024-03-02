@@ -8,7 +8,7 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { addToCartAsync, fetchItemsByUserIdAsync } from "../../cart/cartSlice";
-import { selectLoggedInUser } from "../../auth/authSlice";
+// import { selectLoggedInUser } from "../../auth/authSlice";
 
 const colors = [
   { name: "White", class: "bg-white", selectedClass: "ring-gray-400" },
@@ -45,20 +45,24 @@ export default function AdminProductDetail() {
   const product = useSelector(selectProductById);
   const dispatch = useDispatch();
   const params = useParams();
-  const user = useSelector(selectLoggedInUser);
+  // const user = useSelector(selectLoggedInUser);
 
   const handleCart = (e) => {
-    const newObj = { ...product };
-    newObj.quantity = 2;
-    newObj.user = user.id;
+    e.preventDefault();
+    const newItem = { ...product, quantity: 1 };
+    delete newItem["id"];
+    // newObj.quantity = 2;
+    // newObj.user = user.id;
 
     // console.log("New Object -> ", newObj);
-    e.preventDefault();
-    dispatch(addToCartAsync({ product: product, quantity: 1, user: user.id }));
+
+    dispatch(addToCartAsync(newItem));
+    // dispatch(addToCartAsync({ product: product, quantity: 1}));
     // dispatch(addToCartAsync({...product, quantity : 1, user:user.id}));
-    setTimeout(() => {
-      dispatch(fetchItemsByUserIdAsync(user.id));
-    }, 500);
+
+    // setTimeout(() => {
+    //   dispatch(fetchItemsByUserIdAsync(user.id));
+    // }, 500);
   };
 
   useEffect(() => {
