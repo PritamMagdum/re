@@ -12,6 +12,12 @@ function ProtectedAdmin(children) {
   if (!user) {
     <Navigate to="/login" replace={true}></Navigate>;
   }
+
+  return userInfo && userInfo.role === "admin" ? (
+    <Outlet />
+  ) : (
+    <Navigate to="/" />
+  );
 }
 
 export default ProtectedAdmin;
