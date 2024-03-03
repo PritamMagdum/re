@@ -23,6 +23,7 @@ export const checkUserAsync = createAsyncThunk(
     console.log("loginInfo -->", loginInfo);
     try {
       const response = await checkUser(loginInfo);
+      console.log("response data is -->", response.data);
       return response.data;
     } catch (error) {
       console.log(error);

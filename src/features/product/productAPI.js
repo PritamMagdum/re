@@ -74,7 +74,7 @@ export function deleteProduct(deleted) {
   });
 }
 
-export function fetchProductsByFilters(filter, sort, pagination) {
+export function fetchProductsByFilters(filter, sort, pagination, admin) {
   // TODO : On server we will support multi values
   // Suppose filter is comming like  {"category":"smartphone"}
   // filter : {"category" : ["smartphone", "Laptops"]}
@@ -95,6 +95,10 @@ export function fetchProductsByFilters(filter, sort, pagination) {
 
   for (let key in pagination) {
     queryString += `${key}=${pagination[key]}&`;
+  }
+
+  if (admin) {
+    queryString += `admin=true`;
   }
 
   return new Promise(async (resolve) => {
