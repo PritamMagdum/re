@@ -13,7 +13,7 @@ export function createUser(userData) {
   });
 }
 
-export function checkUser(userInfo) {
+export function loginUser(userInfo) {
   return new Promise(async (resolve, reject) => {
     try {
       const responce = await fetch(`http://localhost:8080/auth/login`, {
