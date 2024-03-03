@@ -48,7 +48,7 @@ export function fetchAllOrders(pagination) {
     // console.log("this is response ---->", response)
     const data = await response.json();
     // console.log("this is data ---->", data.items)
-    const totalOrders = await data.items;
+    const totalOrders = await response.headers.get("X-Total-Count");
     resolve({ data: { orders: data, totalOrders: +totalOrders } });
   });
 }
