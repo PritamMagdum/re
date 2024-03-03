@@ -24,7 +24,7 @@ export default function Cart() {
   //   const itemTotal = await item.product.reduce((acc, product) => acc + (product.price * item.quantity), 0);
   //   return total + itemTotal;
   // }, 0);
-
+  console.log("items is -->", items);
   const totalAmount = items.reduce(
     (amount, item) => item.product.price * item.quantity + amount,
     0
