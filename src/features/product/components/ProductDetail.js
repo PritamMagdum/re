@@ -118,9 +118,9 @@ export default function ProductDetail() {
 
       console.log("newItem is -->", newItem);
       alert("item added to cart Successfully");
-      // setTimeout(() => {
-      //   dispatch(fetchItemsByUserIdAsync(user.id));
-      // }, 500);
+      setTimeout(() => {
+        dispatch(fetchItemsByUserIdAsync());
+      }, 250);
     } else {
       alert("Product is already added");
       console.log("product is already added");
