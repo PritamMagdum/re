@@ -11,7 +11,7 @@ import ProductDetailPage from "./pages/ProductDetailPage";
 import Protected from "./features/auth/components/Protected";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchItemsByUserIdAsync } from "./features/cart/cartSlice";
-import { selectLoggedInUser } from "./features/auth/authSlice";
+import { checkAuthAsync, selectLoggedInUser } from "./features/auth/authSlice";
 import PageNotFound from "./pages/PageNotFound";
 import OrderSuccessPage from "./pages/OrderSuccessPage";
 import UserOrdersPage from "./pages/UserOrdersPage";
@@ -29,6 +29,10 @@ function App() {
   const dispatch = useDispatch();
   const user = useSelector(selectLoggedInUser);
   // console.log("This is comes from app.js file ------>", user);
+  useEffect(() => {
+    dispatch(checkAuthAsync());
+  }, []);
+
   useEffect(() => {
     if (user) {
       // console.log("This is comes from app.js file ------>", user);

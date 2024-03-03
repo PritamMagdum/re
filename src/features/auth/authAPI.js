@@ -37,6 +37,24 @@ export function loginUser(userInfo) {
   });
 }
 
+export function checkAuth() {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const responce = await fetch(`http://localhost:8080/auth/check`);
+      if (responce.ok) {
+        const data = await responce.json();
+        // console.log({ data });
+        resolve({ data });
+      } else {
+        const error = await responce.text();
+        reject(error);
+      }
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+
 export function signOut(userid) {
   return new Promise(async (resolve) => {
     // TODO : On server remove loggedin user info from session
