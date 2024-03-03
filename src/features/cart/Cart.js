@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   deleteItemFromCartAsync,
   fetchItemsByUserIdAsync,
+  selectCartLoaded,
   selectItems,
   updateCartAsync,
 } from "./cartSlice";
@@ -18,6 +19,7 @@ export default function Cart() {
   const [open, setOpen] = useState(true);
   const items = useSelector(selectItems);
   const user = useSelector(selectLoggedInUser);
+  const cartLoaded = useSelector(selectCartLoaded);
   // console.log("Items are -> ",items);
 
   // const totalAmount = items.reduce(async(total, item) => {
@@ -48,7 +50,9 @@ export default function Cart() {
   return (
     <div>
       {/* {console.log("items are --->", items)} */}
-      {!items.length && <Navigate to="/" replace={true}></Navigate>}
+      {!items.length && cartLoaded && (
+        <Navigate to="/" replace={true}></Navigate>
+      )}
       <div className="mx-auto max-w-7xl px-4 bg-white sm:px-6 lg:px-8">
         <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
           <h1 className="text-4xl font-bold tracking-tight my-5 text-gray-900">
