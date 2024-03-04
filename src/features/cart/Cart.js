@@ -14,6 +14,7 @@ import { Link, Navigate } from "react-router-dom";
 import { fetchItemsByUserId } from "./cartAPI";
 import { selectLoggedInUser } from "../auth/authSlice";
 import { Grid } from "react-loader-spinner";
+import Modal from "../common/Modal";
 
 export default function Cart() {
   // const count = useSelector(selectCount);
@@ -23,6 +24,7 @@ export default function Cart() {
   const user = useSelector(selectLoggedInUser);
   const cartLoaded = useSelector(selectCartLoaded);
   const status = useSelector(selectCartStatus);
+  const [openModal, setOpenModal] = useState(null);
   // console.log("Items are -> ",items);
 
   // const totalAmount = items.reduce(async(total, item) => {
@@ -56,6 +58,7 @@ export default function Cart() {
       {!items.length && cartLoaded && (
         <Navigate to="/" replace={true}></Navigate>
       )}
+
       <div className="mx-auto max-w-7xl px-4 bg-white sm:px-6 lg:px-8">
         <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
           <h1 className="text-4xl font-bold tracking-tight my-5 text-gray-900">
@@ -122,8 +125,19 @@ export default function Cart() {
                         </div>
 
                         <div className="flex">
+                          <Modal
+                            title={`Delete ${item.title}`}
+                            message="Are you sure want to delete this Cart Item ?"
+                            dangerOption="Delete"
+                            cancelOption="Cancel"
+                            cancelAction={() => setOpenModal(-1)}
+                            dangerAction={(e) => handleRemove(e, item.id)}
+                            showModal={openModal === item.id}
+                          ></Modal>
                           <button
-                            onClick={(e) => handleRemove(e, item.id)}
+                            onClick={(e) => {
+                              setOpenModal(item.id);
+                            }}
                             type="button"
                             className="font-medium text-indigo-600 hover:text-indigo-500"
                           >
