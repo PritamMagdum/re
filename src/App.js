@@ -28,6 +28,13 @@ import ProtectedAdmin from "./features/auth/components/ProtectedAdmin";
 import AdminProductDetailPage from "./pages/AdminProductDetailPage";
 import AdminProductFormPage from "./pages/AdminProductFormPage";
 import AdminOrdersPage from "./pages/AdminOrdersPage";
+import { positions, Provider } from "react-alert";
+import AlertTemplate from "react-alert-template-basic";
+
+const options = {
+  timeout: 5000,
+  position: positions.BOTTOM_LEFT,
+};
 
 function App() {
   const dispatch = useDispatch();
@@ -49,64 +56,70 @@ function App() {
   return (
     <div className="App">
       {userChecked && (
-        <Router>
-          <Routes>
-            <Route element={<Protected />}>
-              <Route exact path="/" element={<Home />} />
-              <Route exact path="/cart" element={<CartPage />} />
-              <Route exact path="/cart" element={<CartPage />} />
-              <Route exact path="/checkout" element={<Checkout />} />
-              <Route exact path="/orders" element={<UserOrdersPage />} />
-              <Route exact path="/profile" element={<UserProfilePage />} />
-              <Route
-                exact
-                path="/"
-                element={
-                  <Protected>
-                    <Home />
-                  </Protected>
-                }
-              />
-              <Route
-                exact
-                path="/product-detail/:id"
-                element={<ProductDetailPage />}
-              />
-              <Route
-                exact
-                path="/order-success/:id"
-                element={<OrderSuccessPage />}
-              />
-            </Route>
+        <Provider template={AlertTemplate} {...options}>
+          <Router>
+            <Routes>
+              <Route element={<Protected />}>
+                <Route exact path="/" element={<Home />} />
+                <Route exact path="/cart" element={<CartPage />} />
+                <Route exact path="/cart" element={<CartPage />} />
+                <Route exact path="/checkout" element={<Checkout />} />
+                <Route exact path="/orders" element={<UserOrdersPage />} />
+                <Route exact path="/profile" element={<UserProfilePage />} />
+                <Route
+                  exact
+                  path="/"
+                  element={
+                    <Protected>
+                      <Home />
+                    </Protected>
+                  }
+                />
+                <Route
+                  exact
+                  path="/product-detail/:id"
+                  element={<ProductDetailPage />}
+                />
+                <Route
+                  exact
+                  path="/order-success/:id"
+                  element={<OrderSuccessPage />}
+                />
+              </Route>
 
-            <Route element={<ProtectedAdmin />}>
-              <Route exact path="/admin" element={<AdminHome />} />
-              <Route exact path="/admin/orders" element={<AdminOrdersPage />} />
-              <Route
-                exact
-                path="/admin/product-form"
-                element={<AdminProductFormPage />}
-              />
-              <Route
-                exact
-                path="/admin/product-form/edit/:id"
-                element={<AdminProductFormPage />}
-              />
-              <Route
-                exact
-                path="/admin/product-detail/:id"
-                element={<AdminProductDetailPage />}
-              />
-            </Route>
+              <Route element={<ProtectedAdmin />}>
+                <Route exact path="/admin" element={<AdminHome />} />
+                <Route
+                  exact
+                  path="/admin/orders"
+                  element={<AdminOrdersPage />}
+                />
+                <Route
+                  exact
+                  path="/admin/product-form"
+                  element={<AdminProductFormPage />}
+                />
+                <Route
+                  exact
+                  path="/admin/product-form/edit/:id"
+                  element={<AdminProductFormPage />}
+                />
+                <Route
+                  exact
+                  path="/admin/product-detail/:id"
+                  element={<AdminProductDetailPage />}
+                />
+              </Route>
 
-            <Route exact path="/signup" element={<SignupPage />} />
-            <Route exact path="/logout" element={<Logout />} />
-            <Route exact path="/login" element={<LoginPage />} />
-            <Route exact path="/forgot" element={<ForgotPasswordPage />} />
+              <Route exact path="/signup" element={<SignupPage />} />
+              <Route exact path="/logout" element={<Logout />} />
+              <Route exact path="/login" element={<LoginPage />} />
+              <Route exact path="/forgot" element={<ForgotPasswordPage />} />
 
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
-        </Router>
+              <Route path="*" element={<PageNotFound />} />
+            </Routes>
+          </Router>
+        </Provider>
       )}
     </div>
   );
