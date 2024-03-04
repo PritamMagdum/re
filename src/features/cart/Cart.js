@@ -130,7 +130,7 @@ export default function Cart() {
                             message="Are you sure want to delete this Cart Item ?"
                             dangerOption="Delete"
                             cancelOption="Cancel"
-                            cancelAction={() => setOpenModal(-1)}
+                            cancelAction={() => setOpenModal(null)}
                             dangerAction={(e) => handleRemove(e, item.id)}
                             showModal={openModal === item.id}
                           ></Modal>

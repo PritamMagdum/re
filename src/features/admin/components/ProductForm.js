@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -15,12 +15,16 @@ import {
 import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
 import { fetchAllProducts, fetchProductById } from "../../product/productAPI";
+import Modal from "../../common/Modal";
+import { useAlert } from "react-alert";
 
 function ProductForm() {
   const brands = useSelector(selectBrands);
   const categories = useSelector(selectCategories);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [openModal, setOpenModal] = useState(null);
+  const alert = useAlert();
 
   const {
     register,
@@ -90,11 +94,11 @@ function ProductForm() {
         product.rating = selectedProduct.rating || 0;
 
         dispatch(updateProductAsync(product));
-        alert("Product Edited Successfully!");
+        alert.success("Product Edited Successfully!");
         reset();
       } else {
         await dispatch(createProductAsync(product));
-        alert("Product Edited Successfully!");
+        // alert("Product Edited Successfully!");
         navigate("/admin"); // Navigate after successful product creation
       }
     } catch (error) {
@@ -105,8 +109,10 @@ function ProductForm() {
 
   const handleDelete = () => {
     const product = { ...selectedProduct };
-    dispatch(deleteProductAsync(product[0].id));
-    reset();
+    console.log("Product.id from handlDelete is -->", product.id);
+    dispatch(deleteProductAsync(product.id));
+    alert.success("Product Deleted Successfully");
+    navigate("/");
   };
 
   return (
@@ -493,7 +499,10 @@ function ProductForm() {
           </button>
           {selectedProduct && (
             <div
-              onClick={handleDelete}
+              onClick={(e) => {
+                e.preventDefault();
+                setOpenModal(true);
+              }}
               className="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Delete
@@ -504,9 +513,21 @@ function ProductForm() {
             className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
             Save
+            {console.log("selectedProduct is -->", selectedProduct)}
           </button>
         </div>
       </form>
+      {selectedProduct && (
+        <Modal
+          title={`Delete ${selectedProduct.title}`}
+          message="Are you sure want to delete this Product ?"
+          dangerOption="Delete"
+          cancelOption="Cancel"
+          cancelAction={() => setOpenModal(null)}
+          dangerAction={handleDelete}
+          showModal={openModal}
+        ></Modal>
+      )}
     </div>
   );
 }
