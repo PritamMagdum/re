@@ -94,7 +94,7 @@ function ProductForm() {
         product.rating = selectedProduct.rating || 0;
 
         dispatch(updateProductAsync(product));
-        alert.success("Product Edited Successfully!");
+        alert.success("Product Updated Successfully!");
         reset();
       } else {
         await dispatch(createProductAsync(product));
