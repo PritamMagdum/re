@@ -30,6 +30,7 @@ import { Link } from "react-router-dom";
 import { ITEMS_PER_PAGE } from "../../../app/constants";
 import { fetchBrands } from "../productAPI";
 import Pagination from "../../common/Pagination";
+import { Grid } from "react-loader-spinner";
 
 // var totalItems = 100;
 
@@ -122,7 +123,6 @@ export default function ProductList() {
   return (
     <div className="bg-white">
       <div>
-        {/* Mobile filter dialog */}
         <MobileFilter
           mobileFiltersOpen={mobileFiltersOpen}
           setMobileFiltersOpen={setMobileFiltersOpen}
