@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
-import { fetchProductByIdAsync, selectProductById } from "../productSlice";
+import {
+  fetchProductByIdAsync,
+  selectProductById,
+  selectProductListStatus,
+} from "../productSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import {
@@ -11,6 +15,7 @@ import {
 } from "../../cart/cartSlice";
 import { useAlert } from "react-alert";
 import { selectLoggedInUser } from "../../auth/authSlice";
+import { Grid } from "react-loader-spinner";
 
 const colors = [
   { name: "White", class: "bg-white", selectedClass: "ring-gray-400" },
@@ -50,6 +55,7 @@ export default function ProductDetail() {
   const alert = useAlert();
   // const user = useSelector(selectLoggedInUser);
   const items = useSelector(selectItems);
+  const status = useSelector(selectProductListStatus);
 
   const handleCart = (e) => {
     // console.log("params and params.id-->", params, params.id);
@@ -82,6 +88,18 @@ export default function ProductDetail() {
   // TODO: In server data we will add colors, sizes, highlights etc.
   return (
     <div className="bg-white">
+      {status === "loading" ? (
+        <Grid
+          visible={true}
+          height="200"
+          width="200"
+          color="#1f2937"
+          ariaLabel="grid-loading"
+          radius="12.5"
+          wrapperStyle={{}}
+          wrapperClass="grid-wrapper"
+        />
+      ) : null}
       {product && (
         <div className="pt-6">
           <nav aria-label="Breadcrumb">
