@@ -4,6 +4,7 @@ import {
   deleteItemFromCartAsync,
   fetchItemsByUserIdAsync,
   selectCartLoaded,
+  selectCartStatus,
   selectItems,
   updateCartAsync,
 } from "./cartSlice";
@@ -12,6 +13,7 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import { Link, Navigate } from "react-router-dom";
 import { fetchItemsByUserId } from "./cartAPI";
 import { selectLoggedInUser } from "../auth/authSlice";
+import { Grid } from "react-loader-spinner";
 
 export default function Cart() {
   // const count = useSelector(selectCount);
@@ -20,6 +22,7 @@ export default function Cart() {
   const items = useSelector(selectItems);
   const user = useSelector(selectLoggedInUser);
   const cartLoaded = useSelector(selectCartLoaded);
+  const status = useSelector(selectCartStatus);
   // console.log("Items are -> ",items);
 
   // const totalAmount = items.reduce(async(total, item) => {
@@ -60,6 +63,18 @@ export default function Cart() {
           </h1>
           <hr className="my-5" />
           <div className="flow-root">
+            {status === "loading" ? (
+              <Grid
+                visible={true}
+                height="200"
+                width="200"
+                color="#1f2937"
+                ariaLabel="grid-loading"
+                radius="12.5"
+                wrapperStyle={{}}
+                wrapperClass="grid-wrapper"
+              />
+            ) : null}
             <ul role="list" className="-my-6 divide-y divide-gray-200">
               {items[0] &&
                 items.map((item) => (
