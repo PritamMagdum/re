@@ -129,7 +129,10 @@ function AdminOrders() {
                               </div>
                               <span>
                                 {item.product.title} - #{item.quantity} - $
-                                {item.product.price}
+                                {Math.round(
+                                  item.product.price *
+                                    (1 - item.product.discountPercentage / 100)
+                                )}
                               </span>
                             </div>
                           ))}

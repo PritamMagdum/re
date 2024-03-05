@@ -34,7 +34,13 @@ function Checkout() {
   } = useForm();
   const totalAmount = items.reduce(
     // TODO : This is major issue please check when products are comes back (time : 8:36:54)
-    (amount, item) => item.product.price * item.quantity + amount,
+    (amount, item) =>
+      Math.round(
+        item.product.price *
+          (1 - item.product.discountPercentage / 100) *
+          item.quantity +
+          amount
+      ),
     0
   );
   const totalItems = items.reduce((total, item) => item.quantity + total, 0);
@@ -397,7 +403,14 @@ function Checkout() {
                                     {item.product.title}
                                   </a>
                                 </h3>
-                                <p className="ml-4">${item.product.price}</p>
+                                <p className="ml-4">
+                                  $
+                                  {Math.round(
+                                    item.product.price *
+                                      (1 -
+                                        item.product.discountPercentage / 100)
+                                  )}
+                                </p>
                               </div>
                               <p className="mt-1 text-sm text-gray-500">
                                 {item.product.brand}

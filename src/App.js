@@ -59,6 +59,7 @@ function App() {
         <Provider template={AlertTemplate} {...options}>
           <Router>
             <Routes>
+              {/* User Protected Routes */}
               <Route element={<Protected />}>
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/cart" element={<CartPage />} />
@@ -66,6 +67,7 @@ function App() {
                 <Route exact path="/checkout" element={<Checkout />} />
                 <Route exact path="/orders" element={<UserOrdersPage />} />
                 <Route exact path="/profile" element={<UserProfilePage />} />
+
                 <Route
                   exact
                   path="/"
@@ -87,6 +89,7 @@ function App() {
                 />
               </Route>
 
+              {/* Admin Protected Routes */}
               <Route element={<ProtectedAdmin />}>
                 <Route exact path="/admin" element={<AdminHome />} />
                 <Route
