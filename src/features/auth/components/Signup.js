@@ -4,9 +4,11 @@ import { useForm } from "react-hook-form";
 
 import { createUserAsync, selectLoggedInUser } from "../authSlice";
 import { Link, Navigate } from "react-router-dom";
+import { useAlert } from "react-alert";
 export default function Signup() {
   const dispatch = useDispatch();
   const user = useSelector(selectLoggedInUser);
+  const alert = useAlert();
 
   const {
     register,
@@ -44,6 +46,7 @@ export default function Signup() {
                   role: "user", // TODO : It Will change after backend is ready
                 })
               );
+              alert.success("Account Created Successfully");
               // console.log(data);
             })}
           >

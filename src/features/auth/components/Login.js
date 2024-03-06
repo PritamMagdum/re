@@ -3,10 +3,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { loginUserAsync, selectError, selectLoggedInUser } from "../authSlice";
 import { Link, Navigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { useAlert } from "react-alert";
 export default function Login() {
   const dispatch = useDispatch();
   const error = useSelector(selectError);
   const user = useSelector(selectLoggedInUser);
+  const alert = useAlert();
 
   const {
     register,
@@ -36,6 +38,9 @@ export default function Login() {
               dispatch(
                 loginUserAsync({ email: data.email, password: data.password })
               );
+              setTimeout(() => {
+                alert.success("Login Successfully");
+              }, 500);
               // console.log(data);
             })}
             className="space-y-6"

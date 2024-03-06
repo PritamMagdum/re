@@ -101,7 +101,7 @@ function Checkout() {
     console.log("orderItems is-->", orderItems);
     const body = {
       products: orderItems,
-      amount: currentOrder.totalAmount,
+      id: currentOrder.id,
     };
     console.log("body is -->", body);
     console.log("currentOrder.items is -->", currentOrder.items);
