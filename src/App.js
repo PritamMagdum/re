@@ -30,7 +30,6 @@ import AdminProductFormPage from "./pages/AdminProductFormPage";
 import AdminOrdersPage from "./pages/AdminOrdersPage";
 import { positions, Provider } from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
-import StripeCheckout from "./pages/StripeCheckout";
 
 const options = {
   timeout: 5000,
@@ -68,11 +67,6 @@ function App() {
                 <Route exact path="/checkout" element={<Checkout />} />
                 <Route exact path="/orders" element={<UserOrdersPage />} />
                 <Route exact path="/profile" element={<UserProfilePage />} />
-                {/* <Route
-                  exact
-                  path="/stripe-checkout/"
-                  element={<StripeCheckout />}
-                /> */}
 
                 <Route
                   exact
