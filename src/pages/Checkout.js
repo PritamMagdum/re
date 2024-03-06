@@ -14,6 +14,8 @@ import {
   selectCurrentOrder,
 } from "../features/order/orderSlice";
 import { selectUserInfo } from "../features/user/userSlice";
+import { useAlert } from "react-alert";
+import { loadStripe } from "@stripe/stripe-js";
 
 function Checkout() {
   const dispatch = useDispatch();
@@ -24,6 +26,7 @@ function Checkout() {
   const [paymentMethod, setPaymentMethod] = useState("cash");
   const navigate = useNavigate();
   const currentOrder = useSelector(selectCurrentOrder);
+  const alert = useAlert();
 
   const {
     register,
@@ -78,17 +81,63 @@ function Checkout() {
       selectedAddress,
       status: "pending",
     };
-    dispatch(createOrderAsync(order));
+
+    if (order.selectedAddress == null) {
+      alert.error("Please Select Address");
+    } else {
+      dispatch(createOrderAsync(order));
+    }
     // TODO : Redirect to order-success page
     // TODO : Clear cart after oder
     // TODO : on Server change the stock number of items
     // navigate("/order-success");
   };
 
+  const handleCheckout = async () => {
+    const stripe = await loadStripe(
+      "pk_test_51OrFmISCebnZsCxyFc5B0diQyTjuuNrMDfReUhG7MX3B6y7ksmgRfIatYqMUT54MNk7853gA5yQI8sKwcN4BT02Z00KJUMhuMf"
+    );
+    const orderItems = await currentOrder.items;
+    console.log("orderItems is-->", orderItems);
+    const body = {
+      products: orderItems,
+      amount: currentOrder.totalAmount,
+    };
+    console.log("body is -->", body);
+    console.log("currentOrder.items is -->", currentOrder.items);
+
+    const headers = {
+      "Content-Type": "application/json",
+    };
+
+    const response = await fetch(
+      "http://localhost:8080/create-checkout-session",
+      {
+        method: "POST",
+        headers: headers,
+        body: JSON.stringify(body),
+      }
+    );
+
+    const session = await response.json();
+    const result = stripe.redirectToCheckout({
+      sessionId: session.id,
+    });
+
+    if (result.error) {
+      console.log(result.error);
+    }
+  };
+
+  if (currentOrder && currentOrder.paymentMethod === "card") {
+    handleCheckout();
+  }
+
   return (
     <>
       {!items.length && <Navigate to="/" replace={true}></Navigate>}
-      {currentOrder && (
+      {console.log("currentOrder initiallly is -->", currentOrder)}
+      {currentOrder && currentOrder.paymentMethod === "cash" && (
         <Navigate
           to={`/order-success/${currentOrder.id}`}
           replace={true}
