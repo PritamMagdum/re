@@ -31,6 +31,7 @@ import AdminOrdersPage from "./pages/AdminOrdersPage";
 import { positions, Provider } from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
 import AboutUsPage from "./pages/AboutUsPage";
+import ContactUsPage from "./pages/ContactUsPage";
 
 const options = {
   timeout: 5000,
@@ -120,6 +121,7 @@ function App() {
               <Route exact path="/login" element={<LoginPage />} />
               <Route exact path="/forgot" element={<ForgotPasswordPage />} />
               <Route exact path="/about" element={<AboutUsPage />} />
+              <Route exact path="/contact" element={<ContactUsPage />} />
 
               <Route path="*" element={<PageNotFound />} />
             </Routes>
