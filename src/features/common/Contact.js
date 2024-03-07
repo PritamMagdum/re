@@ -1,25 +1,34 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { useAlert } from "react-alert";
+import { useForm } from "react-hook-form";
 
 export default function Contact() {
   const form = useRef();
+  const alert = useAlert();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-    emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
-        publicKey: "YOUR_PUBLIC_KEY",
-      })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
-  };
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+  //   console.log("current is-->", form.current);
+  //   emailjs
+  //     .sendForm("service_phthltw", "template_1685ecb", form.current, {
+  //       publicKey: "pGngaTcgFLsM_Wzqg",
+  //     })
+  //     .then(
+  //       () => {
+  //         alert.success("SUCCESS!");
+  //       },
+  //       (error) => {
+  //         alert.error("FAILED");
+  //       }
+  //     );
+  // };
 
   return (
     <>
@@ -74,7 +83,7 @@ export default function Contact() {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <g clip-path="url(#clip0_941_17577)">
+                      <g clipPath="url(#clip0_941_17577)">
                         <path
                           d="M24.3 31.1499C22.95 31.1499 21.4 30.7999 19.7 30.1499C16.3 28.7999 12.55 26.1999 9.19997 22.8499C5.84997 19.4999 3.24997 15.7499 1.89997 12.2999C0.39997 8.59994 0.54997 5.54994 2.29997 3.84994C2.34997 3.79994 2.44997 3.74994 2.49997 3.69994L6.69997 1.19994C7.74997 0.599942 9.09997 0.899942 9.79997 1.89994L12.75 6.29994C13.45 7.34994 13.15 8.74994 12.15 9.44994L10.35 10.6999C11.65 12.7999 15.35 17.9499 21.25 21.6499L22.35 20.0499C23.2 18.8499 24.55 18.4999 25.65 19.2499L30.05 22.1999C31.05 22.8999 31.35 24.2499 30.75 25.2999L28.25 29.4999C28.2 29.5999 28.15 29.6499 28.1 29.6999C27.2 30.6499 25.9 31.1499 24.3 31.1499ZM3.79997 5.54994C2.84997 6.59994 2.89997 8.74994 3.99997 11.4999C5.24997 14.6499 7.64997 18.0999 10.8 21.2499C13.9 24.3499 17.4 26.7499 20.5 27.9999C23.2 29.0999 25.35 29.1499 26.45 28.1999L28.85 24.0999C28.85 24.0499 28.85 24.0499 28.85 23.9999L24.45 21.0499C24.45 21.0499 24.35 21.0999 24.25 21.2499L23.15 22.8499C22.45 23.8499 21.1 24.1499 20.1 23.4999C13.8 19.5999 9.89997 14.1499 8.49997 11.9499C7.84997 10.8999 8.09997 9.54994 9.09997 8.84994L10.9 7.59994V7.54994L7.94997 3.14994C7.94997 3.09994 7.89997 3.09994 7.84997 3.14994L3.79997 5.54994Z"
                           fill="currentColor"
@@ -133,27 +142,119 @@ export default function Contact() {
             </div>
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
               <div className="relative rounded-lg bg-white p-8 shadow-lg shadow-gray-600 sm:p-12">
-                <form ref={form} onSubmit={sendEmail}>
-                  <ContactInputBox
-                    type="text"
-                    name="user_name"
-                    placeholder="Your Name"
-                  />
-                  <ContactInputBox
-                    type="text"
-                    name="user_email"
-                    placeholder="Your Email"
-                  />
-                  <ContactInputBox
-                    type="text"
-                    name="user_phone"
-                    placeholder="Your Phone"
-                  />
-                  <ContactTextArea
-                    row="6"
-                    placeholder="Your Message"
-                    name="user_message"
-                  />
+                <form
+                  ref={form}
+                  noValidate
+                  onSubmit={handleSubmit((data) => {
+                    // const password = data.name;
+                    // const email = data.email;
+                    // const addresses = data.uMessage;
+
+                    // console.log("e is-->", e);
+                    console.log("data is-->", data);
+                    if (data) {
+                      emailjs
+                        .sendForm(
+                          "service_phthltw",
+                          "template_1685ecb",
+                          form.current,
+                          {
+                            publicKey: "pGngaTcgFLsM_Wzqg",
+                          }
+                        )
+                        .then(
+                          () => {
+                            alert.success("SUCCESS!");
+                          },
+                          (error) => {
+                            alert.error("FAILED");
+                          }
+                        );
+                    }
+                  })}
+                >
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium leading-6 text-gray-900"
+                    >
+                      Your Name
+                    </label>
+                    <div className="mt-2">
+                      <input
+                        id="user_name"
+                        name="user_name"
+                        {...register("user_name", {
+                          required: "Name is Required",
+                        })}
+                        type="text"
+                        autoComplete="name"
+                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      />
+                      {errors.user_name && (
+                        <p className="text-red-500">
+                          {errors.user_name.message}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium leading-6 text-gray-900"
+                    >
+                      Email address
+                    </label>
+                    <div className="mt-2">
+                      <input
+                        id="user_email"
+                        name="user_email"
+                        {...register("user_email", {
+                          required: "Email is Required",
+                          pattern: {
+                            value: /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/gi,
+                            message: "Email not valid",
+                          },
+                        })}
+                        type="email"
+                        autoComplete="email"
+                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      />
+                      {errors.user_email && (
+                        <p className="text-red-500">
+                          {errors.user_email.message}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium leading-6 text-gray-900"
+                    >
+                      Your Message
+                    </label>
+                    <div className="mt-2">
+                      <textarea
+                        id="user_message"
+                        name="user_message"
+                        {...register("user_message", {
+                          required: "message is Required",
+                        })}
+                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      />
+                      {errors.user_message && (
+                        <p className="text-red-500">
+                          {errors.user_message.message}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="mb-6"></div>
+
                   <div>
                     <button
                       type="submit"
@@ -173,33 +274,52 @@ export default function Contact() {
   );
 }
 
-const ContactTextArea = ({ row, placeholder, name, defaultValue }) => {
-  return (
-    <>
-      <div className="mb-6">
-        <textarea
-          rows={row}
-          placeholder={placeholder}
-          name={name}
-          className="w-full resize-none rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-primary dark:border-dark-3 dark:bg-dark dark:text-dark-6"
-          defaultValue={defaultValue}
-        />
-      </div>
-    </>
-  );
-};
+// const ContactTextArea = ({ row, placeholder, name, defaultValue }) => {
+//   return (
+//     <>
+//       <div className="mb-6">
+//         <textarea
+//           rows={row}
+//           required
+//           placeholder={placeholder}
+//           name={name}
+//           className="w-full resize-none rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-primary dark:border-dark-3 dark:bg-dark dark:text-dark-6"
+//           defaultValue={defaultValue}
+//         />
+//       </div>
+//     </>
+//   );
+// };
 
-const ContactInputBox = ({ type, placeholder, name }) => {
-  return (
-    <>
-      <div className="mb-6">
-        <input
-          type={type}
-          placeholder={placeholder}
-          name={name}
-          className="w-full rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-primary dark:border-dark-3 dark:bg-dark dark:text-dark-6"
-        />
-      </div>
-    </>
-  );
-};
+// const ContactInputBox = ({ type, placeholder, name }) => {
+//   return (
+//     <>
+//       <div className="mb-6">
+//         <input
+//           type={type}
+//           required
+//           placeholder={placeholder}
+//           name={name}
+//           className="w-full rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-primary dark:border-dark-3 dark:bg-dark dark:text-dark-6"
+//         />
+//       </div>
+//     </>
+//   );
+// };
+
+// const ContactInputNumber = ({ type, placeholder, name }) => {
+//   return (
+//     <>
+//       <div className="mb-6">
+//         <input
+//           type={type}
+//           required
+//           min={10}
+//           placeholder={placeholder}
+//           name={name}
+//           className="w-full rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-primary dark:border-dark-3 dark:bg-dark dark:text-dark-6"
+//         />
+//       </div>
+//     </>
+//   );
+// };
