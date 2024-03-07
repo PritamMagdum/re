@@ -191,7 +191,11 @@ function Footer() {
                 </a>
               </li>
               <li className="mt-3">
-                <a className="text-gray-500 cursor-pointer hover:text-white">
+                <a
+                  href="https://www.linkedin.com/in/pritam-magdum-63b242221/"
+                  target="_"
+                  className="text-gray-500 cursor-pointer hover:text-white"
+                >
                   +91-869-869-4008
                 </a>
               </li>
@@ -206,7 +210,7 @@ function Footer() {
             <a
               href="https://www.linkedin.com/in/pritam-magdum-63b242221/"
               target="_"
-              className="cursor-pointer"
+              className="cursor-pointer text-black font-medium bg-white p-2 hover:bg-gray-500 hover:text-white rounded-md"
             >
               Pritam Magdum{" "}
             </a>
