@@ -15,6 +15,7 @@ import { fetchItemsByUserId } from "./cartAPI";
 import { selectLoggedInUser } from "../auth/authSlice";
 import { Grid } from "react-loader-spinner";
 import Modal from "../common/Modal";
+import { useAlert } from "react-alert";
 
 export default function Cart() {
   // const count = useSelector(selectCount);
@@ -25,6 +26,7 @@ export default function Cart() {
   const cartLoaded = useSelector(selectCartLoaded);
   const status = useSelector(selectCartStatus);
   const [openModal, setOpenModal] = useState(null);
+  const alert = useAlert();
   // console.log("Items are -> ",items);
 
   // const totalAmount = items.reduce(async(total, item) => {
@@ -60,7 +62,6 @@ export default function Cart() {
 
   return (
     <div>
-      {/* {console.log("items are --->", items)} */}
       {!items.length && cartLoaded && (
         <Navigate to="/" replace={true}></Navigate>
       )}
