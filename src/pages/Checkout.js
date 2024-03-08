@@ -114,7 +114,7 @@ function Checkout() {
       method: "POST",
       headers: headers,
       body: JSON.stringify(body),
-      meta: {
+      metadata: {
         order_id: currentOrder.id,
       },
     });
