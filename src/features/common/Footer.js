@@ -9,7 +9,9 @@ function Footer() {
           <a className="flex items-center justify-center font-medium text-white title-font md:justify-start">
             <h2 className="text italic text-2xl">Magdum E-Commerce</h2>
           </a>
-          <p className="mt-2 text-sm text-gray-400">Design, Code and Ship!</p>
+          <p className="mt-2 text-sm text-gray-400">
+            Make Your Life Easy with Fast Delivery
+          </p>
           <div className="mt-4">
             <span className="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
               <a

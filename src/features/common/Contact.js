@@ -161,7 +161,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block text-sm font-medium leading-6 mt-2 text-gray-900"
                     >
                       Your Name
                     </label>
@@ -187,7 +187,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block text-sm font-medium leading-6 mt-2 text-gray-900"
                     >
                       Email address
                     </label>
@@ -217,7 +217,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="Mobile Number"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block text-sm font-medium leading-6 mt-2 text-gray-900"
                     >
                       Mobile Number
                     </label>
@@ -247,7 +247,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block text-sm font-medium leading-6 mt-2 text-gray-900"
                     >
                       Your Message
                     </label>
@@ -274,7 +274,7 @@ export default function Contact() {
                     <button
                       type="submit"
                       value="Send"
-                      className="w-full rounded- border border-primary bg-blue-800 p-3 text-white transition hover:bg-opacity-90"
+                      className="w-full rounded-md border border-primary bg-blue-800 p-3 text-white transition hover:bg-opacity-90"
                     >
                       Send Message
                     </button>
