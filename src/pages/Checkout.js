@@ -110,17 +110,14 @@ function Checkout() {
       "Content-Type": "application/json",
     };
 
-    const response = await fetch(
-      "http://localhost:8080/create-checkout-session",
-      {
-        method: "POST",
-        headers: headers,
-        body: JSON.stringify(body),
-        meta: {
-          order_id: currentOrder.id,
-        },
-      }
-    );
+    const response = await fetch("/create-checkout-session", {
+      method: "POST",
+      headers: headers,
+      body: JSON.stringify(body),
+      meta: {
+        order_id: currentOrder.id,
+      },
+    });
 
     const session = await response.json();
     const result = stripe.redirectToCheckout({

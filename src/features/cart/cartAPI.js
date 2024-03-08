@@ -9,7 +9,7 @@
 //       user: item.user
 //     };
 
-//     const responce = await fetch('http://localhost:8080/cart', {
+//     const responce = await fetch('/cart', {
 //       method: 'POST',
 //       body: JSON.stringify(dataToSend),
 //       headers: {
@@ -35,7 +35,7 @@ export function addToCart(item) {
     // };
     // console.log("item is -->", item);
     console.log("Before send --> ", item);
-    const response = await fetch("http://localhost:8080/cart/", {
+    const response = await fetch("/cart/", {
       method: "POST",
       // body: JSON.stringify(item),
       body: JSON.stringify(item),
@@ -64,7 +64,7 @@ export function fetchItemsByUserId() {
   return new Promise(async (resolve) => {
     // console.log("fetched userId -->", userId);
     // TODO : we will not hard-code server URL here
-    const responce = await fetch(`http://localhost:8080/cart`);
+    const responce = await fetch(`/cart`);
     const data = await responce.json();
     // console.log("comes fetchItemsById ->", data);
     resolve({ data });
@@ -74,7 +74,7 @@ export function fetchItemsByUserId() {
 export function updateCart(update) {
   return new Promise(async (resolve) => {
     console.log("Before send --> ", update.id);
-    const response = await fetch(`http://localhost:8080/cart/${update.id}`, {
+    const response = await fetch(`/cart/${update.id}`, {
       method: "PATCH",
       body: JSON.stringify(update),
       headers: {
@@ -93,7 +93,7 @@ export function deleteItemFromCart(itemId) {
   return new Promise(async (resolve) => {
     // console.log("Before send --> ", sendData);
     // console.log("Deleted itemId: -->", itemId);
-    const response = await fetch(`http://localhost:8080/cart/${itemId}`, {
+    const response = await fetch(`/cart/${itemId}`, {
       method: "DELETE",
       headers: {
         "content-type": "application/json",

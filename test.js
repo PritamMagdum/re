@@ -1,7 +1,7 @@
 // const hello = (() => {
 //     return new Promise(async (resolve) => {
 //         // const response2 = await fetch("http;//localhost:8080/brands");
-//         const response = await fetch('http://localhost:8080/brands');
+//         const response = await fetch('/brands');
 //         // console.log("This response is brands ----->", response2)
 //         const data = await response.json();
 //         // console.log(data);
