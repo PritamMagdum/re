@@ -114,9 +114,6 @@ function Checkout() {
       method: "POST",
       headers: headers,
       body: JSON.stringify(body),
-      metadata: {
-        order_id: currentOrder.id,
-      },
     });
 
     const session = await response.json();
