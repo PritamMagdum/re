@@ -109,9 +109,10 @@ function Navbar({ children }) {
                               <span className="absolute -inset-1.5" />
                               <span className="sr-only">Open user menu</span>
                               <img
-                                className="h-8 w-8 rounded-full"
-                                src={userInfo.imageUrl}
-                                alt=""
+                                className="h-10 w-10 rounded-full brightness-0 invert "
+                                // src={userInfo.imageUrl}
+                                src="/profilelogo.svg"
+                                alt="Profile"
                               />
                             </Menu.Button>
                           </div>
