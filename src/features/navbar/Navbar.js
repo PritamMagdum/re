@@ -54,7 +54,7 @@ function Navbar({ children }) {
                       <div className="flex-shrink-0">
                         <Link to="/">
                           <img
-                            className="h-8 w-8 bg-white"
+                            className="h-8 w-8 brightness-0 invert"
                             src="/MagdumEcommerce.png"
                             alt="Your Company"
                           />
