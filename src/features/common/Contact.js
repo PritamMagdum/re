@@ -10,25 +10,9 @@ export default function Contact() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
-
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
-  //   console.log("current is-->", form.current);
-  //   emailjs
-  //     .sendForm("service_phthltw", "template_1685ecb", form.current, {
-  //       publicKey: "pGngaTcgFLsM_Wzqg",
-  //     })
-  //     .then(
-  //       () => {
-  //         alert.success("SUCCESS!");
-  //       },
-  //       (error) => {
-  //         alert.error("FAILED");
-  //       }
-  //     );
-  // };
 
   return (
     <>
@@ -164,13 +148,14 @@ export default function Contact() {
                         )
                         .then(
                           () => {
-                            alert.success("SUCCESS!");
+                            alert.success("Form Submitted!");
                           },
                           (error) => {
-                            alert.error("FAILED");
+                            alert.error("Form Not Submitted");
                           }
                         );
                     }
+                    reset();
                   })}
                 >
                   <div>
@@ -224,6 +209,36 @@ export default function Contact() {
                       {errors.user_email && (
                         <p className="text-red-500">
                           {errors.user_email.message}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="Mobile Number"
+                      className="block text-sm font-medium leading-6 text-gray-900"
+                    >
+                      Mobile Number
+                    </label>
+                    <div className="mt-2">
+                      <input
+                        id="user_phone"
+                        name="user_phone"
+                        {...register("user_phone", {
+                          required:
+                            "Mobile Number is Required and should be 10 digit",
+                          maxLength: 10,
+                          minLength: 10,
+                          message: "Mobile Number Should be 10 digit",
+                        })}
+                        type="number"
+                        autoComplete="phone"
+                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      />
+                      {errors.user_phone && (
+                        <p className="text-red-500">
+                          {errors.user_phone.message}
                         </p>
                       )}
                     </div>
