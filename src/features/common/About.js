@@ -29,7 +29,7 @@ export default function About() {
                   <div className="relative z-10 my-4">
                     <img
                       // src="/Pritam.png"
-                      src="https://res.cloudinary.com/pritam1622/image/upload/v1709985152/Pritam_ds7blm.png"
+                      src="https://res.cloudinary.com/pritam1622/image/upload/v1709986000/Pritam_w7m6tt.jpg"
                       alt="Pritam"
                       className="w-full rounded-2xl"
                     />
