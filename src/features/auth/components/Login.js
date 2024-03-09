@@ -38,9 +38,6 @@ export default function Login() {
               dispatch(
                 loginUserAsync({ email: data.email, password: data.password })
               );
-              setTimeout(() => {
-                alert.success("Login Successfully");
-              }, 500);
               // console.log(data);
             })}
             className="space-y-6"
