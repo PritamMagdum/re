@@ -91,7 +91,7 @@ export default function AdminProductList() {
 
   const handleSort = (e, option) => {
     // TODO : Find the solution of asc and desc sort
-    const sort = { _sort: option.sort };
+    const sort = { _sort: option.sort, _order: option.order };
     setSort(sort);
   };
 
