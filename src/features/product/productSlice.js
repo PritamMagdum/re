@@ -53,12 +53,12 @@ export const updateProductAsync = createAsyncThunk(
   async (update) => {
     const response = await updateProduct(update);
     // The value we return becomes the `fulfilled` action payload
-    console.log(
-      "this is UpdateProductAsync response with data -->",
-      response.data
-    );
-    console.log("this is UpdateProductAsync only response -->", response);
-    return response;
+    // console.log(
+    //   "this is UpdateProductAsync response with data -->",
+    //   response.data
+    // );
+    // console.log("this is UpdateProductAsync only response -->", response);
+    // return response;
   }
 );
 
@@ -174,7 +174,7 @@ export const productSlice = createSlice({
       })
       .addCase(createProductAsync.fulfilled, (state, action) => {
         state.status = "idle";
-        console.log(action.payload);
+        // console.log(action.payload);
         state.products.push(action.payload);
         // state.products = [...state.products, action.payload];
       })
@@ -183,8 +183,8 @@ export const productSlice = createSlice({
       })
       .addCase(updateProductAsync.fulfilled, (state, action) => {
         state.status = "idle";
-        console.log("Payload id-->", action.payload.id);
-        console.log("Payload -->", action.payload);
+        // console.log("Payload id-->", action.payload.id);
+        // console.log("Payload -->", action.payload);
         // const index = state.products.findIndex(
         //   (product) => product.id === action.payload.id
         // );
@@ -206,7 +206,7 @@ export const productSlice = createSlice({
       })
       .addCase(deleteProductAsync.fulfilled, (state, action) => {
         state.status = "idle";
-        console.log(action.payload);
+        // console.log(action.payload);
         state.products = action.payload;
         // state.products = [...state.products, action.payload];
       });

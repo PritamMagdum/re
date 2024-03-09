@@ -19,17 +19,17 @@ function AdminOrders() {
   const [sort, setSort] = useState({});
 
   const handleEdit = (order) => {
-    console.log("order id is --->", order.id);
+    // console.log("order id is --->", order.id);
     setEditableOrderId(order.id);
   };
 
   const handleShow = (order) => {
-    console.log("handleEdit Clicked");
+    // console.log("handleEdit Clicked");
   };
 
   const handleUpdate = (e, order) => {
     const updatedOrder = { ...order, status: e.target.value };
-    console.log("handle update updatedOrder -->", updatedOrder);
+    // console.log("handle update updatedOrder -->", updatedOrder);
     dispatch(updateOrderAsync(updatedOrder));
     setTimeout(() => {
       const pagination = { _page: page, _per_page: ITEMS_PER_PAGE };
@@ -56,7 +56,7 @@ function AdminOrders() {
     // TODO : Find the solution of asc and desc sort
 
     const sort = { _sort: sortOption.sort, _order: sortOption.order };
-    console.log(sort);
+    // console.log(sort);
     setSort(sort);
   };
 
@@ -100,9 +100,7 @@ function AdminOrders() {
                     <th className="py-3 px-6 text-center">Total Amount</th>
                     <th className="py-3 px-6 text-center">Shipping Address</th>
                     <th className="py-3 px-6 text-center">Status</th>
-                    <th className="py-3 px-6 text-center">
-                      Actions{console.log("this is orders -->", orders)}
-                    </th>
+                    <th className="py-3 px-6 text-center">Actions</th>
                   </tr>
                 </thead>
                 <tbody className="text-gray-600 text-sm font-light">
@@ -119,8 +117,8 @@ function AdminOrders() {
                           </div>
                         </td>
                         <td className="py-3 px-6 text-left">
-                          {order.items.map((item) => (
-                            <div className="flex items-center">
+                          {order.items.map((item, index) => (
+                            <div key={index} className="flex items-center">
                               <div className="mr-2">
                                 <img
                                   className="w-6 h-6 rounded-full"

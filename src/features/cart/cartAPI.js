@@ -34,7 +34,7 @@ export function addToCart(item) {
     //   user: item.user,
     // };
     // console.log("item is -->", item);
-    console.log("Before send --> ", item);
+    // console.log("Before send --> ", item);
     const response = await fetch("/cart/", {
       method: "POST",
       // body: JSON.stringify(item),
@@ -54,7 +54,7 @@ export function addToCart(item) {
     //   user: item.user
     // };
 
-    console.log("Affter Add --> ", data);
+    // console.log("Affter Add --> ", data);
     // Resolve with the merged data
     resolve({ data });
   });
@@ -73,7 +73,7 @@ export function fetchItemsByUserId() {
 
 export function updateCart(update) {
   return new Promise(async (resolve) => {
-    console.log("Before send --> ", update.id);
+    // console.log("Before send --> ", update.id);
     const response = await fetch(`/cart/${update.id}`, {
       method: "PATCH",
       body: JSON.stringify(update),
@@ -83,7 +83,7 @@ export function updateCart(update) {
     });
 
     const newData = await response.json();
-    console.log("After send --> ", newData);
+    // console.log("After send --> ", newData);
     // Resolve with the merged data
     resolve(newData);
   });

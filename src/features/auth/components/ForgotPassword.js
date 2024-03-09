@@ -27,7 +27,7 @@ export default function ForgotPassword() {
           <form
             noValidate
             onSubmit={handleSubmit((data) => {
-              console.log(data);
+              // console.log(data);
               // TODO : Implementation on backend to send login link on user email
             })}
             className="space-y-6"

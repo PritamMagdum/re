@@ -135,7 +135,7 @@ export default function Contact() {
                     // const addresses = data.uMessage;
 
                     // console.log("e is-->", e);
-                    console.log("data is-->", data);
+                    // console.log("data is-->", data);
                     if (data) {
                       emailjs
                         .sendForm(

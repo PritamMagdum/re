@@ -628,5 +628,5 @@ let items = [
 // }
 
 items.forEach((item) => {
-  console.log(item.id);
+  // console.log(item.id);
 });

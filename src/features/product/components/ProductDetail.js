@@ -71,7 +71,7 @@ export default function ProductDetail() {
       };
       dispatch(addToCartAsync(newItem));
 
-      console.log("newItem is -->", newItem);
+      // console.log("newItem is -->", newItem);
       alert.success("item added to cart Successfully");
       setTimeout(() => {
         dispatch(fetchItemsByUserIdAsync());

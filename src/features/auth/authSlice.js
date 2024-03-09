@@ -21,13 +21,13 @@ export const createUserAsync = createAsyncThunk(
 export const loginUserAsync = createAsyncThunk(
   "user/loginUser",
   async (loginInfo, { rejectWithValue }) => {
-    console.log("loginInfo -->", loginInfo);
+    // console.log("loginInfo -->", loginInfo);
     try {
       const response = await loginUser(loginInfo);
-      console.log("response data is -->", response.data);
+      // console.log("response data is -->", response.data);
       return response.data;
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       return rejectWithValue(error);
     }
   }
@@ -38,7 +38,7 @@ export const checkAuthAsync = createAsyncThunk("user/checkAuth", async () => {
     const response = await checkAuth();
     return response.data;
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 });
 

@@ -49,8 +49,8 @@ function Checkout() {
   const totalItems = items.reduce((total, item) => item.quantity + total, 0);
 
   const handleQuantity = (e, item) => {
-    console.log("e is ->", e.target.value);
-    console.log("item is -> ", item);
+    // console.log("e is ->", e.target.value);
+    // console.log("item is -> ", item);
     dispatch(updateCartAsync({ id: item.id, quantity: +e.target.value }));
     dispatch(fetchItemsByUserIdAsync(user.id));
   };
@@ -98,13 +98,13 @@ function Checkout() {
       "pk_test_51OrFmISCebnZsCxyFc5B0diQyTjuuNrMDfReUhG7MX3B6y7ksmgRfIatYqMUT54MNk7853gA5yQI8sKwcN4BT02Z00KJUMhuMf"
     );
     const orderItems = await currentOrder.items;
-    console.log("orderItems is-->", orderItems);
+    // console.log("orderItems is-->", orderItems);
     const body = {
       products: orderItems,
       id: currentOrder.id,
     };
-    console.log("body is -->", body);
-    console.log("currentOrder.items is -->", currentOrder.items);
+    // console.log("body is -->", body);
+    // console.log("currentOrder.items is -->", currentOrder.items);
 
     const headers = {
       "Content-Type": "application/json",
@@ -122,7 +122,7 @@ function Checkout() {
     });
 
     if (result.error) {
-      console.log(result.error);
+      // console.log(result.error);
     }
   };
 
@@ -133,7 +133,7 @@ function Checkout() {
   return (
     <>
       {!items.length && <Navigate to="/" replace={true}></Navigate>}
-      {console.log("currentOrder initiallly is -->", currentOrder)}
+      {/* {console.log("currentOrder initiallly is -->", currentOrder)} */}
       {currentOrder && currentOrder.paymentMethod === "cash" && (
         <Navigate
           to={`/order-success/${currentOrder.id}`}

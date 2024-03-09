@@ -31,8 +31,8 @@ export default function UserOrders() {
                 <hr className="my-5" />
                 <div className="flow-root">
                   <ul role="list" className="-my-6 divide-y divide-gray-200">
-                    {order.items.map((item) => (
-                      <li key={item.product.id} className="flex py-6">
+                    {order.items.map((item, index) => (
+                      <li key={index} className="flex py-6">
                         <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                           <img
                             src={item.product.thumbnail}

@@ -34,7 +34,7 @@ export function createProduct(product) {
 }
 
 export function updateProduct(update) {
-  console.log("This is updateProduct -->", update);
+  // console.log("This is updateProduct -->", update);
   return new Promise(async (resolve) => {
     // console.log("Before send --> ", sendData);
     const response = await fetch(`/products/${update.id}`, {

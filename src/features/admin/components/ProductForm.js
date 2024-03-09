@@ -47,7 +47,7 @@ function ProductForm() {
 
   useEffect(() => {
     if (selectedProduct && params.id) {
-      console.log(selectedProduct);
+      // console.log(selectedProduct);
       setValue("title", selectedProduct.title);
       setValue("description", selectedProduct.description);
       setValue("price", selectedProduct.price);
@@ -109,7 +109,7 @@ function ProductForm() {
 
   const handleDelete = () => {
     const product = { ...selectedProduct };
-    console.log("Product.id from handlDelete is -->", product.id);
+    // console.log("Product.id from handlDelete is -->", product.id);
     dispatch(deleteProductAsync(product.id));
     alert.success("Product Deleted Successfully");
     navigate("/");
@@ -195,8 +195,10 @@ function ProductForm() {
                   >
                     <option>&larr; Choose Brand &rarr;</option>
                     {brands &&
-                      brands.map((brand) => (
-                        <option value={brand.value}>{brand.label}</option>
+                      brands.map((brand, index) => (
+                        <option value={brand.value} key={index}>
+                          {brand.label}
+                        </option>
                       ))}
                   </select>
                 </div>
@@ -221,8 +223,10 @@ function ProductForm() {
                   >
                     <option>&larr; Choose Category &rarr;</option>
                     {categories &&
-                      categories.map((category) => (
-                        <option value={category.value}>{category.label}</option>
+                      categories.map((category, index) => (
+                        <option value={category.value} key={index}>
+                          {category.label}
+                        </option>
                       ))}
                   </select>
                 </div>
@@ -513,7 +517,7 @@ function ProductForm() {
             className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
             Save
-            {console.log("selectedProduct is -->", selectedProduct)}
+            {/* {console.log("selectedProduct is -->", selectedProduct)} */}
           </button>
         </div>
       </form>

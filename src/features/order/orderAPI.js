@@ -15,7 +15,7 @@ export function createOrder(order) {
 }
 
 export function updateOrder(order) {
-  console.log("order is -->", order);
+  // console.log("order is -->", order);
   return new Promise(async (resolve) => {
     const responce = await fetch(`/orders/${order.id}`, {
       method: "PATCH",

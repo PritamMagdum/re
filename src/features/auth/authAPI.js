@@ -25,7 +25,7 @@ export function loginUser(userInfo) {
       });
       if (responce.ok) {
         const data = await responce.json();
-        console.log({ data });
+        // console.log({ data });
         resolve({ data });
       } else {
         const error = await responce.text();
@@ -43,7 +43,7 @@ export function checkAuth() {
       const responce = await fetch("/auth/check");
       if (responce.ok) {
         const data = await responce.json();
-        console.log({ data });
+        // console.log({ data });
         resolve({ data });
       } else {
         const error = await responce.text();
