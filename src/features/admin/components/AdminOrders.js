@@ -81,27 +81,27 @@ function AdminOrders() {
         <div className="min-w-screen min-h-screen bg-gray-100 flex  justify-center font-sans overflow-hidden">
           <div className="w-full">
             <div className="bg-white shadow-md rounded my-6">
-              <table className="min-w-max w-full table-auto">
+              <table className="w-full table-auto">
                 <thead>
                   <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
                     <th
-                      className="py-3 px-6 text-left"
+                      className="py-3 px-6 text-center"
                       onClick={(e) =>
                         handleSort({
                           sort: "id",
-                          order: sort?._order == "asc" ? "desc" : "asc",
+                          order: sort?._order === "asc" ? "desc" : "asc",
                         })
                       }
                     >
                       Order
                     </th>
-                    <th className="py-3 px-6 text-left">Items</th>
+                    <th className="py-3 px-6 text-center">Items</th>
+                    <th className="py-3 px-6 text-center">Payment Mode</th>
                     <th className="py-3 px-6 text-center">Total Amount</th>
                     <th className="py-3 px-6 text-center">Shipping Address</th>
                     <th className="py-3 px-6 text-center">Status</th>
-                    <th className="py-3 px-6 text-center">Actions</th>
                     <th className="py-3 px-6 text-center">
-                      {console.log("this is orders -->", orders)}
+                      Actions{console.log("this is orders -->", orders)}
                     </th>
                   </tr>
                 </thead>
@@ -136,6 +136,11 @@ function AdminOrders() {
                               </span>
                             </div>
                           ))}
+                        </td>
+                        <td className="py-3 px-6 text-center">
+                          <div className="flex items-center justify-center">
+                            {order.paymentMethod}
+                          </div>
                         </td>
                         <td className="py-3 px-6 text-center">
                           <div className="flex items-center justify-center">
