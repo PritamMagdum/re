@@ -13,7 +13,7 @@ import {
   updateProductAsync,
 } from "../../product/productSlice";
 import { useForm } from "react-hook-form";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { fetchAllProducts, fetchProductById } from "../../product/productAPI";
 import Modal from "../../common/Modal";
 import { useAlert } from "react-alert";
@@ -495,12 +495,13 @@ function ProductForm() {
         </div>
 
         <div className="mt-6 flex items-center justify-end gap-x-6">
-          <button
+          <Link
+            to="/admin"
             type="button"
-            className="text-sm font-semibold leading-6 text-gray-900"
+            className="rounded-md bg-gray-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
             Cancel
-          </button>
+          </Link>
           {selectedProduct && (
             <div
               onClick={(e) => {
