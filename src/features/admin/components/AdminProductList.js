@@ -137,7 +137,7 @@ export default function AdminProductList() {
             </h1>
 
             <div className="flex items-center">
-              <div>
+              <div className="hidden md:block">
                 <Link
                   to="/admin/product-form"
                   // onClick={handleSubmit}
@@ -145,6 +145,27 @@ export default function AdminProductList() {
                   className="rounded-md mx-3 bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Add New Product
+                </Link>
+              </div>
+              <div className="md:hidden">
+                <Link
+                  className="flex p-2.5 bg-green-500 rounded-xl hover:rounded-3xl hover:bg-green-600 transition-all duration-300 text-white my-0.5 mx-3"
+                  to="/admin/product-form"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                    />
+                  </svg>
                 </Link>
               </div>
               <Menu as="div" className="relative inline-block text-left">
