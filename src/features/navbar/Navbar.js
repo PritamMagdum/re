@@ -169,68 +169,75 @@ function Navbar({ children }) {
 
                 <Disclosure.Panel className="md:hidden">
                   <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
-                    {navigation.map((item) => (
-                      <Disclosure.Button
-                        key={item.name}
-                        as="a"
-                        href={item.href}
-                        className={classNames(
-                          item.current
-                            ? "bg-gray-900 text-white"
-                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                          "block rounded-md px-3 py-2 text-base font-medium"
-                        )}
-                        aria-current={item.current ? "page" : undefined}
-                      >
-                        {item.name}
-                      </Disclosure.Button>
-                    ))}
+                    {navigation.map((item) =>
+                      item[userInfo.role] ? (
+                        <Link
+                          key={item.name}
+                          as="a"
+                          to={item.link}
+                          className={classNames(
+                            item.current
+                              ? "bg-gray-900 text-white"
+                              : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                            "block rounded-md px-3 py-2 text-base font-medium"
+                          )}
+                          aria-current={item.current ? "page" : undefined}
+                        >
+                          {item.name}
+                        </Link>
+                      ) : null
+                    )}
                   </div>
                   <div className="border-t border-gray-700 pb-3 pt-4">
-                    <div className="flex items-center px-5">
-                      <div className="flex-shrink-0">
-                        <img
-                          className="h-10 w-10 rounded-full"
-                          // The Below User information should be comes from userInfo
-                          src={userInfo.imageUrl}
-                          alt=""
-                        />
-                      </div>
-                      <div className="ml-3">
-                        <div className="text-base font-medium leading-none text-white">
-                          {userInfo.name}
-                        </div>
-                        <div className="text-sm font-medium leading-none text-gray-400">
-                          {userInfo.email}
-                        </div>
-                      </div>
-                      <Link to="/cart">
-                        <button
-                          type="button"
-                          className="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                        >
-                          <ShoppingCartIcon
-                            className="h-6 w-6"
-                            aria-hidden="true"
+                    <div className="flex items-center px-5 justify-between">
+                      <div className="flex items-center">
+                        <div className="flex-shrink-0">
+                          <img
+                            className="h-10 w-10 rounded-full brightness-0 invert"
+                            // The Below User information should be comes from userInfo
+                            src="/profilelogo.svg"
+                            alt="Pritam"
                           />
-                        </button>
-                      </Link>
-                      {items.length > 0 && (
-                        <span className="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10 mb-7 -ml-3">
-                          {items.length}
-                        </span>
-                      )}
+                        </div>
+                        <div className="ml-3">
+                          <div className="text-base font-medium leading-none text-white">
+                            {userInfo.name}
+                          </div>
+                          <div className="text-sm font-medium leading-none text-gray-400">
+                            {userInfo.email}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center">
+                        <Link to="/cart">
+                          <button
+                            type="button"
+                            className="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                          >
+                            <ShoppingCartIcon
+                              className="h-6 w-6"
+                              aria-hidden="true"
+                            />
+                          </button>
+                        </Link>
+                        {items.length > 0 && (
+                          <span className="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10 mb-7 -ml-3">
+                            {items.length}
+                          </span>
+                        )}
+                      </div>
                     </div>
                     <div className="mt-3 space-y-1 px-2">
                       {userNavigation.map((item) => (
-                        <Disclosure.Button
+                        <Link
                           key={item.name}
                           as="a"
-                          href={item.href}
+                          to={item.link}
                           className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                         >
                           {item.name}
-                        </Disclosure.Button>
+                        </Link>
                       ))}
                     </div>
                   </div>

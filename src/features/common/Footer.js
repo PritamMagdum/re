@@ -206,16 +206,21 @@ function Footer() {
         </div>
       </div>
       <div className="bg-gray-800">
-        <div className="container px-5 py-4 mx-auto">
-          <p className="text-sm text-white capitalize xl:text-center">
-            © Magdum E-Commerce 2024 All rights reserved || Developer -{" "}
-            <a
-              href="https://www.linkedin.com/in/pritam-magdum-63b242221/"
-              target="_"
-              className="cursor-pointer text-black font-medium bg-white p-2 hover:bg-gray-500 hover:text-white rounded-md"
-            >
-              Pritam Magdum{" "}
-            </a>
+        <div className="container px-5 py-4 flex flex-col md:flex-row items-center justify-center">
+          <p className="text-sm text-white capitalize xl:text-center ">
+            © Magdum E-Commerce 2024 All rights reserved ||
+          </p>
+          <p className="items-center mt-2 md:mt-0">
+            <span className="text-sm text-white capitalize mx-2">
+              Developer -{" "}
+              <a
+                href="https://www.linkedin.com/in/pritam-magdum-63b242221/"
+                target="_"
+                className="cursor-pointer text-black font-medium bg-white p-2 hover:bg-gray-500 hover:text-white rounded-md"
+              >
+                Pritam Magdum{" "}
+              </a>
+            </span>
           </p>
         </div>
       </div>
