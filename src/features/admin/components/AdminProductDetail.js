@@ -175,7 +175,7 @@ export default function AdminProductDetail() {
                         key={rating}
                         className={classNames(
                           product[0].rating > rating
-                            ? "text-gray-900"
+                            ? "text-yellow-300"
                             : "text-gray-200",
                           "h-5 w-5 flex-shrink-0"
                         )}
