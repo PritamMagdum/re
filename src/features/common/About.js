@@ -43,8 +43,8 @@ export default function About() {
                 <span className="block mb-4 text-2xl text-blue-800 font-bold">
                   Why Choose Us
                 </span>
-                <h2 className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-[40px]/[48px]">
-                  Make your customers happy by giving services.
+                <h2 className="mb-5 text-3xl font-bold text-dark sm:text-[40px]/[48px]">
+                  Shop Smart, Shop Simple, Shop with Us
                 </h2>
                 <p className="mb-5 text-base text-body-color dark:text-dark-6 text-justify font-medium">
                   Magdum E-Commerce is the brainchild of{" "}
