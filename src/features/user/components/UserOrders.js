@@ -22,10 +22,10 @@ export default function UserOrders() {
             {/* {!items.length && <Navigate to="/" replace={true}></Navigate>} */}
             <div className="mx-auto max-w-7xl px-4 bg-white sm:px-6 lg:px-8">
               <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
-                <h1 className="text-4xl font-bold tracking-tight my-3 text-gray-900">
+                <h1 className="text-lg lg:text-4xl font-bold tracking-tight my-3 text-gray-900">
                   Order # {order.id}
                 </h1>
-                <h3 className="text-xl font-bold tracking-tight my-2 text-red-500">
+                <h3 className="text-lg md:text-xl font-bold tracking-tight my-2 text-red-500">
                   Order Status : {order.status}
                 </h3>
                 <hr className="my-5" />
